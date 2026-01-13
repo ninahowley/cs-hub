@@ -1,3 +1,15 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset='utf-8'>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>{{ page_title }}</title>
+   <link rel='stylesheet' href="{{ url_for('static', filename='style.css') }}">
+
+   {% block head_stuff %}{% endblock %}
+</head>
+
 <body>
-<h1> Wellesley CS Hub </h1>
+   <iframe src="{{ url_for('static', filename='course-dependency.html') }}" width=1000vh height= 500vh></iframe>
 </body>
+</html>
