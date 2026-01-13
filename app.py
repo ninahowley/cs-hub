@@ -29,6 +29,9 @@ def cs_map():
         print(e)
         flash('An error occurred. Please try again.')
         return
+    
+def course_dependency():
+    return render_template('course-dependency.html')
 
 if __name__ == '__main__':
     app.debug = True
