@@ -7,6 +7,12 @@ body {
     font-style: normal;
 }
 
+.map{
+  background-color: linear-gradient(#ff79c3, #7996ff);
+  height:100%;
+  width:100%;
+}
+
 .courses-iframe{
   display: flex;
   justify-content: center;
