@@ -1,0 +1,19 @@
+.pixelify-sans-font {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500; /* weight 400-700*/
+  font-style: normal;
+}
+
+.parent-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.child-container {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid;
+    border-color:black;
+}
