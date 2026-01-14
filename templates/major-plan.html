@@ -14,7 +14,6 @@
         </div>
     </div>
     <div>
-    <h1>Your Major Plan</h1>
     <div class="parent-container">
         <div class="child-container">
             <h2>CS Major Requirements</h2>
@@ -30,7 +29,18 @@
             You must take additional CS classes until you have taken 9 CS classes in total (including the core). Two of these must be at the 300-level.
         </div>
         <div class="child-container">
-            <h2>Current Courses Offered</h2>
+            <h2>Current Course Offerings</h2>
+            {% for course in courses %}
+            <div class="course-container {% if course.course_core %}core{% endif %}">
+                <p>{{ course.course_tag }}: {{ course.course_name }}</p>
+                <div class="instructor-line">
+                    <span>{{ course.course_instructor }}</span>
+                    {% if course.course_distribs is not none and course.course_distribs != "" and course.course_distribs != 'nan' %}
+                        <span class="distribs">{{ course.course_distribs }}</span>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
         </div>
     </div>
     </div>

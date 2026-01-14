@@ -1,4 +1,5 @@
 from flask import Flask, flash, url_for, render_template
+import pandas as pd
 
 app = Flask(__name__)
 app.secret_key = "temp"
@@ -15,7 +16,9 @@ def index():
 @app.route("/major-plan")
 def major_plan():
     try:
-        return render_template('major-plan.html')
+        df = pd.read_csv('courses/courses.csv')
+        course_info = df.to_dict(orient='records')
+        return render_template('major-plan.html', courses = course_info)
     except Exception as e:
         print(e)
         flash('An error occurred. Please try again.')
