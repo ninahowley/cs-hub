@@ -25,6 +25,7 @@ body {
     padding: 10px;
     border: 1px solid black;
     overflow-y: auto;
+    overflow-x: hidden;
     scrollbar-color: blue;
 }
 

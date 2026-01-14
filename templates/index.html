@@ -13,9 +13,18 @@
         <a href="{{ url_for('cs_map') }}">Map of All CS</a>
     </div>
    </div>
-   <h1> CS Course Dependencies 2025-2026</h1>
-   <div class = "courses-iframe">
-      <iframe src="{{ url_for('static', filename='course-dependency.html') }}" style="width: 1000px; height: 500px; border:1.5px solid; border-radius: 15px;"></iframe>
+   <h1>Welcome to Wellesley CS!</h1>
+   <div class="parent-container">
+   <div class="child-container">
+      <h2>A History of Wellesley CS.</h2>
+      <iframe src="{{ url_for('static', filename='dept-timeline.html') }}" style="width:100%; height: 100%; border:1px solid;"></iframe>
+   </div>
+   <div class= "child-container">
+      <h2> CS Course Dependencies 2025-2026</h2>
+      <div class = "courses-iframe">
+         <iframe src="{{ url_for('static', filename='course-dependency.html') }}" style="width: 100%; height: 100%; border:1px solid;"></iframe>
+      </div>
+   </div>
    </div>
 </body>
 </html>
