@@ -24,7 +24,8 @@ body {
     flex: 1;
     padding: 10px;
     border: 1px solid black;
-    overflow: auto;
+    overflow-y: auto;
+    scrollbar-color: blue;
 }
 
 .navigation {
