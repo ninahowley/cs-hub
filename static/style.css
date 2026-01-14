@@ -23,11 +23,10 @@ body {
 .child-container {
     flex: 1;
     padding: 10px;
-    border: 2px solid;
-    border-color:black;
+    border: 1px solid black;
+    border-radius: 10px;
 }
 
-/* NAVBAR */
 .navigation {
     width: 100%;
     display: flex;
@@ -35,26 +34,24 @@ body {
     padding: 15px 30px;
     background-color: #ffffff;
     box-sizing: border-box;
-    border: 1px solid #ff79c3;
+    border: 1px solid #000000;
 }
 
 /* Fixed-width title area */
 .nav-title {
-    width: 240px;          /* 🔒 always same width */
+    width: 240px;         
     margin: 0;
     font-size: 1.8rem;
     font-weight: 700;
-    white-space: nowrap;  /* prevent wrapping */
+    white-space: nowrap;  
 }
 
-/* Tabs container */
 .nav-links {
     display: flex;
-    gap: 10px;             /* 🔒 exact spacing */
-    margin-left: auto;     /* push fully right */
+    gap: 10px;       
+    margin-left: auto; 
 }
 
-/* Button-style links */
 .nav-links a {
     all: unset;
     cursor: pointer;
@@ -67,7 +64,8 @@ body {
 }
 
 .nav-links a:hover {
-    background-color: #8e176c;
+    background-color: linear-gradient(to bottom,#ff79c3, #991373);
+    box-shadow: 2px;
     color: #ffffff;
     transform: translateY(-1px);
 }
