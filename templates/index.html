@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Map of All CS</title>
+    <title>Home</title>
     <link rel='stylesheet' href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
    <div class="navigation">
-      <a href="{{url_for('index')}}">Home</a>
-      <a href="{{url_for('major_plan')}}">Courses</a>
-      <a href="{{url_for('cs_map')}}">Map</a>
+      <h1 class="nav-title">Home</h1>
+      <div class="nav-links">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('major_plan') }}">Major Plan</a>
+        <a href="{{ url_for('cs_map') }}">Map of All CS</a>
+    </div>
    </div>
    <iframe src="{{ url_for('static', filename='course-dependency.html') }}" width=1000vh height= 500vh></iframe>
 </body>
