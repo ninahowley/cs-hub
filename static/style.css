@@ -16,16 +16,16 @@ body {
 .parent-container {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
+    padding: 10px;
     height:550px;
 }
 
 .child-container {
     flex: 1;
-    padding: 10px;
     border: 1px solid black;
     overflow-y: auto;
-    overflow-x: hidden;
+    overflow-x: visible;
     scrollbar-color: blue;
 }
 
