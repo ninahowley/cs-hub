@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Map of All CS</title>
+    <title>Major Plan</title>
     <link rel='stylesheet' href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="navigation">
-        <a href="{{url_for('index')}}">Home</a>
-        <a href="{{url_for('major_plan')}}">Courses</a>
-        <a href="{{url_for('cs_map')}}">Map</a>
+        <h1 class="nav-title">Major Plan</h1>
+        <div class="nav-links">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('major_plan') }}">Major Plan</a>
+            <a href="{{ url_for('cs_map') }}">Map of All CS</a>
+        </div>
     </div>
     <div>
     <h1>Your Major Plan</h1>

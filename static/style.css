@@ -32,21 +32,44 @@ body {
 .navigation {
     width: 100%;
     display: flex;
-    justify-content: flex-end; /* aligns links to the right */
-    gap: 20px;
+    align-items: center;
     padding: 15px 30px;
     background-color: #ffffff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
 }
 
-.navigation a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.2s ease;
+/* Fixed-width title area */
+.nav-title {
+    width: 240px;          /* 🔒 always same width */
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    white-space: nowrap;  /* prevent wrapping */
 }
 
-.navigation a:hover {
-    color: #ac2370;
+/* Tabs container */
+.nav-links {
+    display: flex;
+    gap: 10px;             /* 🔒 exact spacing */
+    margin-left: auto;     /* push fully right */
+}
+
+/* Button-style links */
+.nav-links a {
+    all: unset;
+    cursor: pointer;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-family: inherit;
+    font-weight: 500;
+    background-color: #ff79c3;
+    color: #000;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.nav-links a:hover {
+    background-color: #8e176c;
+    color: #ffffff;
+    transform: translateY(-1px);
 }
