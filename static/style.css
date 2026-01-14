@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 body {
     font-family: "Pixelify Sans", sans-serif;
@@ -7,28 +8,70 @@ body {
     font-style: normal;
 }
 
-.map{
-  background-color: linear-gradient(#ff79c3, #7996ff);
-  height:100%;
-  width:100%;
+.vt323-regular {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .theory-container{
     width: 94%;              /* Full width of parent */
     padding: 15px;
     margin: 10px 0;
-    border:2px black solid;
+    border: 3px black solid;
     color:#000;
-    background-color:#ff79c3;
+    background-color:#ff65ba
+}
+.theory-popup{
+    border-image: url('mario.png') 30;
+    border-image-slice: 27 27 27 27;
+    border-image-width: 20px 20px 20px 20px;
+    border-image-outset: 0px 0px;
+    border-image-repeat: stretch stretch;
+    border-style: solid;
+    position:fixed;
+    top: 50%;
+    left:50%;
+    padding:20px;
+    height:500px;
+    width:1000px;
+    background-color:white;
+    /*border: 1px solid black;*/
+    z-index:1000;
+    transform: translate(-50%, -50%);
+    display:none;
+    /*-webkit-text-fill-color:#dd0e80;*/
+    /*border-color:#dd0e80;*/
+}
+
+.theory-container.active .theory-popup {
+  display: block;
 }
 .eng-container{
     width: 94%;              
     padding: 15px;
     margin: 10px 0;
-    border:2px black solid;
+    border:black solid;
+    border-width: 3px;
     color:#000;
     background-color:#7996ff;
 }
+.eng-popup{
+    position:fixed;
+    top: 50%;
+    left:50%;
+    padding:20px;
+    height:500px;
+    width:500px;
+    background-color:#aebfff;
+    border: 2px solid black;
+    z-index:1000;
+    transform: translate(-50%, -50%);
+}
+.eng-container.active .eng-popup {
+  display: block;
+}
+
 .courses-iframe{
   display: flex;
   justify-content: center;
@@ -45,7 +88,8 @@ body {
 
 .child-container {
     flex: 1;
-    border: 1px solid black;
+    border: solid black;
+    border-width: 2px;
     padding: 10px;
     overflow-y: auto;
     overflow-x: visible;
