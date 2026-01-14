@@ -5,24 +5,29 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="parent-container">
-    <h1>Your Major Plan</h1>
-    <div class="child-container">
-        <h2>CS Major Requirements</h2>
-        <h3>Core</h3>
-        <ul>   
-            <li>CS 111: Computer Programming and Problem Solving</li>
-            <li>CS 230: Data Structures</li>
-            <li>CS 231: Design and Analysis of Algorithms</li>
-            <li>CS 235: Theory of Computation</li>
-            <li>CS 240: Foundations of Computer Systems</li>
-        </ul>
-        <h3>Electives</h3>
-        You must take additional CS classes until you have taken 9 CS classes in total (including the core). Two of these must be at the 300-level.
+    <div class="navigation">
+        <a href="{{url_for('index')}}">Home</a>
+        <a href="{{url_for('major_plan')}}">Courses</a>
+        <a href="{{url_for('cs_map')}}">Map</a>
     </div>
-    <div class="child-container">
-        <h2>Current Courses Offered</h2>
+    <div class="parent-container">
+        <h1>Your Major Plan</h1>
+        <div class="child-container">
+            <h2>CS Major Requirements</h2>
+            <h3>Core</h3>
+            <ul>   
+                <li>CS 111: Computer Programming and Problem Solving</li>
+                <li>CS 230: Data Structures</li>
+                <li>CS 231: Design and Analysis of Algorithms</li>
+                <li>CS 235: Theory of Computation</li>
+                <li>CS 240: Foundations of Computer Systems</li>
+            </ul>
+            <h3>Electives</h3>
+            You must take additional CS classes until you have taken 9 CS classes in total (including the core). Two of these must be at the 300-level.
+        </div>
+        <div class="child-container">
+            <h2>Current Courses Offered</h2>
+        </div>
     </div>
-</div>
 </body>
 </html>
