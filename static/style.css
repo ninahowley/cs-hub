@@ -17,7 +17,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    height:600px;
+    height:550px;
 }
 
 .child-container {
@@ -67,8 +67,7 @@ body {
 }
 
 .nav-links a:hover {
-    background-color: #8e176c;
-    color: #ffffff;
+    background-color: #7996ff;
     transform: translateY(-1px);
 }
 
