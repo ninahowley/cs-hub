@@ -69,3 +69,33 @@ body {
     color: #ffffff;
     transform: translateY(-1px);
 }
+
+/* COURSE CONTAINER */
+.child-container {
+    width: 90%;
+}
+
+.course-container {
+    width: 100%;              /* Full width of parent */
+    padding: 15px;
+    margin: 10px 0;
+    border:2px black solid;
+    color:#000;
+    background-color:#7996ff
+}
+
+.course-container.core {
+    border:2px black solid;
+    color:#000;
+    background-color:#ff79c3
+}
+
+.instructor-line {
+    display: flex;
+    justify-content: space-between; /* Instructor left, distribs right */
+    align-items: center;
+}
+
+.distribs {
+    font-weight: bold;
+}
