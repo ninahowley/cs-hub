@@ -10,6 +10,8 @@
       <a href="{{url_for('major_plan')}}">Courses</a>
       <a href="{{url_for('cs_map')}}">Map</a>
    </div>
-   <iframe src="{{ url_for('static', filename='course-dependency.html') }}" width=1000vh height= 500vh></iframe>
+   <div class = "center-iframe">
+      <iframe src="{{ url_for('static', filename='course-dependency.html') }}"></iframe>
+   </div>
 </body>
 </html>

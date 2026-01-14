@@ -7,10 +7,18 @@ body {
     font-style: normal;
 }
 
+.center-iframe{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:80vh;
+  border-radius: 20px;
+}
 .parent-container {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    height:600px;
 }
 
 .child-container {
