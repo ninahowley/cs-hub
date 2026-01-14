@@ -17,6 +17,7 @@ def index():
 def major_plan():
     try:
         df = pd.read_csv('courses/courses.csv')
+        df['course_distribs'] = df['course_distribs'].where(pd.notna(df['course_distribs']), None)
         course_info = df.to_dict(orient='records')
         return render_template('major-plan.html', courses = course_info)
     except Exception as e:
