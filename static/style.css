@@ -13,6 +13,22 @@ body {
   width:100%;
 }
 
+.theory-container{
+    width: 94%;              /* Full width of parent */
+    padding: 15px;
+    margin: 10px 0;
+    border:2px black solid;
+    color:#000;
+    background-color:#ff79c3;
+}
+.eng-container{
+    width: 94%;              
+    padding: 15px;
+    margin: 10px 0;
+    border:2px black solid;
+    color:#000;
+    background-color:#7996ff;
+}
 .courses-iframe{
   display: flex;
   justify-content: center;
