@@ -17,3 +17,26 @@
     border: 2px solid;
     border-color:black;
 }
+
+/* NAVBAR */
+.navigation {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* aligns links to the right */
+    gap: 20px;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.navigation a:hover {
+    color: #ac2370;
+}
