@@ -1,8 +1,10 @@
-.pixelify-sans-font {
-  font-family: "Pixelify Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500; /* weight 400-700*/
-  font-style: normal;
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500; /* weight 400-700*/
+    font-style: normal;
 }
 
 .parent-container {
