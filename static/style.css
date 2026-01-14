@@ -24,6 +24,7 @@ body {
 .child-container {
     flex: 1;
     border: 1px solid black;
+    padding: 10px;
     overflow-y: auto;
     overflow-x: visible;
     scrollbar-color: blue;
@@ -78,7 +79,7 @@ body {
 }
 
 .course-container {
-    width: 100%;              /* Full width of parent */
+    width: 94%;              /* Full width of parent */
     padding: 15px;
     margin: 10px 0;
     border:2px black solid;
