@@ -103,7 +103,7 @@ body {
     padding: 15px 30px;
     background-color: #ffffff;
     box-sizing: border-box;
-    border: 1px solid #000000;
+    border: 2px solid #000000;
 }
 
 /* Fixed-width title area */
@@ -124,6 +124,7 @@ body {
 .nav-links a {
     all: unset;
     cursor: pointer;
+    border: 2px solid black;
     padding: 8px 14px;
     font-family: inherit;
     font-weight: 500;
@@ -136,6 +137,7 @@ body {
     background-color: linear-gradient(to bottom,#ff79c3, #991373);
     box-shadow: 2px;
     color: #ffffff;
+    border-color: #991373;
     transform: translateY(-1px);
 }
 
