@@ -63,13 +63,9 @@ body {
 }
 
 .nav-links a:hover {
-<<<<<<< HEAD
-    background-color: #7996ff;
-=======
     background-color: linear-gradient(to bottom,#ff79c3, #991373);
     box-shadow: 2px;
     color: #ffffff;
->>>>>>> 18ddee139230e3e922f4295caee85e5545a7a7a7
     transform: translateY(-1px);
 }
 
