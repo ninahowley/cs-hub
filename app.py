@@ -55,8 +55,11 @@ def major_plan():
             on='course_tag',
             how='left'
         )
-        course_info = spring_with_info.to_dict(orient='records')
-        return render_template('major-plan.html', user = username, courses = course_info, page_title='Major Plan')
+        spring_course_info = spring_with_info.to_dict(orient='records')
+        core_tags = ['CS 111', 'CS 111L', 'CS 111M', 'CS 111X', 'CS 230', 'CS 230L', 'CS 230X', 'CS 231', 'CS 235', 'CS 240', 'CS 240L']
+        elective_df = all_df[~all_df["course_tag"].isin(core_tags)] #remove core
+        elective_info = elective_df.to_dict(orient='records')
+        return render_template('major-plan.html', user = username, spring_courses = spring_course_info, electives = elective_info, page_title='Major Plan')
     except Exception as e:
         print(e)
         flash('An error occurred. Please try again.')
