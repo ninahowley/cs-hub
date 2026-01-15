@@ -41,6 +41,7 @@ def index():
 @app.route("/major-plan")
 def major_plan():
     try:
+        username = session['username']
         spring_df = pd.read_csv('courses/spring_courses.csv')
         all_df = pd.read_csv('courses/all_courses.csv')
         spring_with_info = spring_df.merge(
@@ -49,7 +50,7 @@ def major_plan():
             how='left'
         )
         course_info = spring_with_info.to_dict(orient='records')
-        return render_template('major-plan.html', courses = course_info, page_title='Major Plan')
+        return render_template('major-plan.html', user = username, courses = course_info, page_title='Major Plan')
     except Exception as e:
         print(e)
         flash('An error occurred. Please try again.')
