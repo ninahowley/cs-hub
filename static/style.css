@@ -159,9 +159,6 @@ a {
 }
 
 /* COURSE CONTAINER */
-.child-container {
-    width: 90%;
-}
 
 .course-container {
     width: 94%;              /* Full width of parent */
@@ -193,6 +190,16 @@ a {
     width: 100%;
     padding: 10px;
     box-sizing:border-box;
+}
+
+.explore-message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:450px;
+    width: 100vh;
+    font-size: 20px;
+    text-align: center;
 }
 
 /*.
@@ -254,14 +261,16 @@ checkable{
 /* Stuff for map*/
 
 .map-outer{
-  overflow: visible;  /*prevent border clipping*/ 
+    flex: 1;
+    overflow: visible;  /*prevent border clipping*/ 
+    width: 400px;
 }
 
 .map-scroll{ /*vertical scroll*/
-  overflow-y: auto;
-  max-height: 100%;    
-  padding: 14px; /*adjust for hover scaling*/
-  box-sizing: border-box;
+    overflow-y: auto;
+    max-height: 100%;    
+    padding: 14px; /*adjust for hover scaling*/
+    box-sizing: border-box;
 }
 
 .map-container {
