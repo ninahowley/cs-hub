@@ -21,12 +21,22 @@
    <div class="map-outer">
    <div class="map-scroll">
     <div class="map-container"> <!--vt323-regular-->
-
-        <div class="topic" data-popup="theory">
-            <img src="{{ url_for('static', filename='icons/theory.png') }}" class="icon" alt="Theory">
-            <span>Computability and Complexity Theory</span>
+        <!-- ACCESSIBILITY -->
+        <div class="topic" data-popup="accessibility">
+            <img src="{{ url_for('static', filename='icons/accessibility.png') }}" class="icon" alt="Accessibility">
+            <span>Accessibility</span>
         </div>
-
+        <div class="popup hidden" id="accessibility">
+            <div class="popup-header">
+                <button class="close-button"> × </button>
+            </div>
+            <div class="popup-body-wrap">
+            <div class="popup-body">
+                <h2>Accessibility Tech</h2>
+            </div>
+            </div>
+        </div>
+        <!-- ALGORITHMS -->
         <div class="topic" data-popup="algorithms">
             <img src="{{ url_for('static', filename='icons/algorithms.png') }}" class="icon" alt="Algorithms">
             <span class="label">Algorithms</span>
@@ -61,27 +71,12 @@
                 </div>
             </div>
         </div>
-
-        <div class="topic" data-popup="systems">
-            <img src="{{ url_for('static', filename='icons/systems.png') }}" class="icon" alt="Systems">
-            <span>Computer Systems</span>
+        <!-- COMPUTABILITY AND COMPLEX THEORY -->
+        <div class="topic" data-popup="theory">
+            <img src="{{ url_for('static', filename='icons/theory.png') }}" class="icon" alt="Theory">
+            <span>Computability and Complexity Theory</span>
         </div>
-
-        <div class="topic" data-popup="security">
-            <img src="{{ url_for('static', filename='icons/security.png') }}" class="icon" alt="Security">
-            <span>Security</span>
-        </div>
-        <div class="popup hidden" id="security">
-            <div class="popup-header">
-                <button class="close-button"> × </button>
-            </div>
-            <div class="popup-body-wrap">
-            <div class="popup-body">
-                <h2>Computer Security</h2>
-            </div>
-            </div>
-        </div>
-        
+        <!-- COMPUTER GRAPHICS -->
         <div class="topic" data-popup="graphics">
             <img src="{{ url_for('static', filename='icons/graphics.png') }}" class="icon" alt="Graphics">
             <span>Computer Graphics</span>
@@ -96,97 +91,12 @@
             </div>
             </div>
         </div>
-
-        <div class="topic" data-popup="hci">
-            <img src="{{ url_for('static', filename='icons/human_computer_interaction.png') }}" class="icon" alt="HCI">
-            <span>Human-Computer Interaction</span>
+        <!-- COMPUTER SYSTEMS -->
+        <div class="topic" data-popup="systems">
+            <img src="{{ url_for('static', filename='icons/systems.png') }}" class="icon" alt="Systems">
+            <span>Computer Systems</span>
         </div>
-        <div class="popup hidden" id="hci">
-            <div class="popup-header">
-                <button class="close-button"> × </button>
-            </div>
-            <div class="popup-body-wrap">
-            <div class="popup-body">
-                <h2>Human-Computer Interaction</h2>
-            </div>
-            </div>
-        </div>
-
-        <div class="topic" data-popu="game">
-            <img src="{{ url_for('static', filename='icons/game_design.png') }}" class="icon" alt="Game Development">
-            <span>Game Development</span>
-        </div>
-        <div class="popup hidden" id="game">
-            <div class="popup-header">
-                <button class="close-button"> × </button>
-            </div>
-            <div class="popup-body-wrap">
-            <div class="popup-body">
-                <h2>Game Development!</h2>
-            </div>
-            </div>
-        </div>
-
-        <div class="topic" data-popup="robotics">
-            <img src="{{ url_for('static', filename='icons/robotics.png') }}" class="icon" alt="Robotics">
-            <span>Robotics</span>
-        </div>
-        <div class="popup hidden" id="robotics">
-            <div class="popup-header">
-                <button class="close-button"> × </button>
-            </div>
-            <div class="popup-body-wrap">
-            <div class="popup-body">
-                <h2>Robotics</h2>
-            </div>
-            </div>
-        </div>
-
-        <div class="topic" data-popup="accessibility">
-            <img src="{{ url_for('static', filename='icons/accessibility.png') }}" class="icon" alt="Accessibility">
-            <span>Accessibility</span>
-        </div>
-        <div class="popup hidden" id="accessibility">
-            <div class="popup-header">
-                <button class="close-button"> × </button>
-            </div>
-            <div class="popup-body-wrap">
-            <div class="popup-body">
-                <h2>Accessibility Tech</h2>
-            </div>
-            </div>
-        </div>
-
-        <div class="topic" data-popup="ml">
-            <img src="{{ url_for('static', filename='icons/machine_learning.png') }}" class="icon" alt="ML">
-            <span>Machine Learning</span>
-        </div>
-        <div class="popup hidden" id="ml">
-            <div class="popup-header">
-                <button class="close-button"> × </button>
-            </div>
-            <div class="popup-body-wrap">
-            <div class="popup-body">
-                <h2>Machine Learning</h2>
-            </div>
-            </div>
-        </div>
-
-        <div class="topic" data-popup="nlp">
-            <img src="{{ url_for('static', filename='icons/natural_language_processing.png') }}" class="icon" alt="NLP">
-            <span>Natural Language Processing</span>
-        </div>
-        <div class="popup hidden" id="nlp">
-            <div class="popup-header">
-                <button class="close-button"> × </button>
-            </div>
-            <div class="popup-body-wrap">
-            <div class="popup-body">
-                <h2>Natural Language Processing</h2>
-            </div>
-            </div>
-        </div>
-
+        <!-- DATA SCIENCE -->
         <div class="topic" data-popup="data">
             <img src="{{ url_for('static', filename='icons/data_science.png') }}" class="icon" alt="Data Science">
             <span>Data Science</span>
@@ -201,7 +111,97 @@
             </div>
             </div>
         </div>
-
+        <!-- GAME DEVELOPMENT -->
+        <div class="topic" data-popu="game">
+            <img src="{{ url_for('static', filename='icons/game_design.png') }}" class="icon" alt="Game Development">
+            <span>Game Development</span>
+        </div>
+        <div class="popup hidden" id="game">
+            <div class="popup-header">
+                <button class="close-button"> × </button>
+            </div>
+            <div class="popup-body-wrap">
+            <div class="popup-body">
+                <h2>Game Development!</h2>
+            </div>
+            </div>
+        </div>
+        <!-- HUMAN COMPUTER INTERACTION -->
+        <div class="topic" data-popup="hci">
+            <img src="{{ url_for('static', filename='icons/human_computer_interaction.png') }}" class="icon" alt="HCI">
+            <span>Human-Computer Interaction</span>
+        </div>
+        <div class="popup hidden" id="hci">
+            <div class="popup-header">
+                <button class="close-button"> × </button>
+            </div>
+            <div class="popup-body-wrap">
+            <div class="popup-body">
+                <h2>Human-Computer Interaction</h2>
+            </div>
+            </div>
+        </div>
+        <!-- MACHINE LEARNING -->
+        <div class="topic" data-popup="ml">
+            <img src="{{ url_for('static', filename='icons/machine_learning.png') }}" class="icon" alt="ML">
+            <span>Machine Learning</span>
+        </div>
+        <div class="popup hidden" id="ml">
+            <div class="popup-header">
+                <button class="close-button"> × </button>
+            </div>
+            <div class="popup-body-wrap">
+            <div class="popup-body">
+                <h2>Machine Learning</h2>
+            </div>
+            </div>
+        </div>
+        <!-- NATURAL LANGUAGE PROCESSING -->
+        <div class="topic" data-popup="nlp">
+            <img src="{{ url_for('static', filename='icons/natural_language_processing.png') }}" class="icon" alt="NLP">
+            <span>Natural Language Processing</span>
+        </div>
+        <div class="popup hidden" id="nlp">
+            <div class="popup-header">
+                <button class="close-button"> × </button>
+            </div>
+            <div class="popup-body-wrap">
+            <div class="popup-body">
+                <h2>Natural Language Processing</h2>
+            </div>
+            </div>
+        </div>
+        <!-- ROBOTICS -->
+        <div class="topic" data-popup="robotics">
+            <img src="{{ url_for('static', filename='icons/robotics.png') }}" class="icon" alt="Robotics">
+            <span>Robotics</span>
+        </div>
+        <div class="popup hidden" id="robotics">
+            <div class="popup-header">
+                <button class="close-button"> × </button>
+            </div>
+            <div class="popup-body-wrap">
+            <div class="popup-body">
+                <h2>Robotics</h2>
+            </div>
+            </div>
+        </div>
+        <!-- SECURITY -->
+        <div class="topic" data-popup="security">
+            <img src="{{ url_for('static', filename='icons/security.png') }}" class="icon" alt="Security">
+            <span>Security</span>
+        </div>
+        <div class="popup hidden" id="security">
+            <div class="popup-header">
+                <button class="close-button"> × </button>
+            </div>
+            <div class="popup-body-wrap">
+            <div class="popup-body">
+                <h2>Security</h2>
+            </div>
+            </div>
+        </div>
+        <!-- SOFTWARE ENGINEERING -->
         <div class="topic" data-popup="swe">
             <img src="{{ url_for('static', filename='icons/software_engineering.png') }}" class="icon" alt="Software Engineering">
             <span>Software Engineering</span>
@@ -216,7 +216,6 @@
             </div>
             </div>
         </div>
-
     </div>
     </div>
     </div>
