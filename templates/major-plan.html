@@ -25,26 +25,36 @@
             <h3>Required Sequence</h3>
             <div class="course-container core checkable">
                 <span>CS 111: Computer Programming and Problem Solving</span>
-                <div class="course-checkbox"></div>
+                {% if user %}
+                    <button class="taken_button core_button">Add</button>
+                {% endif %}
             </div>
             <div class="course-container core checkable">
                 <span>CS 230: Data Structures</span>
-                <div class="course-checkbox"></div>
+                {% if user %}
+                    <button class="taken_button core_button">Add</button>
+                {% endif %}
             </div>
             <!--CORE (ANIMATED LIST)-->
             <h3>Core</h3>
             <div class="course-list">
             <div class="course-container core checkable-moving">
                 <span>CS 231: Design and Analysis of Algorithms</span>
-                <div class="course-checkbox"></div>
+                {% if user %}
+                    <button class="taken_button core_button">Add</button>
+                {% endif %}
             </div>
             <div class="course-container core checkable-moving">
                 <span>CS 235: Theory of Computation</span>
-                <div class="course-checkbox"></div>
+                {% if user %}
+                    <button class="taken_button core_button">Add</button>
+                {% endif %}
             </div>
             <div class="course-container core checkable-moving">
                 <span>CS 240: Foundations of Computer Systems</span>
-                <div class="course-checkbox"></div>
+                {% if user %}
+                    <button class="taken_button core_button">Add</button>
+                {% endif %}
             </div>
             </div>
             <!--ELECTIVES-->
@@ -55,7 +65,9 @@
                 <div class="course-container checkable">
                     <div class="instructor-line">
                         <span>{{ course.course_tag }}: {{ course.course_name }}</span>
-                        <div class="course-checkbox"></div>
+                        {% if user %}
+                            <button class="taken_button">Add</button>
+                        {% endif %}
                     </div>
                 </div>
                 {% endfor %}

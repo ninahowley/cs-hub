@@ -99,7 +99,7 @@ a {
 
 /* FLASHED MESSAGE */
 .flashed_message {
-    color:#ff79c3;
+    color:#b8377e;
 }
 
 @media (max-width: 768px) {
@@ -275,7 +275,7 @@ a {
     cursor: pointer;
     background-color: #ff79c3;
     box-shadow: 3px;
-    transform: translateY(-1px);
+    transform: translate(-2px, -2px);
 }
 
 .map-container .topic:active {
@@ -337,4 +337,35 @@ a {
     overflow-y: auto;
     overflow-x: visible;
     scrollbar-color: blue;
+}
+
+/* major requirements */
+.taken_button {
+    padding: 10px 15px;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    background-color: white;
+    border: 3px solid #000;
+    cursor: pointer;
+    height:6vh;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+    position:absolute;
+    right: 16px;
+}
+
+.core_button:hover {
+    background-color: #7996ff !important;
+}
+
+.taken_button:hover {
+    background-color: #ff79c3;
+    box-shadow: 3px;
+    transform: translateY(-1px);
+}
+
+.taken_button:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 #000;
 }
