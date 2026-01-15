@@ -50,7 +50,7 @@
                                 {% endif %}
                                 <!-- if there are opportunities for this topic, display them -->
                                 {% if data[d]['opportunities'][0]['title'] %}
-                                    <h2>Opportunities outside of Wellesley</h2>
+                                    <h2>Opportunities</h2>
                                     {% for opportunity in data[d]['opportunities'] %}
                                         <p><a href="{{ opportunity['link'] }}" target="_blank">{{ opportunity['title'] }}</a>: {{ opportunity['about'] }}</p>
                                     {% endfor %}
@@ -99,6 +99,5 @@
         });
     });
 </script>
-
 </body>
 </html>
