@@ -1,0 +1,246 @@
+{
+    "Accessibility": {
+        "alt_name":"Accessibility",
+        "blurb": "",
+        "instructors": [
+            {"name": "Vinitha Gadiraju", "link": "https://www.wellesley.edu/people/vinitha-gadiraju", "bio": "My research centers on building collaborative, equitable tools for people with disabilities, particularly in the context of learning and education."}
+        ],
+        "courses": [
+            {"course_code": "CS 325", "course_name": "Designing for Accessibility", "link":"https://catalog.wellesley.edu/course.php?pos=55&doc_type=CS+325", "type": "300-level elective"}
+        ],
+        "opportunities": [
+            {"title": "", "link": "", "about": ""}
+        ]
+    },
+    "Algorithms": {
+        "alt_name":"Algorithms",
+        "blurb": "An algorithm is a set of step-by-step instructions. Popular examples include sorting algorithms, search algorithms, graph traversal algorithms, and data compressio algorithms. The study of algorithms teaches you how to design and implement algorithms, and how to prove properties such as correctness or efficiency.",
+        "instructors": [
+            {"name": "Brian Brubach", "link": "https://www.wellesley.edu/people/brian-brubach", "bio": "I have broad research interests in algorithms and theoretical computer science motivated by a range of social good applications."},
+            {"name": "Brian Tjaden", "link": "https://www.wellesley.edu/people/brian-tjaden", "bio": "My work focuses on the design, analysis, and implementation of algorithms with applications in genomics and molecular biology."}
+        ],
+        "courses": [
+            {"course_code": "CS 231", "course_name": "Fundamental Algorithms", "link":"https://cs.wellesley.edu/~cs231/", "type": "Core course"},
+            {"course_code": "CS 331", "course_name": "Advanced Algorithm Design", "link":"https://cs.wellesley.edu/~cs331/", "type": "300-level elective"}
+        ],
+        "opportunities": [
+            {"title": "AlgoWiki", "link": "https://algorithm-wiki.csail.mit.edu/wiki/Main_Page", "about": "A team at MIT FutureTech that works on documenting algorithms throughout history."}
+        ]
+    },
+    "Compilers": {
+        "alt_name":"Compilers",
+        "blurb": "",
+        "instructors": [
+            {"name": "", "link": "", "bio": ""}
+        ],
+        "courses": [
+            {"course_code": "", "course_name": "", "link":"", "type": ""}
+        ],
+        "opportunities": [
+            {"title": "", "link": "", "about": ""}
+        ]
+    },
+    "Computability & Complexity Theory": {
+        "alt_name":"Theory",
+        "blurb": "",
+        "instructors": [
+            {"name": "", "link": "", "bio": ""}
+        ],
+        "courses": [
+            {"course_code": "CS 235", "course_name": "Theory of Computation", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+235", "type": "Core course"}
+        ],
+        "opportunities": [
+            {"title": "", "link": "", "about": ""}
+        ]
+    },
+    "Computer Architecture": {
+        "alt_name":"Architecture",
+        "blurb": "",
+        "instructors": [
+            {"name": "", "link": "", "bio": ""}
+        ],
+        "courses": [
+            {"course_code": "", "course_name": "", "link":"", "type": ""}
+        ],
+        "opportunities": [
+            {"title": "", "link": "", "about": ""}
+        ]
+    },
+    "Computer Graphics": {
+        "alt_name":"Graphics",
+        "blurb": "",
+        "instructors": [
+            {"name": "", "link": "", "bio": ""}
+        ],
+        "courses": [
+            {"course_code": "", "course_name": "", "link":"", "type": ""}
+        ],
+        "opportunities": [
+            {"title": "", "link": "", "about": ""}
+        ]
+    },
+    "Cryptography & Information Theory": {
+        "alt_name":"Cryptography",
+        "blurb": "",
+        "instructors": [
+            {"name": "", "link": "", "bio": ""}
+        ],
+        "courses": [
+            {"course_code": "", "course_name": "", "link":"", "type": ""}
+        ],
+        "opportunities": [
+            {"title": "", "link": "", "about": ""}
+        ]
+    },
+    "Data Science": {
+        "alt_name":"Data",
+        "blurb": "",
+        "instructors": [
+            {"name": "Eni Mustafaraj", "link": "https://www.wellesley.edu/people/eni-mustafaraj", "bio": "I am a computational data scientist who studies the online information environment shaped by the interactions of algorithms, humans, and organizations."}
+        ],
+        "courses": [
+            {"course_code": "CS 234", "course_name": "Data, Analytics, and Visualization", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+234", "type": " 200-level elective"},
+            {"course_code": "CS 248", "course_name": "Software and Data", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+248", "type": "200-level elective"}
+        ],
+        "opportunities": [
+            {"title": "", "link": "", "about": ""}
+        ]
+    },
+    "Game Development": {
+        "alt_name":"Game",
+        "blurb": "",
+        "instructors": [
+            {"name": "Jordan Tynes", "link": "https://www.wellesley.edu/people/jordan-tynes", "bio": "My work at Wellesley College and beyond focuses on the creation and study of immersive and interactive learning experiences."}
+        ],
+        "courses": [
+            {"course_code": "CS 121", "course_name": "Intro to Game Design", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+121", "type": "100-level elective"},
+            {"course_code": "CS 221", "course_name": "Digital Worlds for Gaming", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+221", "type": "200-level elective"},
+            {"course_code": "CS 321", "course_name": "Extended Reality", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+321", "type": "300-level elective"},
+            {"course_code": "CS 365", "course_name": "Advanced Projects in Playable Media", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+365", "type": "300-level elective"}
+        ],
+        "opportunities": [
+            {"title": "", "link": "", "about": ""}
+        ]
+    },
+    "Human-Computer Interaction": {
+        "alt_name":"HCI",
+        "blurb": "",
+        "instructors": [
+            {"name": "Catherine Delcourt", "link": "https://www.wellesley.edu/people/catherine-grevet-delcourt", "bio": "My research interests are varied in the areas of Human-Computer Interaction and Social Computing."},
+            {"name": "Vinitha Gadiraju", "link": "https://www.wellesley.edu/people/vinitha-gadiraju", "bio": "I approach my work through prototyping and qualitative research methods, including ethnography, co-design, user evaluation, interviews, and diary studies."},
+            {"name": "Orit Shaer", "link": "https://www.wellesley.edu/people/orit-shaer", "bio": "Her research focuses on novel human-computer interaction for the future of work and learning, including human-AI collaboration, tangible and embodied interaction, and mixed-reality interfaces."}
+        ],
+        "courses": [
+            {"course_code": "CS 220", "course_name": "Human-Computer Interaction", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+220", "type": "200-level elective"},
+            {"course_code": "CS 320", "course_name": "Tangible User Interfaces", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+320", "type": "300-level elective"},
+            {"course_code": "CS 325", "course_name": "Designing for Accessibility", "link":"https://catalog.wellesley.edu/course.php?pos=55&doc_type=CS+325", "type": "300-level elective"}
+        ],
+        "opportunities": [
+            {"title": "", "link": "", "about": ""}
+        ]
+    },
+    "Machine Learning": {
+        "alt_name":"ML",
+        "blurb": "",
+        "instructors": [
+            {"name": "", "link": "", "bio": ""}
+        ],
+        "courses": [
+            {"course_code": "", "course_name": "", "link":"", "type": ""}
+        ],
+        "opportunities": [
+            {"title": "", "link": "", "about": ""}
+        ]
+    },
+    "Natural Language Processing": {
+        "alt_name":"NLP",
+        "blurb": "",
+        "instructors": [
+            {"name": "", "link": "", "bio": ""}
+        ],
+        "courses": [
+            {"course_code": "", "course_name": "", "link":"", "type": ""}
+        ],
+        "opportunities": [
+            {"title": "", "link": "", "about": ""}
+        ]
+    },
+    "Networks & Distributed Systems": {
+        "alt_name":"Networks",
+        "blurb": "",
+        "instructors": [
+            {"name": "", "link": "", "bio": ""}
+        ],
+        "courses": [
+            {"course_code": "", "course_name": "", "link":"", "type": ""}
+        ],
+        "opportunities": [
+            {"title": "", "link": "", "about": ""}
+        ]
+    },
+    "Operating Systems": {
+        "alt_name":"OS",
+        "blurb": "",
+        "instructors": [
+            {"name": "", "link": "", "bio": ""}
+        ],
+        "courses": [
+            {"course_code": "", "course_name": "", "link":"", "type": ""}
+        ],
+        "opportunities": [
+            {"title": "", "link": "", "about": ""}
+        ]
+    },
+    "Programming Languages": {
+        "alt_name":"PL",
+        "blurb": "",
+        "instructors": [
+            {"name": "", "link": "", "bio": ""}
+        ],
+        "courses": [
+            {"course_code": "", "course_name": "", "link":"", "type": ""}
+        ],
+        "opportunities": [
+            {"title": "", "link": "", "about": ""}
+        ]
+    },
+    "Robotics": {
+        "alt_name":"Robotics",
+        "blurb": "",
+        "instructors": [
+            {"name": "", "link": "", "bio": ""}
+        ],
+        "courses": [
+            {"course_code": "", "course_name": "", "link":"", "type": ""}
+        ],
+        "opportunities": [
+            {"title": "", "link": "", "about": ""}
+        ]
+    },
+    "Security": {
+        "alt_name":"Security",
+        "blurb": "",
+        "instructors": [
+            {"name": "", "link": "", "bio": ""}
+        ],
+        "courses": [
+            {"course_code": "", "course_name": "", "link":"", "type": ""}
+        ],
+        "opportunities": [
+            {"title": "", "link": "", "about": ""}
+        ]
+    },
+    "Software Engineering": {
+        "alt_name":"SWE",
+        "blurb": "",
+        "instructors": [
+            {"name": "", "link": "", "bio": ""}
+        ],
+        "courses": [
+            {"course_code": "", "course_name": "", "link":"", "type": ""}
+        ],
+        "opportunities": [
+            {"title": "", "link": "", "about": ""}
+        ]
+    }
+}
