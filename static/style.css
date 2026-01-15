@@ -339,6 +339,13 @@ a {
     scrollbar-color: blue;
 }
 
+/* Horizontal line */
+hr {
+    border: none;
+    height: 2px;
+    background-color: black; /* or set a specific color */
+}
+
 /* major requirements */
 .taken_button {
     padding: 10px 15px;

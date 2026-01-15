@@ -20,8 +20,8 @@
             {"name": "Brian Tjaden", "link": "https://www.wellesley.edu/people/brian-tjaden", "bio": "My work focuses on the design, analysis, and implementation of algorithms with applications in genomics and molecular biology."}
         ],
         "courses": [
-            {"course_code": "CS 231", "course_name": "Fundamental Algorithms", "link":"https://cs.wellesley.edu/~cs231/", "type": "Core course"},
-            {"course_code": "CS 331", "course_name": "Advanced Algorithm Design", "link":"https://cs.wellesley.edu/~cs331/", "type": "300-level elective"}
+            {"course_code": "CS 231", "course_name": "Fundamental Algorithms", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+231", "type": "core course"},
+            {"course_code": "CS 331", "course_name": "Advanced Algorithm Design", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+331", "type": "300-level elective"}
         ],
         "opportunities": [
             {"title": "AlgoWiki", "link": "https://algorithm-wiki.csail.mit.edu/wiki/Main_Page", "about": "A team at MIT FutureTech that works on documenting algorithms throughout history."}
@@ -47,7 +47,7 @@
             {"name": "", "link": "", "bio": ""}
         ],
         "courses": [
-            {"course_code": "CS 235", "course_name": "Theory of Computation", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+235", "type": "Core course"}
+            {"course_code": "CS 235", "course_name": "Theory of Computation", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+235", "type": "core course"}
         ],
         "opportunities": [
             {"title": "", "link": "", "about": ""}
