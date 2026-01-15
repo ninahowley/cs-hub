@@ -20,25 +20,32 @@
     <div>
     <div class="parent-container">
         <div class="child-container">
+        <div id="course-list">
             <h2>CS Major Requirements</h2>
             <h3>Core</h3>
-            <div class="course-container">
+            <div class="course-container checkable">
                 <span>CS 111: Computer Programming and Problem Solving</span>
+                <div class="course-checkbox"></div>
             </div>
-            <div class="course-container">
+            <div class="course-container checkable">
                 <span>CS 230: Data Structures</span>
+                <div class="course-checkbox"></div>
             </div>
-            <div class="course-container">
+            <div class="course-container checkable">
                 <span>CS 231: Design and Analysis of Algorithms</span>
+                <div class="course-checkbox"></div>
             </div>
-            <div class="course-container">
+            <div class="course-container checkable">
                 <span>CS 235: Theory of Computation</span>
+                <div class="course-checkbox"></div>
             </div>
-            <div class="course-container">
+            <div class="course-container checkable">
                 <span>CS 240: Foundations of Computer Systems</span>
+                <div class="course-checkbox"></div>
             </div>
             <h3>Electives</h3>
             You must take additional CS classes until you have taken 9 CS classes in total (including the core). Two of these must be at the 300-level.
+        </div>
         </div>
         <div class="child-container">
             <h2>Spring '26 Course Offerings</h2>
@@ -56,4 +63,24 @@
     </div>
     </div>
 </body>
+<script> //for button checking
+    document.addEventListener("click", (e) =>{ //close popup on outside click
+        const row = e.target.closest(".checkable");
+        if (!row) return;
+        row.classList.toggle("checked");
+
+        // move element
+        if (row.classList.contains("checked")) {
+            list.appendChild(row); // move to bottom
+        } else {
+            // move back above checked ones
+            const firstChecked = list.querySelector(".checkable.checked");
+            if (firstChecked) {
+                list.insertBefore(row, firstChecked);
+            } else {
+                list.prepend(row);
+            }
+        }
+    });
+</script>
 </html>

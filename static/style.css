@@ -172,20 +172,35 @@ a {
     background-color:#7996ff
 }
 
-.checkable-course{
-
-}
-
-.course-checkbox{
-  width: 26px;
-  height: 26px;
-  flex: 0 0 auto;
-}
-
 .course-container.core {
     border:3px black solid;
     color:#000;
     background-color:#ff79c3
+}
+
+#course-list{
+  display: flex;
+  flex-direction: column;
+}
+
+.checkable{  /*interactive class so users can check box*/
+    display: flex;
+    align-items: center;
+    position:relative;
+    transition: transform 0.25s ease;
+}
+
+.course-checkbox{
+    width: 16px;
+    height: 16px;
+    border: 3px solid black;
+    background-color: white;
+    position:absolute;
+    right:16px;
+}
+
+.checkable.checked .course-checkbox{ 
+    background: #000000;
 }
 
 .instructor-line {
