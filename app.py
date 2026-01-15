@@ -28,9 +28,10 @@ def index():
                     flash(f"Welcome, {input_username}!")
                     session['username']=input_username
                     session['logged_in']=True
+                    return redirect(url_for('index', user = username, page_title="Home"))
                 else:
                     flash(f"Please enter a valid username.")
-                return render_template('index.html', user = username, page_title="Home")
+                    return render_template('index.html', user = username, page_title="Home")
             else:
                 if username:
                     flash(f'Goodbye, {username}.')
