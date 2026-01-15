@@ -7,7 +7,7 @@ app = Flask(__name__)
 app.secret_key = "temp"
 
 def is_valid_username(s):
-    return bool(re.fullmatch(r"[A-Za-z]{2}\d{3}", s))
+    return len(s) == 5 and bool(re.fullmatch(r"[A-Za-z]{2}\d{3}", s))
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
@@ -23,12 +23,12 @@ def index():
             return render_template('index.html', user = username, page_title='Home')
         else:
             if 'login' in request.form:
-                username = request.form.get('username')
-                if is_valid_username(username):
-                    flash(f"Welcome, {username}!")
-                    session['username']=username
+                input_username = request.form.get('username')
+                if is_valid_username(input_username):
+                    flash(f"Welcome, {input_username}!")
+                    session['username']=input_username
                     session['logged_in']=True
-                elif 'logout' in request.form:
+                else:
                     flash(f"Please enter a valid username.")
                 return render_template('index.html', user = username, page_title="Home")
             else:
