@@ -83,7 +83,8 @@ body {
     flex-direction: row;
     gap: 10px;
     padding: 10px;
-    height:88vh;
+    height: calc(88vh - 20px);   /* subtract padding */
+    height: calc(88dvh - 20px);  /* mobile-safe */
     overflow:hidden
 }
 
@@ -97,10 +98,18 @@ body {
     scrollbar-color: blue;
 }
 
+@media (max-width: 768px) {
+    .parent-container {
+        flex-direction: column;
+    }
+}
+
 .navigation {
     width: 100%;
     display: flex;
     align-items: center;
+    position:relative;
+    z-index:1;
     padding: 15px 30px;
     background-color: #ffffff;
     box-sizing: border-box;
@@ -171,3 +180,76 @@ body {
 .distribs {
     font-weight: bold;
 }
+
+/* stuff for map */
+.map-container {
+    position: relative; /* already has this */
+    width: 100%;
+    height: 100%;
+    z-index: 10; /* make sure it's above normal content */
+}
+
+.map-container > a {
+    position: absolute;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+/* Icon itself */
+.map-container > a img {
+    width: 10hv;
+    height: 10vh;
+    image-rendering: pixelated; /* crisp pixel art */
+}
+
+.map-container > img:hover {
+    transform: scale(1.2);
+}
+
+/* Tooltip text */
+.map-container > a span {
+    visibility: hidden;
+    opacity: 0;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    padding: 2px 6px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    position: absolute;
+    top: 90px;  /* below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 1000;
+    transition: opacity 0.2s;
+    pointer-events: none; /* ignore mouse */
+}
+
+/* Show on hover */
+.map-container > a:hover span {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* random positions: directly target the <a> tags */
+.map-container > a:nth-of-type(1) { top: 10%; left: 0%; }
+.map-container > a:nth-of-type(2) { top: 40%; left: 10%; }
+.map-container > a:nth-of-type(3) { top: 15%; left: 60%; }
+.map-container > a:nth-of-type(4) { top: 70%; left: 5%; }
+.map-container > a:nth-of-type(5) { top: 60%; left: 50%; }
+.map-container > a:nth-of-type(6) { top: 25%; left: 80%; }
+.map-container > a:nth-of-type(7) { top: 80%; left: 30%; }
+.map-container > a:nth-of-type(8) { top: 50%; left: 70%; }
+.map-container > a:nth-of-type(9) { top: 30%; left: 40%; }
+.map-container > a:nth-of-type(10){ top: 5%; left: 90%; }
+.map-container > a:nth-of-type(11){ top: 85%; left: 60%; }
+.map-container > a:nth-of-type(12){ top: 10%; left: 30%; }
+.map-container > a:nth-of-type(13){ top: 40%; left: 90%; }
+.map-container > a:nth-of-type(14){ top: 70%; left: 80%; }
+.map-container > a:nth-of-type(15){ top: 55%; left: 15%; }
