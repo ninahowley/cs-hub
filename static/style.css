@@ -187,6 +187,12 @@ a {
     display: flex;
     align-items: center;
     position:relative;
+}
+
+.checkable-moving{  /*interactive class so users can check box*/
+    display: flex;
+    align-items: center;
+    position:relative;
     transition: transform 0.25s ease;
 }
 
@@ -200,6 +206,10 @@ a {
 }
 
 .checkable.checked .course-checkbox{ 
+    background: #000000;
+}
+
+.checkable-moving.checked .course-checkbox{ 
     background: #000000;
 }
 
