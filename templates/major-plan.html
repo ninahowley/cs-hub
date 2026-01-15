@@ -64,6 +64,7 @@
     </div>
 </body>
 <script> //for button checking
+    const list = document.getElementById("course-list");
     document.addEventListener("click", (e) =>{ //close popup on outside click
         const row = e.target.closest(".checkable");
         if (!row) return;
