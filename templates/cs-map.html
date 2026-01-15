@@ -14,65 +14,191 @@
     </div>
    </div>
    <div class="parent-container">
-   <div class="map-container">
-        <a href="#systems">
+   <div class="map-container"> <!--vt323-regular-->
+        <div class="systems" data-popup="systems">
             <img src="{{ url_for('static', filename='icons/systems.png') }}" class="icon" alt="Systems">
             <span>Systems</span>
-        </a>
-        <a href="#theory">
+        </div>
+        <div class="topic" data-popup="theory">
             <img src="{{ url_for('static', filename='icons/theory.png') }}" class="icon" alt="Theory">
             <span>Theory</span>
-        </a>
-        <a href="#graphics">
+        </div>
+        <div class="topic" data-popup="graphics">
             <img src="{{ url_for('static', filename='icons/graphics.png') }}" class="icon" alt="Graphics">
             <span>Graphics</span>
-        </a>
-        <a href="#hci">
+        </div>
+        <div class="popup hidden" id="graphics">
+            <div class="popup-header">
+                <button class="close-button"> × </button>
+            </div>
+            <div class="popup-body">
+            </div>
+        </div>
+        <div class="topic" data-popup="hci">
             <img src="{{ url_for('static', filename='icons/human_computer_interaction.png') }}" class="icon" alt="HCI">
             <span>Human-Computer Interaction</span>
-        </a>
-        <a href="#robotics">
+        </div>
+        <div class="popup hidden" id="hci">
+            <div class="popup-header">
+                <button class="close-button"> × </button>
+            </div>
+            <div class="popup-body">
+            </div>
+        </div>
+        <div class="topic" data-popup="robotics">
             <img src="{{ url_for('static', filename='icons/robotics.png') }}" class="icon" alt="Robotics">
             <span>Robotics</span>
-        </a>
-        <a href="#accessibility">
+        </div>
+        <div class="popup hidden" id="robotics">
+            <div class="popup-header">
+                <button class="close-button"> × </button>
+            </div>
+            <div class="popup-body">
+            </div>
+        </div>
+        <div class="topic" data-popup="accessibility">
             <img src="{{ url_for('static', filename='icons/accessibility.png') }}" class="icon" alt="Accessibility">
             <span>Accessibility</span>
-        </a>
-        <a href="#nlp">
+        </div>
+        <div class="popup hidden" id="accessibility">
+            <div class="popup-header">
+                <button class="close-button"> × </button>
+            </div>
+            <div class="popup-body">
+            </div>
+        </div>
+        <div class="topic" data-popup="nlp">
             <img src="{{ url_for('static', filename='icons/natural_language_processing.png') }}" class="icon" alt="NLP">
             <span>Natural Language Processing</span>
-        </a>
-        <a href="#ml">
+        </div>
+        <div class="popup hidden" id="nlp">
+            <div class="popup-header">
+                <button class="close-button"> × </button>
+            </div>
+            <div class="popup-body">
+            </div>
+        </div>
+        <div class="topic" data-popup="ml">
             <img src="{{ url_for('static', filename='icons/machine_learning.png') }}" class="icon" alt="ML">
             <span>Machine Learning</span>
-        </a>
-        <a href="#data">
+        </div>
+        <div class="popup hidden" id="ml">
+            <div class="popup-header">
+                <button class="close-button"> × </button>
+            </div>
+            <div class="popup-body">
+            </div>
+        </div>
+        <div class="topic" data-popup="data">
             <img src="{{ url_for('static', filename='icons/data_science.png') }}" class="icon" alt="Data Science">
             <span>Data Science</span>
-        </a>
-        <a href="#algorithms">
+        </div>
+        <div class="popup hidden" id="data">
+            <div class="popup-header">
+                <button class="close-button"> × </button>
+            </div>
+            <div class="popup-body">
+            </div>
+        </div>
+        <div class="topic" data-popup="algorithms">
             <img src="{{ url_for('static', filename='icons/algorithms.png') }}" class="icon" alt="Algorithms">
-            <span>Algorithms</span>
-        </a>
-        <a href="#game">
+            <span class="label">Algorithms</span>
+        </div>
+        <div class="popup hidden" id="algorithms">
+            <div class="popup-header">
+                <button class="close-button"> × </button>
+            </div>
+            <div class="popup-body">
+                <h2>Algorithms!</h2>
+                <p>An algorithm is a set of step-by-step instructions. Popular examples include sorting algorithms, search algorithms, graph traversal algorithms, and data compressio algorithms. The study of algorithms teaches you how to design and implement algorithms, and how to prove properties such as correctness or efficiency.</p>
+                <h2>Relevant instructors at Wellesley: </h2>
+                <li>
+                    <ul><a href="https://www.wellesley.edu/people/brian-brubach">Brian Brubach</a>: "algorithms and theoretical computer science motivated by a range of social good applications."</ul>
+                    <ul><a href="https://www.wellesley.edu/people/brian-tjaden">Brian Tjaden</a>: "design, analysis, and implementation of algorithms in genomics and molecular biology."</ul>
+                    <ul></ul>
+                </li>
+                <h2>Take a Course!</h2>
+                <li>
+                    <ul>CS 231: <a href="https://cs.wellesley.edu/~cs231/">Design and Analysis of Algorithms.</a>
+                        <i>Core CS course.</i>
+                    </ul>
+                    <ul>CS 331: <a href="https://catalog.wellesley.edu/course.php?pos=87&doc_type=CS+331">Advanced Algorithm Design.</a>
+                        <i>300-level CS elective.</i>
+                    </ul>
+                    <ul></ul>
+                </li>
+                <h2>Opportunities outside of Wellesley</h2>
+                <p>The <a href="https://algorithm-wiki.csail.mit.edu/wiki/Main_Page">AlgoWiki</a> team at MIT FutureTech works on documenting algorithms throughout history.</p>
+            </div>
+        </div>
+        <div class="topic" data-popu="game">
             <img src="{{ url_for('static', filename='icons/game_design.png') }}" class="icon" alt="Game Development">
             <span>Game Development</span>
-        </a>
-        <a href="#security">
+        </div>
+        <div class="popup hidden" id="game">
+            <div class="popup-header">
+                <button class="close-button"> × </button>
+            </div>
+            <div class="popup-body">
+            </div>
+        </div>
+        <div class="topic" data-popup="security">
             <img src="{{ url_for('static', filename='icons/security.png') }}" class="icon" alt="Security">
             <span>Security</span>
-        </a>
-        <a href="#swe">
+        </div>
+        <div class="popup hidden" id="security">
+            <div class="popup-header">
+                <button class="close-button"> × </button>
+            </div>
+            <div class="popup-body">
+            </div>
+        </div>
+        <div class="topic" data-popup="swe">
             <img src="{{ url_for('static', filename='icons/software_engineering.png') }}" class="icon" alt="Software Engineering">
             <span>Software Engineering</span>
-        </a>
+        </div>
+        <div class="popup hidden" id="swe">
+            <div class="popup-header">
+                <button class="close-button"> × </button>
+            </div>
+            <div class="popup-body">
+            </div>
+        </div>
      </div>
     </div>
 
+<!--popup script; could probably refactor and move to a diff file later-->
+<script>
+    document.querySelectorAll(".topic").forEach(topic => { //open popup on click
+        topic.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const popupId = topic.dataset.popup; //read topic in data-popup
+        const popup = document.getElementById(popupId); //get topic id
+
+        popup.classList.remove("hidden");
+        });
+    });
+
+    document.addEventListener("click", (e) =>{ //close popup on outside click
+        if (e.target.closest(".popup") || e.target.closest(".topic")) return;
+        document.querySelectorAll(".popup").forEach(popup =>{
+            popup.classList.add("hidden");
+        });
+    });
+
+    document.querySelectorAll(".close-button").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            btn.closest(".popup").classList.add("hidden");
+        });
+    });
+</script>
+
+
 <!--map body-->
+<!--
 <div class="parent-container">
-    <!--theory-->
     <div class="child-container">
         <h1>Theoretical Computer Science</h1>
         <div class="theory-container">
@@ -81,7 +207,7 @@
                 <h2>Algorithms!</h2>
                 <p>An algorithm is a set of step-by-step instructions. Popular examples include sorting algorithms, search algorithms, graph traversal algorithms, and data compressio algorithms. The study of algorithms teaches you how to design and implement algorithms, and how to prove properties such as correctness or efficiency.</p>
                 <h2>Relevant instructors at Wellesley: </h2>
-                <li><!--class = "vt323-regular"-->
+                <li>
                     <ul><a href="https://www.wellesley.edu/people/brian-brubach">Brian Brubach</a>: "algorithms and theoretical computer science motivated by a range of social good applications."</ul>
                     <ul><a href="https://www.wellesley.edu/people/brian-tjaden">Brian Tjaden</a>: "design, analysis, and implementation of algorithms in genomics and molecular biology."</ul>
                     <ul></ul>
@@ -113,7 +239,6 @@
             <h2>Quantum Computation</h2>
         </div>
     </div>
-    <!--engineering-->
     <div class="child-container">
         <h1>Computer Engineering</h1>
         <div class="eng-container">
@@ -129,29 +254,8 @@
             <h2>Compilers</h2>
         </div>
     </div>
-</div>
+</div> -->
 </body>
 
-<!--hover script; could probably refactor and move to a diff file later-->
-<script>
-    document.querySelectorAll(".theory-container").forEach(item => {
-    item.addEventListener("click", (e) => {
-      e.stopPropagation(); //can't click anywhere until function is done
-
-      //close all other popups
-      document.querySelectorAll(".theory-container.active")
-        .forEach(el => el.classList.remove("active")); //active = display (see style.css)
-
-      //toggle this popup
-      item.classList.toggle("active");
-    });
-  });
-
-  //click anywhere else --> close all popups
-  document.addEventListener("click", () => {
-    document.querySelectorAll(".theory-container.active")
-      .forEach(el => el.classList.remove("active"));
-  });
-</script>
 
 </html>
