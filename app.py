@@ -7,6 +7,7 @@ app.secret_key = "temp"
 @app.route("/")
 def index():
     try:
+        flash("Hello!")
         return render_template('index.html')
     except Exception as e:
         print(e)
