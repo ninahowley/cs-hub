@@ -23,26 +23,26 @@
             <h2>CS Major Requirements</h2>
             <!--REQUIRED SEQUENCE-->
             <h3>Required Sequence</h3>
-            <div class="course-container checkable">
+            <div class="course-container core checkable">
                 <span>CS 111: Computer Programming and Problem Solving</span>
                 <div class="course-checkbox"></div>
             </div>
-            <div class="course-container checkable">
+            <div class="course-container core checkable">
                 <span>CS 230: Data Structures</span>
                 <div class="course-checkbox"></div>
             </div>
             <!--CORE (ANIMATED LIST)-->
             <h3>Core</h3>
             <div class="course-list">
-            <div class="course-container checkable-moving">
+            <div class="course-container core checkable-moving">
                 <span>CS 231: Design and Analysis of Algorithms</span>
                 <div class="course-checkbox"></div>
             </div>
-            <div class="course-container checkable-moving">
+            <div class="course-container core checkable-moving">
                 <span>CS 235: Theory of Computation</span>
                 <div class="course-checkbox"></div>
             </div>
-            <div class="course-container checkable-moving">
+            <div class="course-container core checkable-moving">
                 <span>CS 240: Foundations of Computer Systems</span>
                 <div class="course-checkbox"></div>
             </div>
@@ -50,10 +50,20 @@
             <!--ELECTIVES-->
             <h3>Electives</h3>
             You must take additional CS classes until you have taken 9 CS classes in total (including the core). Two of these must be at the 300-level.
+            <!--div class="elective-list"-->
+                {% for course in electives %}
+                <div class="course-container checkable">
+                    <div class="instructor-line">
+                        <span>{{ course.course_tag }}: {{ course.course_name }}</span>
+                        <div class="course-checkbox"></div>
+                    </div>
+                </div>
+                {% endfor %}
+            <!--/div-->
         </div>
         <div class="child-container">
             <h2>Spring '26 Course Offerings</h2>
-            {% for course in courses %}
+            {% for course in spring_courses %}
             <div class="course-container {% if course.course_core == 'True' %}core{% endif %}">
                 <div class="instructor-line">
                     <p>{{ course.course_tag }}: {{ course.course_name }}</p>
@@ -68,14 +78,14 @@
     </div>
 </body>
 <script> //for button checking
-    const list = document.getElementById("course-list");
+    const list = document.querySelector(".course-list");
     document.addEventListener("click", (e) =>{ //close popup on outside click
         const row = e.target.closest(".checkable") || e.target.closest(".checkable-moving");
         if (!row) return;
         row.classList.toggle("checked");
 
         // move element
-        if (row.classList.contains("checkable-moving") && row.classList.contains("checked")) {
+        /*if (row.classList.contains("checkable-moving") && row.classList.contains("checked")) {
             list.appendChild(row); // move to bottom
         } else {
             // move back above checked ones
@@ -85,7 +95,7 @@
             } else {
                 list.prepend(row);
             }
-        }
+        }*/
     });
 </script>
 </html>

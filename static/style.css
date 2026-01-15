@@ -178,9 +178,18 @@ a {
     background-color:#ff79c3
 }
 
-#course-list{
+.course-list{
   display: flex;
   flex-direction: column;
+  gap:0px;
+  padding:0px;
+}
+
+.elective-list{
+    border: 3px black solid;
+    width: 100%;
+    padding: 10px;
+    box-sizing:border-box;
 }
 
 .checkable{  /*interactive class so users can check box*/
