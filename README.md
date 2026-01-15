@@ -1,9 +1,8 @@
 # Wellesley CS Hub
 
-An interactive hub for resources from the Wellesley CS department. Browse through course options, plan your major, and explore :)
+An interactive hub for Wellesley students to navigate our CS department. Browse through course options, plan your major, and explore :)
 
 ## Authors
-* Jessica Chen '28
 * Nina Howley '27
 * Aileen Liang '28
 
