@@ -1,14 +1,38 @@
-from flask import Flask, flash, url_for, render_template
+from flask import (Flask, render_template, make_response, url_for, request,
+                   redirect, flash, session, send_from_directory, jsonify)
 import pandas as pd
+import re
 
 app = Flask(__name__)
 app.secret_key = "temp"
 
-@app.route("/")
+def is_valid_username(s):
+    return bool(re.fullmatch(r"[A-Za-z]{2}\d{3}", s))
+
+@app.route("/", methods=['GET', 'POST'])
 def index():
     try:
-        flash("Hello!")
-        return render_template('index.html')
+        username = session['username']
+        if request.method == 'GET':
+            # If method is get, send a blank form
+            if not username:
+                username = None
+            return render_template('index.html', user = username, page_title='Home')
+        else:
+            if 'login' in request.form:
+                username = request.form.get('username')
+                if is_valid_username(username):
+                    flash(f"Welcome, {username}!")
+                    session['username']=username
+                    session['logged_in']=True
+                elif 'logout' in request.form:
+                    flash(f"Please enter a valid username.")
+                return render_template('index.html', user = username, page_title="Home")
+            else:
+                if username:
+                    flash(f'Goodbye, {username}.')
+                session['username'] = None
+                return render_template('index.html', user = None, page_title="Home")
     except Exception as e:
         print(e)
         flash('An error occurred. Please try agåain.')
@@ -25,7 +49,7 @@ def major_plan():
             how='left'
         )
         course_info = spring_with_info.to_dict(orient='records')
-        return render_template('major-plan.html', courses = course_info)
+        return render_template('major-plan.html', courses = course_info, page_title='Major Plan')
     except Exception as e:
         print(e)
         flash('An error occurred. Please try again.')
@@ -34,7 +58,11 @@ def major_plan():
 @app.route("/explore")
 def explore():
     try:
-        return render_template('explore.html')
+        username = session["username"]
+        if username:
+            return render_template('explore.html', user = username, page_title='Explore')
+        else:
+            return render_template('explore.html', user = None, page_title='Explore')
     except Exception as e:
         print(e)
         flash('An error occurred. Please try again.')
