@@ -202,6 +202,7 @@ a {
 /* Stuff for map*/
 .map-container {
     display: flex;
+    overflow-y: auto;
     flex-direction: column; /* vertical list */
     gap: 10px;             /* spacing between items */
     padding: 10px;
