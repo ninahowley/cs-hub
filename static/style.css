@@ -91,7 +91,7 @@ a {
     flex: 1;
     border: solid black;
     border-width: 3px;
-    padding: 20px;
+    padding: 30px;
     overflow-y: auto;
     overflow-x: visible;
     scrollbar-color: blue;
@@ -377,7 +377,7 @@ hr {
 
 /* major requirements */
 .add-button {
-    padding: 10px 15px;
+    padding: 3px 10px;
     font-family: "Pixelify Sans", sans-serif;
     font-size: 16px;
     font-weight: bold;
@@ -389,6 +389,7 @@ hr {
     transition: background-color 0.15s ease, transform 0.1s ease;
     position:absolute;
     right: 16px;
+    box-sizing: border-box;
 }
 
 .add-button:hover {
