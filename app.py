@@ -3,6 +3,7 @@ from flask import (Flask, render_template, make_response, url_for, request,
 import pandas as pd
 import re
 import db_functions as db
+import json
 
 app = Flask(__name__)
 app.secret_key = "temp"
@@ -93,14 +94,18 @@ def major_plan():
 @app.route("/explore")
 def explore():
     try:
+        # load data from explore.json to fill in the explore page
+        # edit explore.json to display data
+        with open('static/explore.json', 'r') as file:
+            explore_dict = json.load(file)
         if 'username' in session:
             username = session['username']
         else:
             username = None
         if username:
-            return render_template('explore.html', user = username, page_title='Explore')
+            return render_template('explore.html', user = username, data = explore_dict, page_title='Explore')
         else:
-            return render_template('explore.html', user = None, page_title='Explore')
+            return render_template('explore.html', user = None, data = explore_dict, page_title='Explore')
     except Exception as e:
         print(e)
         flash('An error occurred. Please try again.')
