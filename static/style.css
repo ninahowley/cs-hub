@@ -91,7 +91,7 @@ a {
     flex: 1;
     border: solid black;
     border-width: 3px;
-    padding: 30px;
+    padding: 20px 28px;
     overflow-y: auto;
     overflow-x: visible;
     scrollbar-color: blue;

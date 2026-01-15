@@ -57,8 +57,8 @@ def major_plan():
     try:
         #display all courses
         all_df = pd.read_csv('courses/all_courses.csv')
-        elective_df = all_df[all_df["course_core"] == False] #remove core
         all_course_info = all_df.to_dict(orient='records')
+        elective_df = all_df[all_df["course_core"] == False] #remove core
         elective_info = elective_df.to_dict(orient='records')
 
         if 'username' in session:
