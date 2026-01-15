@@ -81,9 +81,9 @@ a {
     flex-direction: row;
     gap: 10px;
     padding: 10px;
-    height: calc(88vh - 20px);   /* subtract padding */
-    height: calc(88dvh - 20px);  /* mobile-safe */
-    overflow:hidden
+    height: calc(85vh - 20px);   /* subtract padding */
+    height: calc(85dvh - 20px);  /* mobile-safe */
+    overflow:hidden;
 }
 
 .child-container {
@@ -190,7 +190,7 @@ a {
 
 .map-scroll{ /*vertical scroll*/
   overflow-y: auto;
-  max-height: 100vh;    
+  max-height: 100%;    
   padding: 14px; /*adjust for hover scaling*/
   box-sizing: border-box;
 }
