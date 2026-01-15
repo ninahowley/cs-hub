@@ -27,69 +27,80 @@
             {% endif %}
             <!--REQUIRED SEQUENCE-->
             <h3>Required Sequence</h3>
-            <div class="course-container core checkable">
+            <div class="course-container core">
                 <span>CS 111: Computer Programming and Problem Solving</span>
-                {% if user %}
-                    <button class="taken_button core_button">Add</button>
-                {% endif %}
+                <span class="taken-mark core">Not Taken</span>
             </div>
-            <div class="course-container core checkable">
+            <div class="course-container core">
                 <span>CS 230: Data Structures</span>
-                {% if user %}
-                    <button class="taken_button core_button">Add</button>
-                {% endif %}
+                <span class="taken-mark core">Not Taken</span>
             </div>
             <!--CORE (ANIMATED LIST)-->
             <h3>Core</h3>
-            <div class="course-list">
-            <div class="course-container core checkable-moving">
+            <div class="course-container core">
                 <span>CS 231: Design and Analysis of Algorithms</span>
-                {% if user %}
-                    <button class="taken_button core_button">Add</button>
-                {% endif %}
+                <span class="taken-mark core">Not Taken</span>
             </div>
-            <div class="course-container core checkable-moving">
+            <div class="course-container core">
                 <span>CS 235: Theory of Computation</span>
-                {% if user %}
-                    <button class="taken_button core_button">Add</button>
-                {% endif %}
+                <span class="taken-mark core">Not Taken</span>
             </div>
-            <div class="course-container core checkable-moving">
+            <div class="course-container core">
                 <span>CS 240: Foundations of Computer Systems</span>
-                {% if user %}
-                    <button class="taken_button core_button">Add</button>
-                {% endif %}
-            </div>
+                <span class="taken-mark core">Not Taken</span>
             </div>
             <!--ELECTIVES-->
             <h3>Electives</h3>
-            You must take additional CS classes until you have taken 9 CS classes in total (including the core). Two of these must be at the 300-level.
+            <p>You have to take x more elective(s). Exactly x of these must be at the 300-level.</p>
+            {% if user %}
+                {% for course in taken_electives %}
+                <div class="course-container">
+                    <div class="instructor-line">
+                        <span>{{ course.course_tag }}: {{ course.course_name }}</span!>
+                        <span class="taken-mark">Taken</span>
+                    </div>
+                </div>
+                {% endfor %}
+            {% endif %}
         </div>
         <div class="child-container">
             <!--div class="elective-list"-->
+            <h3>All courses offered</h3>
                 {% for course in all_courses %}
-                <div class="course-container checkable">
+                {% if course.course_core %}
+                <div class="course-container core">
                     <div class="instructor-line">
                         <span>{{ course.course_tag }}: {{ course.course_name }}</span>
                         {% if user %}
-                            <button class="taken_button">Add</button>
+                            <button class="add-button core">Add</button>
                         {% endif %}
                     </div>
                 </div>
+                {% else %}
+                <div class="course-container">
+                    <div class="instructor-line">
+                        <span>{{ course.course_tag }}: {{ course.course_name }}</span>
+                        {% if user %}
+                            <button class="add-button">Add</button>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endif %}
                 {% endfor %}
             <!--/div-->
     </div>
     </div>
 </body>
 <script> //for button checking
-    const list = document.querySelector(".course-list");
+    
+    /*const list = document.querySelector(".course-list");
     document.addEventListener("click", (e) =>{ //close popup on outside click
         const row = e.target.closest(".checkable") || e.target.closest(".checkable-moving");
         if (!row) return;
         row.classList.toggle("checked");
 
         // move element
-        /*if (row.classList.contains("checkable-moving") && row.classList.contains("checked")) {
+        if (row.classList.contains("checkable-moving") && row.classList.contains("checked")) {
             list.appendChild(row); // move to bottom
         } else {
             // move back above checked ones
@@ -99,7 +110,7 @@
             } else {
                 list.prepend(row);
             }
-        }*/
-    });
+        }
+    });*/
 </script>
 </html>

@@ -169,7 +169,10 @@ a {
     margin: 10px 0;
     border:3px black solid;
     color:#000;
-    background-color:#7996ff
+    background-color:#7996ff;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .course-container.core {
@@ -192,13 +195,14 @@ a {
     box-sizing:border-box;
 }
 
-.checkable{  /*interactive class so users can check box*/
+/*.
+checkable{  
     display: flex;
     align-items: center;
     position:relative;
 }
 
-.checkable-moving{  /*interactive class so users can check box*/
+.checkable-moving{ 
     display: flex;
     align-items: center;
     position:relative;
@@ -221,6 +225,19 @@ a {
 .checkable-moving.checked .course-checkbox{ 
     background: #000000;
 }
+*/
+
+.taken-mark{
+    color: #ccd6fd;
+    position: absolute;
+    right: 16px;
+}
+
+.taken-mark.core{
+    color: #fcd5ec;
+    position: absolute;
+    right: 16px;
+}
 
 .instructor-line {
     display: flex;
@@ -230,6 +247,8 @@ a {
 
 .distribs {
     font-weight: bold;
+    position: absolute;
+    right: 16px;
 }
 
 /* Stuff for map*/
@@ -340,7 +359,7 @@ a {
 }
 
 /* major requirements */
-.taken_button {
+.add-button {
     padding: 10px 15px;
     font-family: "Pixelify Sans", sans-serif;
     font-size: 16px;
@@ -355,17 +374,17 @@ a {
     right: 16px;
 }
 
-.core_button:hover {
+.add-button:hover {
+    background-color: #ff79c3;
+    box-shadow: 3px;
+    transform: translateY(1px);
+}
+
+.add-button.core_button:hover {
     background-color: #7996ff !important;
 }
 
-.taken_button:hover {
-    background-color: #ff79c3;
-    box-shadow: 3px;
-    transform: translateY(-1px);
-}
-
-.taken_button:active {
-    transform: translate(4px, 4px);
+.add-button:active {
+    transform: translate(2px, 2px);
     box-shadow: 0 0 0 #000;
 }

@@ -66,11 +66,23 @@ def major_plan():
             how='left'
         )
         spring_course_info = spring_with_info.to_dict(orient='records')
-        core_tags = ['CS 111', 'CS 111L', 'CS 111M', 'CS 111X', 'CS 230', 'CS 230L', 'CS 230X', 'CS 231', 'CS 235', 'CS 240', 'CS 240L']
-        elective_df = all_df[~all_df["course_tag"].isin(core_tags)] #remove core
+        #display all courses
+        #core_tags = ['CS 111', 'CS 111L', 'CS 111M', 'CS 111X', 'CS 230', 'CS 230L', 'CS 230X', 'CS 231', 'CS 235', 'CS 240', 'CS 240L']
+        elective_df = all_df[all_df["course_core"] == False] #remove core
         all_course_info = all_df.to_dict(orient='records')
         elective_info = elective_df.to_dict(orient='records')
-        return render_template('major-plan.html', user = username, all_courses = all_course_info, electives = elective_info, page_title='Major Plan')
+        #display user courses
+        taken_courses = db.get_user_courses('nh107')
+        taken_electives_df = elective_df[elective_df["course_tag"].isin(taken_courses)] #only keep taken
+        taken_electives = taken_electives_df.to_dict(orient='records')
+        return render_template(
+            'major-plan.html', 
+            user = username, 
+            all_courses = all_course_info, 
+            taken_electives = taken_electives, 
+            electives = elective_info, 
+            page_title='Major Plan'
+        )
     except Exception as e:
         print(e)
         flash('An error occurred. Please try again.')

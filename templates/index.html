@@ -41,14 +41,25 @@
       <div class="child-container">
          <h2>Spring '26 Course Offerings</h2>
          {% for course in spring_courses %}
-         <div class="course-container {% if course.course_core == 'True' %}core{% endif %}">
+         {% if course.course_core %}
+         <div class="course-container core">
                <div class="instructor-line">
-                  <p>{{ course.course_tag }}: {{ course.course_name }}</p>
+                  <span>{{ course.course_tag }}: {{ course.course_name }}</span>
                   {% if course.course_distribs %}
                      <span class="distribs">{{ course.course_distribs }}</span>
                   {% endif %}
                </div>
          </div>
+         {% else %}
+         <div class="course-container">
+               <div class="instructor-line">
+                  <span>{{ course.course_tag }}: {{ course.course_name }}</span>
+                  {% if course.course_distribs %}
+                     <span class="distribs">{{ course.course_distribs }}</span>
+                  {% endif %}
+               </div>
+         </div>
+         {% endif %}
          {% endfor %}
         </div>
    </div>  
