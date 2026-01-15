@@ -16,9 +16,15 @@ def index():
 @app.route("/major-plan")
 def major_plan():
     try:
-        df = pd.read_csv('courses/spring_courses.csv')
-        df['course_distribs'] = df['course_distribs'].where(pd.notna(df['course_distribs']), None)
-        course_info = df.to_dict(orient='records')
+        spring_df = pd.read_csv('courses/spring_courses.csv')
+        all_df = pd.read_csv('courses/all_courses.csv')
+        spring_with_info = spring_df.merge(
+            all_df,
+            on='course_tag',
+            how='left'
+        )
+        
+        course_info = spring_with_info.to_dict(orient='records')
         return render_template('major-plan.html', courses = course_info)
     except Exception as e:
         print(e)

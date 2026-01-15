@@ -31,10 +31,9 @@
         <div class="child-container">
             <h2>Spring '26 Course Offerings</h2>
             {% for course in courses %}
-            <div class="course-container {% if course.course_core %}core{% endif %}">
-                <p>{{ course.course_tag }}: {{ course.course_name }}</p>
+            <div class="course-container {% if course.course_core == 'True' %}core{% endif %}">
                 <div class="instructor-line">
-                    <span>{{ course.course_instructor }}</span>
+                    <p>{{ course.course_tag }}: {{ course.course_name }}</p>
                     {% if course.course_distribs %}
                         <span class="distribs">{{ course.course_distribs }}</span>
                     {% endif %}
