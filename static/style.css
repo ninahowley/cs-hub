@@ -200,7 +200,6 @@ a {
     width: 100vh;
     font-size: 20px;
     text-align: center;
-    transform: translate(-30%, 7.5%);
 }
 
 /*.
@@ -272,7 +271,7 @@ checkable{
     max-height: 100%;    
     padding: 14px; /*adjust for hover scaling*/
     box-sizing: border-box;
-    width:67vh;
+    width:75vh;
 }
 
 .map-container {
@@ -407,3 +406,9 @@ hr {
     box-shadow: 0 0 0 #000;
 }
 
+.explore-container {
+  display: grid;
+  grid-template-columns: 29% 69%;
+  background-color: dodgerblue;
+  padding: 10px;
+}
