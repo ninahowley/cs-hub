@@ -30,17 +30,8 @@ a {
     height:540px;
     width:125vh;
     background-color:white;
-    /*border: 1px solid black;*/
     z-index:1000;
     transform: translate(-50%, -50%);
-    /*-webkit-text-fill-color:#dd0e80;*/
-    /*border-color:#dd0e80;*/
-    /*border-image: url('mario.png') 30;
-    border-image-slice: 27 27 27 27;
-    border-image-width: 20px 20px 20px 20px;
-    border-image-outset: 0px 0px;
-    border-image-repeat: stretch stretch;
-    border-style: solid;*/
 }
 .popup-header{
     height: 40px;
