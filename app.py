@@ -12,6 +12,14 @@ def is_valid_username(s):
 @app.route("/", methods=['GET', 'POST'])
 def index():
     try:
+        spring_df = pd.read_csv('courses/spring_courses.csv')
+        all_df = pd.read_csv('courses/all_courses.csv')
+        spring_with_info = spring_df.merge(
+            all_df,
+            on='course_tag',
+            how='left'
+        )
+        spring_course_info = spring_with_info.to_dict(orient='records')
         if 'username' in session:
             username = session['username']
         else:
@@ -20,7 +28,7 @@ def index():
             # If method is get, send a blank form
             if not username:
                 username = None
-            return render_template('index.html', user = username, page_title='Home')
+            return render_template('index.html', user = username, spring_courses = spring_course_info, page_title='Home')
         else:
             if 'login' in request.form:
                 input_username = request.form.get('username')
@@ -28,15 +36,15 @@ def index():
                     flash(f"Welcome, {input_username}!")
                     session['username']=input_username
                     session['logged_in']=True
-                    return redirect(url_for('index', user = username, page_title="Home"))
+                    return redirect(url_for('index', user = username, spring_courses = spring_course_info, page_title="Home"))
                 else:
                     flash(f"Please enter a valid username.")
-                    return render_template('index.html', user = username, page_title="Home")
+                    return render_template('index.html', user = username, spring_courses = spring_course_info, page_title="Home")
             else:
                 if username:
                     flash(f'Goodbye, {username}.')
                 session['username'] = None
-                return render_template('index.html', user = None, page_title="Home")
+                return render_template('index.html', user = None, spring_courses = spring_course_info, page_title="Home")
     except Exception as e:
         print(e)
         flash('An error occurred. Please try agåain.')
@@ -60,7 +68,7 @@ def major_plan():
         core_tags = ['CS 111', 'CS 111L', 'CS 111M', 'CS 111X', 'CS 230', 'CS 230L', 'CS 230X', 'CS 231', 'CS 235', 'CS 240', 'CS 240L']
         elective_df = all_df[~all_df["course_tag"].isin(core_tags)] #remove core
         elective_info = elective_df.to_dict(orient='records')
-        return render_template('major-plan.html', user = username, spring_courses = spring_course_info, electives = elective_info, page_title='Major Plan')
+        return render_template('major-plan.html', user = username, electives = elective_info, page_title='Major Plan')
     except Exception as e:
         print(e)
         flash('An error occurred. Please try again.')

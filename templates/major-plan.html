@@ -62,17 +62,11 @@
             <!--/div-->
         </div>
         <div class="child-container">
-            <h2>Spring '26 Course Offerings</h2>
-            {% for course in spring_courses %}
-            <div class="course-container {% if course.course_core == 'True' %}core{% endif %}">
-                <div class="instructor-line">
-                    <p>{{ course.course_tag }}: {{ course.course_name }}</p>
-                    {% if course.course_distribs %}
-                        <span class="distribs">{{ course.course_distribs }}</span>
-                    {% endif %}
-                </div>
-            </div>
-            {% endfor %}
+            {% if user %}
+            <h2>Major Plan for <span style="color:#b8377e">{{ user }}</span></h2>
+            {% else %}
+                <h2>Please log in to see your major plan!</h2>
+            {% endif %}
         </div>
     </div>
     </div>
