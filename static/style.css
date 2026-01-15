@@ -171,6 +171,16 @@ a {
     background-color:#7996ff
 }
 
+.checkable-course{
+
+}
+
+.course-checkbox{
+  width: 26px;
+  height: 26px;
+  flex: 0 0 auto;
+}
+
 .course-container.core {
     border:3px black solid;
     color:#000;
