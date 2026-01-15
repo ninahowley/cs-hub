@@ -54,27 +54,29 @@ def index():
 @app.route("/major-plan")
 def major_plan():
     try:
+        #display all courses
+        all_df = pd.read_csv('courses/all_courses.csv')
+        elective_df = all_df[all_df["course_core"] == False] #remove core
+        all_course_info = all_df.to_dict(orient='records')
+        elective_info = elective_df.to_dict(orient='records')
+
         if 'username' in session:
             username = session['username']
+            #display user courses
+            taken_courses = db.get_user_courses(username)
+            taken_electives_df = elective_df[elective_df["course_tag"].isin(taken_courses)] #only keep taken
+            taken_electives = taken_electives_df.to_dict(orient='records')
         else:
             username = None
+        
+        #display spring courses
         spring_df = pd.read_csv('courses/spring_courses.csv')
-        all_df = pd.read_csv('courses/all_courses.csv')
         spring_with_info = spring_df.merge(
             all_df,
             on='course_tag',
             how='left'
         )
         spring_course_info = spring_with_info.to_dict(orient='records')
-        #display all courses
-        #core_tags = ['CS 111', 'CS 111L', 'CS 111M', 'CS 111X', 'CS 230', 'CS 230L', 'CS 230X', 'CS 231', 'CS 235', 'CS 240', 'CS 240L']
-        elective_df = all_df[all_df["course_core"] == False] #remove core
-        all_course_info = all_df.to_dict(orient='records')
-        elective_info = elective_df.to_dict(orient='records')
-        #display user courses
-        taken_courses = db.get_user_courses('nh107')
-        taken_electives_df = elective_df[elective_df["course_tag"].isin(taken_courses)] #only keep taken
-        taken_electives = taken_electives_df.to_dict(orient='records')
         return render_template(
             'major-plan.html', 
             user = username, 
