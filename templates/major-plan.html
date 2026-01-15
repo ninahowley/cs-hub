@@ -65,7 +65,7 @@
         </div>
         <div class="child-container">
             <!--div class="elective-list"-->
-            <h3>All courses offered</h3>
+            <h2>All CS Courses offered at Wellesley</h2>
                 {% for course in all_courses %}
                 {% if course.course_core %}
                 <div class="course-container core">
@@ -81,7 +81,13 @@
                     <div class="instructor-line">
                         <span>{{ course.course_tag }}: {{ course.course_name }}</span>
                         {% if user %}
+                        <form action="/submit" method="POST">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="user_name">
+                            <button type="submit">Save to Database</button>
+                            </form>
                             <button class="add-button">Add</button>
+                        </form>
                         {% endif %}
                     </div>
                 </div>
