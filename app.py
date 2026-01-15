@@ -69,6 +69,7 @@ def major_plan():
             taken_electives = taken_electives_df.to_dict(orient='records')
         else:
             username = None
+            taken_electives = []
         
         #display spring courses
         spring_df = pd.read_csv('courses/spring_courses.csv')
@@ -90,6 +91,26 @@ def major_plan():
         print(e)
         flash('An error occurred. Please try again.')
         return
+
+@app.route("/add-course", methods=['POST'])
+def add_course():
+    if 'username' not in session:
+        return jsonify({'success': False})
+    
+    username = session['username']
+    data = request.get_json()
+    course_code = data.get('course_code')
+    
+    if not course_code:
+        print("course code problem")
+        return jsonify({'success': False})
+    try:
+        print("got to try")
+        db.upload_registration(username, course_code)
+        return jsonify({'success': True}) #so page can check if it works
+    except Exception as e:
+        print(e)
+        return jsonify({"success": False})
 
 @app.route("/explore")
 def explore():

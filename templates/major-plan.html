@@ -72,7 +72,7 @@
                     <div class="instructor-line">
                         <span>{{ course.course_tag }}: {{ course.course_name }}</span>
                         {% if user %}
-                            <button class="add-button core">Add</button>
+                            <button class="add-button core" data course-code="{{course.course_tag}}">Add</button>
                         {% endif %}
                     </div>
                 </div>
@@ -81,13 +81,7 @@
                     <div class="instructor-line">
                         <span>{{ course.course_tag }}: {{ course.course_name }}</span>
                         {% if user %}
-                        <form action="/submit" method="POST">
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="user_name">
-                            <button type="submit">Save to Database</button>
-                            </form>
-                            <button class="add-button">Add</button>
-                        </form>
+                            <button class="add-button" data-course-code="{{course.course_tag}}">Add</button>
                         {% endif %}
                     </div>
                 </div>
@@ -97,7 +91,38 @@
     </div>
     </div>
 </body>
-<script> //for button checking
+<script> // for adding + displaying courses
+
+const addButtons = document.querySelectorAll('.add-button');
+addButtons.forEach( button => {
+    button.addEventListener('click', function() {
+        console.log("button clicked");
+        const courseCode = this.getAttribute('data-course-code');
+        fetch('/add-course', { //fetch route to send to db
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    course_code: courseCode
+                })
+            })
+        .then(response => response.json()) //convert db response to json
+        .then(data =>{
+            if (data.success) {
+                    this.textContent = 'Taken';
+                } else {
+                    alert('Error: ' + data.message);
+                }
+        }).catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred');
+        });
+    });
+});
+
+
+//for button checking
     
     /*const list = document.querySelector(".course-list");
     document.addEventListener("click", (e) =>{ //close popup on outside click
