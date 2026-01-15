@@ -7,6 +7,10 @@ body {
     font-weight: 500; /* weight 400-700*/
     font-style: normal;
 }
+a {
+    color:#324ba5;
+}
+
 
 .vt323-regular {
   font-family: "VT323", monospace;
@@ -134,7 +138,7 @@ body {
 
 /* Fixed-width title area */
 .nav-title {
-    width: 240px;         
+    width: 400px;   
     margin: 0;
     font-size: 1.8rem;
     font-weight: 700;
@@ -160,10 +164,8 @@ body {
 }
 
 .nav-links a:hover {
-    background-color: linear-gradient(to bottom,#ff79c3, #991373);
+    background-color: #7996ff;
     box-shadow: 3px;
-    color: #ffffff;
-    border-color: #991373;
     transform: translateY(-1px);
 }
 
