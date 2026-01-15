@@ -54,17 +54,19 @@ def upload_registration(username: str, coursecode: str):
     Uploads username coursecode pair to the database.
     """
     if check_course_code(coursecode):
-        conn = connect_db()
-        cur = conn.cursor()
-        cur.execute("""INSERT INTO registration (name, coursecode)
-                        VALUES (?,?) 
-                        """, 
-                        (username, coursecode)
-                    )
-        conn.commit()
-        conn.close()
+        user_courses = get_user_courses(username)
+        if coursecode not in user_courses:
+            conn = connect_db()
+            cur = conn.cursor()
+            cur.execute("""INSERT INTO registration (username, coursecode)
+                            VALUES (?,?) 
+                            """, 
+                            (username, coursecode)
+                        )
+            conn.commit()
+            conn.close()
 
-def delete_registration(username: str, course_code: str):
+def delete_registration(username: str, coursecode: str):
     """
     Delete a username coursecode pair from the database.
     """
@@ -79,6 +81,20 @@ def delete_registration(username: str, course_code: str):
     conn.close()
     return
 
+def get_user_courses(username:str):
+    conn = connect_db()
+    cur = conn.cursor()
+    cur.execute("""SELECT coursecode
+                    FROM registration
+                    WHERE username == ?
+                    """, 
+                    ([username])
+                )
+    courses = cur.fetchall()
+    courses = [course[0] for course in courses]
+    conn.close()
+    return courses
+
 def get_db():
     conn = connect_db()
     df = pd.read_sql_query("SELECT * FROM registration", conn)
@@ -87,3 +103,9 @@ def get_db():
 
 if __name__ == "__main__":
     # create_db()
+    clear_db()
+    upload_registration("nh107", "CS 111")
+    upload_registration("nh107", "CS 230")
+    upload_registration("nh107", "CS 248")
+    upload_registration("nh107", "CS 304")
+    print(get_user_courses("nh107"))
