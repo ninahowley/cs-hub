@@ -34,6 +34,6 @@ with open("courses.txt", 'r') as file:
 
 courses_df = pd.DataFrame(courses)
 courses_df = courses_df.drop_duplicates()
-courses_df.to_csv('courses.csv', index=False)
+courses_df.to_csv('spring_courses.csv', index=False)
 
 

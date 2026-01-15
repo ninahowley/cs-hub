@@ -1,23 +1,23 @@
 course_tag,course_name,course_instructor,course_distribs,course_core
-CS 110,Sociotechnical Dimensions of Computing in the Age of AI,Brian Brubach,MM,False
+CS 110,Computing in the Age of AI,Brian Brubach,MM,False
 CS 111,Computer Programming and Problem Solving,Vinitha Gadiraju,MM,True
 CS 111,Computer Programming and Problem Solving,Franklyn Turbak,MM,True
-CS 111L,Laboratory: Computer Programming and Problem Solving,Sohie Lee,,True
-CS 111L,Laboratory: Computer Programming and Problem Solving,Sara Melnick,,True
-CS 112,Introduction to Computing for the Sciences,Smaranda Sandu,MM,False
-CS 112L,Laboratory: Introduction to Computing for the Sciences,Michael Mavros,,False
+CS 111L,Lab: Computer Programming and Problem Solving,Sohie Lee,,True
+CS 111L,Lab: Computer Programming and Problem Solving,Sara Melnick,,True
+CS 112,Introduction to Computing for the Sciences,Smaranda Sandu,MM,True
+CS 112L,Lab: Introduction to Computing for the Sciences,Michael Mavros,,True
 CS 121,Intro to Game Design,Jordan Tynes,MM,False
 CS 204,Introduction to Front-End Web Development,Scott Anderson,MM,False
 CS 220,Human-Computer Interaction,Vinitha Gadiraju,MM,False
 CS 220,Human-Computer Interaction,Catherine Grevet Delcourt,MM,False
 CS 230,Data Structures,Yaniv Yacoby,MM,True
 CS 230,Data Structures,Catherine Grevet Delcourt,MM,True
-CS 230L,Laboratory: Data Structures,Stella Kakavouli,MM,True
+CS 230L,Lab: Data Structures,Stella Kakavouli,MM,True
 CS 231,Design and Analysis of Algorithms,Brian Brubach,MM,True
 CS 235,Theory of Computation,Smaranda Sandu,MM,True
 CS 240,Foundations of Computer Systems with Laboratory,Alexa VanHattum,"LAB, MM",True
-CS 240L,Laboratory: Foundations of Computer Systems,Peter Andrew Mawhorter,,True
-CS 240L,Laboratory: Foundations of Computer Systems,Sara Melnick,,True
+CS 240L,Lab: Foundations of Computer Systems,Peter Andrew Mawhorter,,True
+CS 240L,Lab: Foundations of Computer Systems,Sara Melnick,,True
 CS 242,Computer Networks,Christine Bassem,MM,False
 CS 245,Probabilistic Foundations of Predictive Machine Learning,Yaniv Yacoby,"DL, MM",False
 CS 304,Databases with Web Interfaces,Scott Anderson,MM,False
@@ -27,6 +27,3 @@ CS 342,Computer Security,Franklyn Turbak,MM,False
 CS 343,Distributed Computing,Christine Bassem,MM,False
 CS 344,Deep Learning,Brian Tjaden,MM,False
 CS 365,Advanced Projects in Playable Media,Jordan Tynes,MM,False
-MAS 110,Sociotechnical Dimensions of Computing in the Age of AI,Brian Brubach,MM,False
-MAS 121,Intro to Game Design,Jordan Tynes,MM,False
-MAS 365,Advanced Projects in Playable Media,Jordan Tynes,MM,False
