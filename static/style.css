@@ -200,13 +200,23 @@ a {
 }
 
 /* Stuff for map*/
+
+.map-outer{
+  overflow: visible;  /*prevent border clipping*/ 
+}
+
+.map-scroll{ /*vertical scroll*/
+  overflow-y: auto;
+  max-height: 100vh;    
+  padding: 14px; /*adjust for hover scaling*/
+  box-sizing: border-box;
+}
+
 .map-container {
     display: flex;
-    overflow-y: auto;
     flex-direction: column; /* vertical list */
     gap: 10px;             /* spacing between items */
-    padding: 10px;
-    width: 250px;           /* adjust as needed */
+    width: 400px;           /* adjust as needed */
 }
 
 .map-container .topic {
@@ -230,7 +240,7 @@ a {
 
 .map-container .topic:hover {
     background-color: #ff79c3;
-    transform: scale(1.1);
+    transform: scale(1.06);
 }
 
 .map-container .topic span {
