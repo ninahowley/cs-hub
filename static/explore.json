@@ -57,7 +57,8 @@
         "alt_name":"Architecture",
         "blurb": "",
         "instructors": [
-            {"name": "", "link": "", "bio": ""}
+            {"name": "Alexa Vanhattum", "link": "https://www.wellesley.edu/people/alexa-vanhattum", "bio": "I use lightweight formal methods to improve the reliability and efficiency of low-level computer systems."},
+            {"name": "Peter Mawhorter", "link": "https://www.wellesley.edu/people/peter-mawhorter", "bio": "I'm especially interested in teaching programming basics to scientists who need them for their experiments, and to humanists who want to sharpen their understanding of our increasingly code-driven world."}
         ],
         "courses": [
             {"course_code": "", "course_name": "", "link":"", "type": ""}
@@ -70,10 +71,10 @@
         "alt_name":"Graphics",
         "blurb": "",
         "instructors": [
-            {"name": "", "link": "", "bio": ""}
+            {"name": "Scott Anderson", "link": "https://www.wellesley.edu/people/scott-anderson", "bio": "Professor Anderson's teaching interests include web application programming, including databases, web frameworks, and computer graphics"}
         ],
         "courses": [
-            {"course_code": "", "course_name": "", "link":"", "type": ""}
+            {"course_code": "CS 307", "course_name": "Computer Graphics", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+307", "type": "300-level elective"}
         ],
         "opportunities": [
             {"title": "", "link": "", "about": ""}
@@ -100,7 +101,8 @@
         ],
         "courses": [
             {"course_code": "CS 234", "course_name": "Data, Analytics, and Visualization", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+234", "type": " 200-level elective"},
-            {"course_code": "CS 248", "course_name": "Software and Data", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+248", "type": "200-level elective"}
+            {"course_code": "CS 248", "course_name": "Software and Data", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+248", "type": "200-level elective"},
+            {"course_code": "CS 315", "course_name": "Data Science for the Web", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+315", "type": "300-level elective"}
         ],
         "opportunities": [
             {"title": "", "link": "", "about": ""}
@@ -143,10 +145,14 @@
         "alt_name":"ML",
         "blurb": "",
         "instructors": [
-            {"name": "", "link": "", "bio": ""}
+            {"name": "Yaniv Yacoby", "link": "https://www.wellesley.edu/people/yaniv-yacoby", "bio": "I lead the Model-Guided Uncertainty (MOGU) Lab at Wellesley, where we enable effective and responsible uses of expressive (deep) ML models in safety-critical domains, like precision healthcare."}
         ],
         "courses": [
-            {"course_code": "", "course_name": "", "link":"", "type": ""}
+            {"course_code": "CS 232", "course_name": "Artificial Intelligence", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+232", "type": "200-level elective"},
+            {"course_code": "CS 244", "course_name": "Machine Learning", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+244", "type": "200-level elective"},
+            {"course_code": "CS 245", "course_name": "Probablistic Foundations of Predictive Machine Learning", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+245", "type": "200-level elective"},
+            {"course_code": "CS 344", "course_name": "Deep Learning", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+344", "type": "300-level elective"},
+            {"course_code": "CS 245", "course_name": "Probablistic Foundations of Machine Learning", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+345", "type": "300-level elective"}
         ],
         "opportunities": [
             {"title": "", "link": "", "about": ""}
@@ -234,10 +240,12 @@
         "alt_name":"SWE",
         "blurb": "",
         "instructors": [
-            {"name": "", "link": "", "bio": ""}
+            {"name": "Scott Anderson", "link": "https://www.wellesley.edu/people/scott-anderson", "bio": "Professor Anderson's teaching interests include web application programming, including databases, web frameworks, and computer graphics."}
         ],
         "courses": [
-            {"course_code": "", "course_name": "", "link":"", "type": ""}
+            {"course_code": "CS 204", "course_name": "Introduction to Front-End Web Development", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+204", "type": "200-level elective"},
+            {"course_code": "CS 304", "course_name": "Databases with Web Interfaces", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+304", "type": "300-level elective"},
+            {"course_code": "CS 317", "course_name": "Mobile App Development", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+317", "type": "300-level elective"}
         ],
         "opportunities": [
             {"title": "", "link": "", "about": ""}
