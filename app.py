@@ -12,7 +12,10 @@ def is_valid_username(s):
 @app.route("/", methods=['GET', 'POST'])
 def index():
     try:
-        username = session['username']
+        if 'username' in session:
+            username = session['username']
+        else:
+            username = None
         if request.method == 'GET':
             # If method is get, send a blank form
             if not username:
@@ -41,7 +44,10 @@ def index():
 @app.route("/major-plan")
 def major_plan():
     try:
-        username = session['username']
+        if 'username' in session:
+            username = session['username']
+        else:
+            username = None
         spring_df = pd.read_csv('courses/spring_courses.csv')
         all_df = pd.read_csv('courses/all_courses.csv')
         spring_with_info = spring_df.merge(
@@ -59,7 +65,10 @@ def major_plan():
 @app.route("/explore")
 def explore():
     try:
-        username = session["username"]
+        if 'username' in session:
+            username = session['username']
+        else:
+            username = None
         if username:
             return render_template('explore.html', user = username, page_title='Explore')
         else:
