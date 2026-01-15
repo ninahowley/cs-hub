@@ -6,7 +6,11 @@
 </head>
 <body>
    <div class="navigation">
-      <h1 class="nav-title">Home</h1>
+      {% if user %}
+         <h1 class="nav-title">< {{ user }} > Home</h1>
+      {% else %}
+         <h1 class="nav-title">Home</h1>
+      {% endif %}
       <div class="nav-links">
         <a href="{{ url_for('index') }}">Home</a>
         <a href="{{ url_for('major_plan') }}">Major Plan</a>
@@ -17,11 +21,11 @@
    <div class="child-container">
       <h2>Login</h2>
       <p>Please log in using your wellesley username (ex: rg123) to track your progress!</p>
-      <form>
+      <form method=POST action="{{ url_for('index') }}">
          <input type="username" name='username' value="" class="input_box">
-         <input type="submit" name="submit" value="Log In" class="submit_button">
-      </form>
-      <p>To do</p>
+         <input type="submit" name="login" value="Log In" class="submit_button">
+         <input type="submit" name="logout" value="Log Out" class="submit_button">
+      </form><br>
       {% with messages = get_flashed_messages() %}
       {% if messages %}
          <div>
