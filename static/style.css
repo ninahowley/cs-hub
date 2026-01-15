@@ -147,6 +147,11 @@ a {
     transform: translateY(-1px);
 }
 
+.nav-links a:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 #000;
+}
+
 /* COURSE CONTAINER */
 .child-container {
     width: 90%;
@@ -205,7 +210,7 @@ a {
     font-family: "Pixelify Sans", sans-serif;
     gap: 10px;              /* space between icon and text */
     padding: 5px 8px;
-    border: 2px solid black;
+    border: 3px solid #000;
     border-radius: 4px;
     transition: background-color 0.2s;
 }
@@ -217,11 +222,58 @@ a {
 }
 
 .map-container .topic:hover {
+    cursor: pointer;
     background-color: #ff79c3;
-    transform: scale(1.06);
+    box-shadow: 3px;
+    transform: translateY(-1px);
+}
+
+.map-container .topic:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 #000;
 }
 
 .map-container .topic span {
     font-weight: bold;
     font-size: 16px;
+}
+
+/* login form */
+.input_box {
+    width: 220px;
+    padding: 10px;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 16px;
+    color: #222;
+    background-color: #f4f4f4;
+    border: 3px solid #000;
+    outline: none;
+}
+
+.input_box:focus {
+    background-color: #ffbbdd;
+}
+
+.submit_button {
+    margin-top: 12px;
+    padding: 10px 15px;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    background-color: #ff79c3;
+    border: 3px solid #000;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.submit_button:hover {
+    background-color: #7996ff;
+    box-shadow: 3px;
+    transform: translateY(-1px);
+}
+
+.submit_button:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 #000;
 }
