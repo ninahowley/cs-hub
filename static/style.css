@@ -200,6 +200,7 @@ a {
     width: 100vh;
     font-size: 20px;
     text-align: center;
+    transform: translate(-30%, 7.5%);
 }
 
 /*.
@@ -271,13 +272,14 @@ checkable{
     max-height: 100%;    
     padding: 14px; /*adjust for hover scaling*/
     box-sizing: border-box;
+    width:67vh;
 }
 
 .map-container {
     display: flex;
     flex-direction: column; /* vertical list */
     gap: 10px;             /* spacing between items */
-    width: 400px;           /* adjust as needed */
+    width: 390px;           /* adjust as needed */
 }
 
 .map-container .topic {
@@ -404,3 +406,4 @@ hr {
     transform: translate(2px, 2px);
     box-shadow: 0 0 0 #000;
 }
+
