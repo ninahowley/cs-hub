@@ -19,22 +19,21 @@
    </div>
    <div class="parent-container">
    <div class="child-container">
-      <h2>Login</h2>
-      <p>Please log in using your wellesley username (ex: rg123) to track your progress!</p>
-      <form method=POST action="{{ url_for('index') }}">
-         <input type="username" name='username' value="" class="input_box">
-         <input type="submit" name="login" value="Log In" class="submit_button">
-         <input type="submit" name="logout" value="Log Out" class="submit_button">
-      </form><br>
       {% with messages = get_flashed_messages() %}
       {% if messages %}
          <div>
             {% for message in messages %}
-               <span>{{ message }}</span>
+               <span class="flashed-message">{{ message }}</span>
             {% endfor %}
          </div>
       {% endif %}
       {% endwith %}
+      <form method=POST action="{{ url_for('index') }}">
+         <input type="username" name='username' value="" class="input_box">
+         <input type="submit" name="login" value="Log In" class="submit_button">
+         <input type="submit" name="logout" value="Log Out" class="submit_button">
+      </form>
+      <p>Please log in using your wellesley username (ex: rg123) to track your progress!</p>
    </div>
    <div class= "child-container">
       <h2>Blurb about website</h2>
