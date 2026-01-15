@@ -23,7 +23,6 @@ def major_plan():
             on='course_tag',
             how='left'
         )
-        
         course_info = spring_with_info.to_dict(orient='records')
         return render_template('major-plan.html', courses = course_info)
     except Exception as e:
@@ -31,10 +30,10 @@ def major_plan():
         flash('An error occurred. Please try again.')
         return
 
-@app.route("/cs-map")
-def cs_map():
+@app.route("/explore")
+def explore():
     try:
-        return render_template('cs-map.html')
+        return render_template('explore.html')
     except Exception as e:
         print(e)
         flash('An error occurred. Please try again.')

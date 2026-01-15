@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Map of All CS</title>
+    <title>Explore</title>
     <link rel='stylesheet' href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body> <!--style="background-color:#ffdbfe;"-->
    <div class="navigation">
-    <h1 class="nav-title">Map of All CS</h1>
-    <div class="nav-links">
-        <a href="{{ url_for('index') }}">Home</a>
-        <a href="{{ url_for('major_plan') }}">Major Plan</a>
-        <a href="{{ url_for('cs_map') }}">Map of All CS</a>
+        <h1 class="nav-title">Major Plan</h1>
+        <div class="nav-links">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('major_plan') }}">Major Plan</a>
+            <a href="{{ url_for('explore') }}">Explore</a>
+        </div>
     </div>
-   </div>
+    <div>
    <div class="parent-container">
    <div class="map-container"> <!--vt323-regular-->
-        <div class="systems" data-popup="systems">
+        <div class="topic" data-popup="systems">
             <img src="{{ url_for('static', filename='icons/systems.png') }}" class="icon" alt="Systems">
             <span>Systems</span>
         </div>

@@ -23,8 +23,8 @@ body {
     position:fixed;
     top: 50%;
     left:50%;
-    height:500px;
-    width:1000px;
+    height:70vh;
+    width:125vh;
     background-color:white;
     /*border: 1px solid black;*/
     z-index:1000;
@@ -197,75 +197,40 @@ body {
     font-weight: bold;
 }
 
-/* stuff for map */
+/* Stuff for map*/
 .map-container {
-    position: relative; /* already has this */
-    width: 100%;
-    height: 100%;
-    z-index: 10; /* make sure it's above normal content */
+    display: flex;
+    flex-direction: column; /* vertical list */
+    gap: 10px;             /* spacing between items */
+    padding: 10px;
+    width: 250px;           /* adjust as needed */
 }
 
-.map-container > a {
-    position: absolute;
-    display: inline-block;
+.map-container .topic {
+    display: flex;          /* icon + text inline */
+    align-items: center;
     text-decoration: none;
     color: black;
     font-family: "Pixelify Sans", sans-serif;
+    gap: 10px;              /* space between icon and text */
+    padding: 5px 8px;
+    border: 2px solid black;
+    border-radius: 4px;
+    transition: background-color 0.2s;
 }
 
-/* Icon itself */
-.map-container > a img {
-    width: 10hv;
-    height: 10vh;
-    image-rendering: pixelated; /* crisp pixel art */
+.map-container .topic img {
+    width: 50px;
+    height: 50px;
+    image-rendering: pixelated;
 }
 
-.map-container > img:hover {
-    transform: scale(1.2);
+.map-container .topic:hover {
+    background-color: #ff79c3;
+    transform: scale(1.1);
 }
 
-/* Tooltip text */
-.map-container > a span {
-    visibility: hidden;
-    opacity: 0;
-    background-color: #fff;
-    color: #000;
-    text-align: center;
-    padding: 2px 6px;
-    border: 1px solid #000;
-    border-radius: 3px;
-    position: absolute;
-    top: 90px;  /* below the icon */
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    font-size: 12px;
+.map-container .topic span {
     font-weight: bold;
-    z-index: 1000;
-    transition: opacity 0.2s;
-    pointer-events: none; /* ignore mouse */
+    font-size: 16px;
 }
-
-/* Show on hover */
-.map-container > a:hover span {
-    visibility: visible;
-    opacity: 1;
-}
-
-
-/* random positions: directly target the <a> tags */
-.map-container > a:nth-of-type(1) { top: 10%; left: 0%; }
-.map-container > a:nth-of-type(2) { top: 40%; left: 10%; }
-.map-container > a:nth-of-type(3) { top: 15%; left: 60%; }
-.map-container > a:nth-of-type(4) { top: 70%; left: 5%; }
-.map-container > a:nth-of-type(5) { top: 60%; left: 50%; }
-.map-container > a:nth-of-type(6) { top: 25%; left: 80%; }
-.map-container > a:nth-of-type(7) { top: 80%; left: 30%; }
-.map-container > a:nth-of-type(8) { top: 50%; left: 70%; }
-.map-container > a:nth-of-type(9) { top: 30%; left: 40%; }
-.map-container > a:nth-of-type(10){ top: 5%; left: 90%; }
-.map-container > a:nth-of-type(11){ top: 85%; left: 60%; }
-.map-container > a:nth-of-type(12){ top: 10%; left: 30%; }
-.map-container > a:nth-of-type(13){ top: 40%; left: 90%; }
-.map-container > a:nth-of-type(14){ top: 70%; left: 80%; }
-.map-container > a:nth-of-type(15){ top: 55%; left: 15%; }
