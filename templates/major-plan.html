@@ -20,7 +20,11 @@
     <div>
     <div class="parent-container">
         <div class="child-container">
-            <h2>CS Major Requirements</h2>
+            {% if user %}
+            <h2>Major Plan for <span style="color:#b8377e">{{ user }}</span></h2>
+            {% else %}
+                <h2>Please log in to see your major plan!</h2>
+            {% endif %}
             <!--REQUIRED SEQUENCE-->
             <h3>Required Sequence</h3>
             <div class="course-container core checkable">
@@ -60,8 +64,10 @@
             <!--ELECTIVES-->
             <h3>Electives</h3>
             You must take additional CS classes until you have taken 9 CS classes in total (including the core). Two of these must be at the 300-level.
+        </div>
+        <div class="child-container">
             <!--div class="elective-list"-->
-                {% for course in electives %}
+                {% for course in all_courses %}
                 <div class="course-container checkable">
                     <div class="instructor-line">
                         <span>{{ course.course_tag }}: {{ course.course_name }}</span>
@@ -72,14 +78,6 @@
                 </div>
                 {% endfor %}
             <!--/div-->
-        </div>
-        <div class="child-container">
-            {% if user %}
-            <h2>Major Plan for <span style="color:#b8377e">{{ user }}</span></h2>
-            {% else %}
-                <h2>Please log in to see your major plan!</h2>
-            {% endif %}
-        </div>
     </div>
     </div>
 </body>
