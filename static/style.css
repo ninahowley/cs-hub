@@ -32,7 +32,7 @@ a {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    height: calc(100vh - 81px - 10px); /* 81px = navbar height, 20px = gap below navbar */
+    height: calc(100vh - 81px - 12px); /* 81px = navbar height, 20px = gap below navbar */
     padding-top: 10px; /* space below navbar */
     box-sizing: border-box;
 }
@@ -393,7 +393,7 @@ hr {
 /* Parent container below navbar */
 .explore-parent-container {
     display: flex;
-    height: calc(100vh - 81px); /* adjust 81px to match your navbar height */
+    height: calc(100vh - 81px - 12px); /* 81px = navbar height, 20px = gap below navbar */
     gap: 10px; 
     padding: 10px; /* optional padding around content */
     box-sizing: border-box;
