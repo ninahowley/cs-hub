@@ -12,15 +12,15 @@ Enter your Wellesley ID (or any username) to **log in**. Explore courses offered
 
 ### Major Plan
 
-The right panel displays all CS courses offered at Wellesley. Hover to read the **course description**, and click to **add a course** to your profile!
+Explore Wellesley's full list of CS courses on the right. Hover to read a **course description**, and click to **add a course** to your profile!
 
-Your personalized **major panel** on the left will automatically update with which requirements you still need to complete. You can also click on the **drop button** to drop a course.
+Your **major panel** on the left will update with the requirements you still need to complete. You can also click on the **drop button** to drop a course.
 
 <img alt="image" src="static/screenshots/major_plan_popup.png" />
 
 ### Explore Page
 
-The scrollable **topic list** in the left panel displays some popular topics in CS (as well as unique topics that our professors research.) Click on a topic to view a **popup** with more information!
+The scrollable **topic list** on the left displays some popular topics in CS (and unique topics that our professors research.) Click on each topic to view a **popup** with more information!
 
 <img alt="image" src="static/screenshots/explore_popup.png" />
 
