@@ -27,7 +27,7 @@ CS Hub is a website where Wellesley CS majors and other students interested in C
 
 1. **Clone the repository**
     ```git clone https://github.com/ninahowley/cs-hub.git```
-2. **Optional: create a [https://gist.github.com/ryumada/c22133988fd1c22a66e4ed1b23eca233](virtual environment).**
+2. **Optional: create a [virtual environment](https://gist.github.com/ryumada/c22133988fd1c22a66e4ed1b23eca233).**
 3. **Install flask**
     ```pip install flask```
 4. **Run the app!**
