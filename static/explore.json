@@ -264,7 +264,8 @@
         "courses": [
             {"course_code": "CS 204", "course_name": "Introduction to Front-End Web Development", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+204", "type": "200-level elective"},
             {"course_code": "CS 304", "course_name": "Databases with Web Interfaces", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+304", "type": "300-level elective"},
-            {"course_code": "CS 317", "course_name": "Mobile App Development", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+317", "type": "300-level elective"}
+            {"course_code": "CS 317", "course_name": "Mobile App Development", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+317", "type": "300-level elective"},
+            {"course_code": "CS 366", "course_name": "Advanced Projects in Interactive Media", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+366", "type": "300-level elective"}
         ],
         "opportunities": [
             {"title": "UpSkill (Software Development Lifecycle)", "link": "https://careereducation.wellesley.edu/upskill", "about": "A wintersession program for Wellesley students to learn about Github and collaborate on a project."}
