@@ -17,67 +17,74 @@
             <a href="{{ url_for('explore') }}">Explore</a>
         </div>
     </div>
-    <div class="parent-container">
-            <div class="map-scroll">
-                <div class="map-container"> <!--vt323-regular-->
-                    {% for d in data %}
-                    <div class="topic" data-popup="{{ data[d]['alt_name'] }}">
-                        <img src="{{ url_for('static', filename='icons/' + data[d]['alt_name'] + '.png') }}" class="icon" alt="{{ d }}">
-                        <span>{{ d }}</span>
-                    </div>
-                    <div class="popup hidden" id="{{ data[d]['alt_name'] }}">
-                        <div class="popup-header">
-                            <button class="close-button"> × </button>
-                        </div>
-                        <div class="popup-body-wrap">
-                            <div class="popup-body">
-                                <h2>{{ d }}!</h2>
-                                <p>{{ data[d]['blurb'] }}</p>
-                                <!-- if there are relevant professors for this topic, display them -->
-                                {% if data[d]['instructors'][0]['name'] %}
-                                    <h2>Relevant instructors at Wellesley: </h2>
-                                    {% for instructor in data[d]['instructors'] %}
-                                        <p></p><a href="{{ instructor['link'] }}" target="_blank">{{ instructor['name'] }}</a>: "{{ instructor['bio'] }}"</p>
-                                    {% endfor %}
-                                {% endif %}
-                                <!-- if there are courses for this topic, display them -->
-                                {% if data[d]['courses'][0]['course_code'] %}
-                                    <h2>Take a Course!</h2>
-                                    {% for course in data[d]['courses'] %}
-                                        <p><a href="{{ course['link'] }}" target="_blank">{{ course['course_code'] }}</a>: {{ course['course_name'] }} — <i>{{ course['type'] }}</i></p>
-                                    {% endfor %}
-                                {% endif %}
-                                <!-- if there are opportunities for this topic, display them -->
-                                {% if data[d]['opportunities'][0]['title'] %}
-                                    <h2>Opportunities</h2>
-                                    {% for opportunity in data[d]['opportunities'] %}
-                                        <p><a href="{{ opportunity['link'] }}" target="_blank">{{ opportunity['title'] }}</a>: {{ opportunity['about'] }}</p>
-                                    {% endfor %}
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
+    <div class="explore-parent-container">
+    <!-- Left scrollable panel -->
+    <div class="explore-left-panel">
+        <div class="map-container">
+            {% for d in data %}
+            <div class="topic" data-popup="{{ data[d]['alt_name'] }}">
+                <img src="{{ url_for('static', filename='icons/' + data[d]['alt_name'] + '.png') }}" class="icon" alt="{{ d }}">
+                <span>{{ d }}</span>
             </div>
+            {% endfor %}
         </div>
+    </div>
+
+    <!-- Right panel -->
+    <div class="explore-right-panel">
         <div class="explore-message">
             There is always more to explore! <br> 
             To the left is a list of some popular topics in CS. <br>
             Click on a topic to learn more.
         </div>
+
+        <!-- Popups (hidden by default) -->
+        {% for d in data %}
+        <div class="explore-popup hidden" id="{{ data[d]['alt_name'] }}">
+            <div class="explore-popup-header">
+                <button class="explore-close-button"> × </button>
+            </div>
+            <div class="popup-body-wrap">
+                <div style="padding:10px;">
+                    <h2>{{ d }}!</h2>
+                    <p>{{ data[d]['blurb'] }}</p>
+                    {% if data[d]['instructors'][0]['name'] %}
+                        <h2>Relevant instructors at Wellesley: </h2>
+                        {% for instructor in data[d]['instructors'] %}
+                            <p><a href="{{ instructor['link'] }}" target="_blank">{{ instructor['name'] }}</a>: "{{ instructor['bio'] }}"</p>
+                        {% endfor %}
+                    {% endif %}
+                    {% if data[d]['courses'][0]['course_code'] %}
+                        <h2>Take a Course!</h2>
+                        {% for course in data[d]['courses'] %}
+                            <p><a href="{{ course['link'] }}" target="_blank">{{ course['course_code'] }}</a>: {{ course['course_name'] }} — <i>{{ course['type'] }}</i></p>
+                        {% endfor %}
+                    {% endif %}
+                    {% if data[d]['opportunities'][0]['title'] %}
+                        <h2>Opportunities</h2>
+                        {% for opportunity in data[d]['opportunities'] %}
+                            <p><a href="{{ opportunity['link'] }}" target="_blank">{{ opportunity['title'] }}</a>: {{ opportunity['about'] }}</p>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
     </div>
+</div>
 <!--popup script; could probably refactor and move to a diff file later-->
 <script>
+    // Open popup when clicking a topic
     document.querySelectorAll(".topic").forEach(topic => {
         topic.addEventListener("click", (e) => {
-            e.preventDefault();
+            e.stopPropagation();
 
-            // CLOSE all popups first
-            document.querySelectorAll(".popup").forEach(popup => {
+            // Close all popups first
+            document.querySelectorAll(".explore-popup").forEach(popup => {
                 popup.classList.add("hidden");
             });
 
-            // OPEN the selected popup
+            // Open selected popup
             const popupId = topic.dataset.popup;
             const popup = document.getElementById(popupId);
 
@@ -87,20 +94,28 @@
         });
     });
 
-    document.addEventListener("click", (e) => {
-        if (e.target.closest(".popup") || e.target.closest(".topic")) return;
-
-        document.querySelectorAll(".popup").forEach(popup => {
+    // Close popup when clicking outside
+    document.addEventListener("click", () => {
+        document.querySelectorAll(".explore-popup").forEach(popup => {
             popup.classList.add("hidden");
         });
     });
 
-    document.querySelectorAll(".close-button").forEach(btn => {
+    // Prevent clicks inside popup from closing it
+    document.querySelectorAll(".explore-popup").forEach(popup => {
+        popup.addEventListener("click", (e) => {
+            e.stopPropagation();
+        });
+    });
+
+    // Close button
+    document.querySelectorAll(".explore-close-button").forEach(btn => {
         btn.addEventListener("click", (e) => {
             e.stopPropagation();
-            btn.closest(".popup").classList.add("hidden");
+            btn.closest(".explore-popup").classList.add("hidden");
         });
     });
 </script>
+
 </body>
 </html>

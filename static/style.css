@@ -22,55 +22,6 @@ a {
     display: none;
 }
 
-.popup{
-    border: 3px solid black;
-    position:absolute;
-    /* top: 50%;
-    left:50%; */
-    height:450px;
-    width:110vh;
-    background-color:white;
-    z-index:1000;
-    transform: translate(70%, 0%);
-}
-.popup-header{
-    height: 40px;
-    width:100%;
-    background-color: #ff79c3;
-    border-bottom: 3px solid black;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    padding: 0 10px;
-    box-sizing: border-box;
-}
-
-.popup-body-wrap{
-    height: 400px;
-    overflow-y: auto;
-}
-
-.popup-body{
-    padding: 0px 20px;
-}
-
-.close-button{
-    position:absolute;
-    cursor: pointer;
-    top: 8px;
-    right: 14px;
-    border: 3px solid black;
-    width: 50px;
-    height: 25px;
-    background-color: #ffbbdd; 
-    font-size: 25px;
-    font-weight: 2.5rem;
-    padding:none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .courses-iframe{
   display: flex;
   justify-content: center;
@@ -81,20 +32,37 @@ a {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    padding-top: 10px;
-    height: calc(85.5vh - 20px);   /* subtract padding */
-    height: calc(85.5dvh - 20px);  /* mobile-safe */
-    overflow:hidden;
+    height: calc(100vh - 81px - 10px); /* 81px = navbar height, 20px = gap below navbar */
+    padding-top: 10px; /* space below navbar */
+    box-sizing: border-box;
 }
 
 .child-container {
+    flex: 1;                 /* keeps 50 / 50 */
+    display: flex;
+    flex-direction: column;  /* vertical layout inside */
+    border: 3px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.child-container.scrollable {
     flex: 1;
-    border: solid black;
-    border-width: 3px;
-    padding: 20px 28px;
-    overflow-y: auto;
-    overflow-x: visible;
-    scrollbar-color: blue;
+    border: 3px solid black;
+    padding: 20px;
+    overflow-y: auto; /* only right side scrolls */
+    box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+    .parent-container {
+        flex-direction: column;
+        height: auto; /* let content flow */
+    }
+    .child-container,
+    .child-container.scrollable {
+        height: auto;
+    }
 }
 
 /* FLASHED MESSAGE */
@@ -258,6 +226,10 @@ checkable{
     right: 16px;
 }
 
+.footer-info {
+    margin-top: auto; /* magic line */
+}
+
 /* Stuff for map*/
 
 .map-outer{
@@ -279,6 +251,7 @@ checkable{
     flex-direction: column; /* vertical list */
     gap: 10px;             /* spacing between items */
     width: 390px;           /* adjust as needed */
+    overflow: visible;
 }
 
 .map-container .topic {
@@ -304,7 +277,7 @@ checkable{
     cursor: pointer;
     background-color: #ff79c3;
     box-shadow: 3px;
-    transform: translate(-2px, -2px);
+    transform: translate(-1px, -1px);
 }
 
 .map-container .topic:active {
@@ -412,4 +385,95 @@ hr {
   grid-template-columns: 29% 69%;
   background-color: dodgerblue;
   padding: 10px;
+}
+
+/* === EXPLORE PAGE CSS === */
+
+/* Parent container below navbar */
+.explore-parent-container {
+    display: flex;
+    height: calc(100vh - 81px); /* adjust 81px to match your navbar height */
+    gap: 10px; 
+    padding: 10px; /* optional padding around content */
+    box-sizing: border-box;
+}
+
+/* Left scrollable panel (topics) */
+.explore-left-panel {
+    overflow-y: auto;   /* only this panel scrolls */
+    overflow-x: hidden;
+    flex: 0 0 auto;     /* width based on content */
+    max-width: 35%;     /* optional: limit width on large screens */
+}
+
+/* Container for the right panel (explore message + popups) */
+.explore-right-panel {
+    flex: 1;            /* takes remaining space */
+    display: flex;
+    justify-content: center;  /* horizontal center */
+    align-items: center;      /* vertical center */
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 20px;
+    height: 100%; 
+    box-sizing: border-box;
+    position: relative; /* popups positioned relative to this panel */
+}
+
+/* Popup styling */
+.explore-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;          /* fit inside right panel */
+    max-width: 60%;
+    max-height: 70%;
+    background-color: white;
+    border: 3px solid black;
+    z-index: 1000;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.explore-popup-header {
+    position: sticky;   /* stick to top of container */
+    top: 0;             /* stick at top */
+    z-index: 2000;        /* above scrollable content */
+    height: 40px;
+    width: 100%;
+    background-color: #ff79c3;
+    border-bottom: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.explore-close-button{
+    position:absolute;
+    cursor: pointer;
+    top: 8px;
+    right: 14px;
+    border: 3px solid black;
+    width: 50px;
+    height: 25px;
+    background-color: #ffbbdd; 
+    font-size: 25px;
+    font-weight: 2.5rem;
+    padding:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-body-wrap {
+    overflow-y: auto;       /* scrolling still works */
+    -ms-overflow-style: none;  /* IE/Edge */
+    scrollbar-width: none;      /* Firefox */
+}
+
+.popup-body-wrap::-webkit-scrollbar {
+    display: none;           /* Chrome, Safari, Opera */
 }

@@ -39,11 +39,17 @@
       <p>Explore the different tabs to view your major plan (make sure to log in first!) and various courses and opportunities related to the many fields within computer science!</p>
       <p><a href="https://cs.wellesley.edu/~cs/Curriculum/dependencies.html" target="_blank">Wellesley CS Course Flowchart</a></p>
       <p><a href="https://cs.wellesley.edu/timeline/" target="_blank">Wellesley CS Department Timeline</a></p>
-      <hr>
-      <p>Created by:</p>
-      <p><a href="https://github.com/ninahowley" target="_blank">Nina Howley</a> '27 and <a href="https://github.com/propadiene-1" target="_blank">Aileen Liang</a> '28 @ Wellesley UpSkill</p>
+      <div class="footer-info">
+         <hr>
+         <p>Created by:</p>
+         <p>
+            <a href="https://github.com/ninahowley" target="_blank">Nina Howley</a> '27 and
+            <a href="https://github.com/propadiene-1" target="_blank">Aileen Liang</a> '28
+            @ Wellesley UpSkill
+         </p>
+      </div>
    </div>
-      <div class="child-container">
+      <div class="child-container scrollable">
          <h2>Spring '26 Course Offerings</h2>
          {% for course in spring_courses %}
          {% if course.course_core %}
