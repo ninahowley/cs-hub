@@ -31,7 +31,7 @@ CS Hub is a website where Wellesley CS majors and other students interested in C
 3. **Install flask**
     ```pip install flask```
 4. **Run the app!**
-    ```flask mac: --app app run | windows: python app.py```
+    ```mac: flask --app app run | windows: python app.py```
 
 ## Contents
 
