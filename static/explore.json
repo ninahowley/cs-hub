@@ -16,6 +16,7 @@
         "alt_name":"Algorithms",
         "blurb": "An algorithm is a set of step-by-step instructions. Popular examples include sorting algorithms, search algorithms, graph traversal algorithms, and data compressio algorithms. The study of algorithms teaches you how to design and implement algorithms, and how to prove properties such as correctness or efficiency.",
         "instructors": [
+            {"name": "Christin Bassem", "link": "https://www.wellesley.edu/people/christin-bassem", "bio": "My broad research interests are in mechanism and algorithm design for dynamic distributed systems, including crowd networks, mobile ad-hoc networks, and transport networks."},
             {"name": "Brian Brubach", "link": "https://www.wellesley.edu/people/brian-brubach", "bio": "I have broad research interests in algorithms and theoretical computer science motivated by a range of social good applications."},
             {"name": "Brian Tjaden", "link": "https://www.wellesley.edu/people/brian-tjaden", "bio": "My work focuses on the design, analysis, and implementation of algorithms with applications in genomics and molecular biology."}
         ],
@@ -61,7 +62,8 @@
             {"name": "Peter Mawhorter", "link": "https://www.wellesley.edu/people/peter-mawhorter", "bio": "I'm especially interested in teaching programming basics to scientists who need them for their experiments, and to humanists who want to sharpen their understanding of our increasingly code-driven world."}
         ],
         "courses": [
-            {"course_code": "", "course_name": "", "link":"", "type": ""}
+            {"course_code": "CS 240", "course_name": "Foundations of Computer Systems", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+240", "type": "core course"},
+            {"course_code": "CS 340", "course_name": "Modeling for Computer Systems", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+340", "type": "300-level elective"}
         ],
         "opportunities": [
             {"title": "", "link": "", "about": ""}
@@ -100,7 +102,7 @@
             {"name": "Eni Mustafaraj", "link": "https://www.wellesley.edu/people/eni-mustafaraj", "bio": "I am a computational data scientist who studies the online information environment shaped by the interactions of algorithms, humans, and organizations."}
         ],
         "courses": [
-            {"course_code": "CS 234", "course_name": "Data, Analytics, and Visualization", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+234", "type": " 200-level elective"},
+            {"course_code": "CS 234", "course_name": "Data, Analytics, and Visualization", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+234", "type": "200-level elective"},
             {"course_code": "CS 248", "course_name": "Software and Data", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+248", "type": "200-level elective"},
             {"course_code": "CS 315", "course_name": "Data Science for the Web", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+315", "type": "300-level elective"}
         ],
@@ -162,10 +164,10 @@
         "alt_name":"NLP",
         "blurb": "",
         "instructors": [
-            {"name": "", "link": "", "bio": ""}
+            {"name": "Carolyn Anderson", "link": "https://www.wellesley.edu/people/carolyn-anderson", "bio": "I use computational, experimental, and symbolic methods to understand meaning in natural language."}
         ],
         "courses": [
-            {"course_code": "", "course_name": "", "link":"", "type": ""}
+            {"course_code": "CS 333", "course_name": "Natural Language Processing", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+333", "type": "300-level elective"}
         ],
         "opportunities": [
             {"title": "", "link": "", "about": ""}
@@ -175,10 +177,11 @@
         "alt_name":"Networks",
         "blurb": "",
         "instructors": [
-            {"name": "", "link": "", "bio": ""}
+            {"name": "Christin Bassem", "link": "https://www.wellesley.edu/people/christin-bassem", "bio": "My broad research interests are in mechanism and algorithm design for dynamic distributed systems, including crowd networks, mobile ad-hoc networks, and transport networks."}
         ],
         "courses": [
-            {"course_code": "", "course_name": "", "link":"", "type": ""}
+            {"course_code": "CS 242", "course_name": "Computer Networks", "link":"https://catalog.wellesley.edu/course.php?pos=55&doc_type=CS+242", "type": "200-level elective"},
+            {"course_code": "CS 343", "course_name": "Distributed Computing", "link":"https://catalog.wellesley.edu/course.php?pos=55&doc_type=CS+343", "type": "300-level elective"}
         ],
         "opportunities": [
             {"title": "", "link": "", "about": ""}
@@ -201,10 +204,11 @@
         "alt_name":"PL",
         "blurb": "",
         "instructors": [
-            {"name": "", "link": "", "bio": ""}
+            {"name": "Alexa Vanhattum", "link": "https://www.wellesley.edu/people/alexa-vanhattum", "bio": "My interests span programming languages and computer systems."},
+            {"name": "Franklyn Turbak", "link": "https://www.wellesley.edu/people/franklyn-turbak", "bio": "My passion is the study of programs and programming languages, which is at the heart of both my teaching and research."}
         ],
         "courses": [
-            {"course_code": "", "course_name": "", "link":"", "type": ""}
+            {"course_code": "CS 251", "course_name": "Principles of Programming Languages", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+251", "type": "200-level elective"}
         ],
         "opportunities": [
             {"title": "", "link": "", "about": ""}
@@ -230,7 +234,21 @@
             {"name": "", "link": "", "bio": ""}
         ],
         "courses": [
-            {"course_code": "", "course_name": "", "link":"", "type": ""}
+            {"course_code": "CS 342", "course_name": "Computer Security", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+342", "type": "300-level elective"}
+        ],
+        "opportunities": [
+            {"title": "", "link": "", "about": ""}
+        ]
+    },
+    "Social Computing": {
+        "alt_name":"Social",
+        "blurb": "",
+        "instructors": [
+            {"name": "Scott Anderson", "link": "https://www.wellesley.edu/people/scott-anderson", "bio": "Professor Anderson's teaching interests include web application programming, including databases, web frameworks, and computer graphics."}
+        ],
+        "courses": [
+            {"course_code": "CS 233", "course_name": "Computational Social Choice: Theory & Applications", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+233", "type": "200-level elective"},
+            {"course_code": "CS 323", "course_name": "Social Computing", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+323", "type": "300-level elective"}
         ],
         "opportunities": [
             {"title": "", "link": "", "about": ""}
