@@ -6,13 +6,14 @@ CS Hub is a website where Wellesley CS majors and other students interested in C
 
 ### Home Page
 
-Enter your Wellesley ID in the **Login** section (or any username you want). On the right, explore courses offered in the **current semester** (Spring '26).
+Enter your Wellesley ID in the **Login** section (or any username you want).  
+On the right, explore courses offered in the **current semester** (Spring '26).
 
 <img alt="image" src="static/screenshots/home.png" />
 
 ### Major Plan
 
-The right panel displays all CS courses offered at Wellesley. Hover to read the **course description**, and click to **add a course**!
+The right panel displays all CS courses offered at Wellesley. Hover to read the **course description**, and click to **add a course** to your profile!
 
 Your personalized **major panel** on the left will automatically update with which requirements you still need to complete. You can also click on the **drop button** to drop a course.
 
