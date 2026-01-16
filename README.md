@@ -6,8 +6,7 @@ CS Hub is a website where Wellesley CS majors and other students interested in C
 
 ### Home Page
 
-Enter your Wellesley ID in the **Login** section (or any username you want).  
-On the right, explore courses offered in the **current semester** (Spring '26).
+Enter your Wellesley ID (or any username) in the **Login** section. Explore courses offered in the **current semester** (Spring '26) in the right panel.
 
 <img alt="image" src="static/screenshots/home.png" />
 
@@ -24,10 +23,6 @@ Your personalized **major panel** on the left will automatically update with whi
 The scrollable **topic list** in the left panel displays some popular topics in CS (as well as unique topics that our professors research.) Click on a topic to view a **popup** with more information!
 
 <img alt="image" src="static/screenshots/explore_popup.png" />
-
-## Authors
-* Nina Howley '27
-* Aileen Liang '28
 
 ## Quick Start
 
@@ -61,7 +56,11 @@ The scrollable **topic list** in the left panel displays some popular topics in 
 + **Frontend:** Flask, HTMl, CSS, JavaScript
 + **Backend:** Python and SQLite
 
-## Our Design Process-- Milestones and Next Steps
+## Authors
+
+Nina Howley '27, Aileen Liang '28
+
+## Our Design Process and Next Steps
 
 **Milestone 1:**
 + Scrape courses (separate core vs elective courses)
