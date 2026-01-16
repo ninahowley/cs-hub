@@ -6,7 +6,7 @@
 </head>
 <body>
     <div class="navigation">
-        {% if user %}
+        {% if user and user != 'notloggedin' %}
         <h1 class="nav-title">< {{ user }} > Major Plan</h1>
         {% else %}
             <h1 class="nav-title">Major Plan</h1>
@@ -20,7 +20,7 @@
     <div>
     <div class="parent-container">
         <div class="child-container scrollable">
-            {% if user %}
+            {% if user and user != 'notloggedin' %}
             <h2>Major Plan for <span style="color:#b8377e">{{ user }}</span></h2>
             {% else %}
                 <h2>Please log in to see your major plan!</h2>

@@ -61,6 +61,8 @@ def get_remaining_courses(username: str):
         cores_not_taken.remove("CS 112")
     if "CS 112" in cores_taken:
         cores_not_taken.remove("CS 111")
+    if "CS 111" in cores_not_taken and "CS 112" in cores_not_taken:
+        cores_not_taken.remove("CS 112")
     electives_taken = [course for course in courses_taken if course not in core_courses and course[3] in ["2", "3"]]
     electives_remaining = 0
     if len(electives_taken) < 4:
@@ -95,8 +97,23 @@ def major_plan():
             taken_electives_df = elective_df[elective_df["course_tag"].isin(taken_courses)] #only keep taken
             taken_electives = taken_electives_df.to_dict(orient='records')
         else:
-            username = None
-            taken_electives = []
+            username = "notloggedin"
+            #display user courses
+            remaining_info = get_remaining_courses(username)
+            taken_courses = db.get_user_courses(username)
+            taken_courses = [course.strip() for course in taken_courses]
+            taken_electives_df = elective_df[elective_df["course_tag"].isin(taken_courses)] #only keep taken
+            taken_electives = taken_electives_df.to_dict(orient='records')
+            return render_template(
+                'major-plan.html', 
+                user = username, 
+                all_courses = all_course_info, 
+                taken_courses = taken_courses,
+                taken_electives = taken_electives, 
+                electives = elective_info, 
+                remaining_info = remaining_info,
+                page_title='Major Plan'
+            )
         
         #display spring courses
         spring_df = pd.read_csv('courses/spring_courses.csv')
