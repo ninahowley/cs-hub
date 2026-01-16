@@ -66,13 +66,13 @@
       {% endfor %}
    </div>
 </div>
-<div>
+<div class="popup-layer">
    {% for d in spring_data %}
-   <div class="course-popup hidden" id="{{ d | replace(' ', '-') }}">
-      <h2>{{ d }}: {{ spring_data[d]['course_name'] }}</h2>
-      <p>{{ spring_data[d]['description'] }}</p>
-      <p>Distribution(s): {{ spring_data[d]['course_distribs'] }}</p>
-   </div>
+      <div class="course-popup hidden" id="{{ d | replace(' ', '-') }}">
+         <h2>{{ d }}: {{ spring_data[d]['course_name'] }}</h2>
+         <p>{{ spring_data[d]['description'] }}</p>
+         <p>Distribution(s): {{ spring_data[d]['course_distribs'] }}</p>
+      </div>
    {% endfor %}
 </div>
 </body>
