@@ -35,9 +35,10 @@ CS Hub is a website where Wellesley CS majors and other students interested in C
     pip install flask
     ```
 4. **Run the app!**
-    ```
-    flask --app app run
-    ```
+
+   Mac: ```flask --app app run```
+
+   Windows: ```python app.py```
 
 ## Contents
 
