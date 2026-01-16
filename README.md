@@ -2,6 +2,23 @@
 
 CS Hub is a website where Wellesley CS majors and other students interested in CS can view course offerings, plan their major and explore the many fields of CS. It was made for the UpSkill: Software Development Lifecycle program.
 
+## Screenshots
+
+<h2>Home
+<img alt="image" src="static/screenshots/home.png" />
+
+<h2>Major Plan
+<img alt="image" src="static/screenshots/major_plan.png" />
+
+<h2>Major Plan - Course Popup
+<img alt="image" src="static/screenshots/major_plan_popup.png" />
+
+<h2>Explore
+<img alt="image" src="static/screenshots/explore.png" />
+
+<h2>Explore - Topic Popup
+<img alt="image" src="static/screenshots/explore_popup.png" />
+
 ## Authors
 * Nina Howley '27
 * Aileen Liang '28
