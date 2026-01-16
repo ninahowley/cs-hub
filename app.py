@@ -73,6 +73,8 @@ def get_remaining_courses(username: str):
         cores_not_taken.remove("CS 112")
     if "CS 112" in cores_taken:
         cores_not_taken.remove("CS 111")
+    if "CS 111" in cores_not_taken and "CS 112" in cores_not_taken:
+        cores_not_taken.remove("CS 112")
     electives_taken = [course for course in courses_taken if course not in core_courses and course[3] in ["2", "3"]]
     electives_remaining = 0
     if len(electives_taken) < 4:
@@ -97,27 +99,18 @@ def major_plan():
         all_course_info = all_df.to_dict(orient='records')
         elective_df = all_df[all_df["course_core"] == False] #remove core
         elective_info = elective_df.to_dict(orient='records')
-
+        # by default, if not logged in use dummy account with no courses
+        username = "notloggedin"
+        # otherwise, get username from session
         if 'username' in session:
             username = session['username']
-            #display user courses
-            remaining_info = get_remaining_courses(username)
-            taken_courses = db.get_user_courses(username)
-            taken_courses = [course.strip() for course in taken_courses]
-            taken_electives_df = elective_df[elective_df["course_tag"].isin(taken_courses)] #only keep taken
-            taken_electives = taken_electives_df.to_dict(orient='records')
-        else:
-            username = None
-            taken_electives = []
-        
-        #display spring courses
-        spring_df = pd.read_csv('courses/spring_courses.csv')
-        spring_with_info = spring_df.merge(
-            all_df,
-            on='course_tag',
-            how='left'
-        )
-        spring_course_info = spring_with_info.to_dict(orient='records')
+        print(f"{username = }")
+        # get user courses to display
+        remaining_info = get_remaining_courses(username)
+        taken_courses = db.get_user_courses(username)
+        taken_courses = [course.strip() for course in taken_courses]
+        taken_electives_df = elective_df[elective_df["course_tag"].isin(taken_courses)] #only keep taken
+        taken_electives = taken_electives_df.to_dict(orient='records')
         return render_template(
             'major-plan.html', 
             user = username, 

@@ -1,7 +1,7 @@
 {
     "Accessibility": {
         "alt_name":"Accessibility",
-        "blurb": "",
+        "blurb": "Accessibility is an important part of computer science, as we can create inclusive and usable technologies for everyone to enjoy. Aspects of accessible design are used in many other fields such as software engineering and assistive technology.",
         "instructors": [
             {"name": "Vinitha Gadiraju", "link": "https://www.wellesley.edu/people/vinitha-gadiraju", "bio": "My research centers on building collaborative, equitable tools for people with disabilities, particularly in the context of learning and education."}
         ],
@@ -16,6 +16,7 @@
         "alt_name":"Algorithms",
         "blurb": "An algorithm is a set of step-by-step instructions. Popular examples include sorting algorithms, search algorithms, graph traversal algorithms, and data compressio algorithms. The study of algorithms teaches you how to design and implement algorithms, and how to prove properties such as correctness or efficiency.",
         "instructors": [
+            {"name": "Christin Bassem", "link": "https://www.wellesley.edu/people/christin-bassem", "bio": "My broad research interests are in mechanism and algorithm design for dynamic distributed systems, including crowd networks, mobile ad-hoc networks, and transport networks."},
             {"name": "Brian Brubach", "link": "https://www.wellesley.edu/people/brian-brubach", "bio": "I have broad research interests in algorithms and theoretical computer science motivated by a range of social good applications."},
             {"name": "Brian Tjaden", "link": "https://www.wellesley.edu/people/brian-tjaden", "bio": "My work focuses on the design, analysis, and implementation of algorithms with applications in genomics and molecular biology."}
         ],
@@ -29,12 +30,12 @@
     },
     "Compilers": {
         "alt_name":"Compilers",
-        "blurb": "",
+        "blurb": "A compiler is a specialized software that translates human-readable source code (such as Python or Java) into a lower-level language (such as binary instruction) that a computer's processor can execute.",
         "instructors": [
             {"name": "", "link": "", "bio": ""}
         ],
         "courses": [
-            {"course_code": "", "course_name": "", "link":"", "type": ""}
+            {"course_code": "CS 251", "course_name": "Principles of Programming Languages", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+251", "type": "200-level elective"}
         ],
         "opportunities": [
             {"title": "", "link": "", "about": ""}
@@ -42,7 +43,7 @@
     },
     "Computability & Complexity Theory": {
         "alt_name":"Theory",
-        "blurb": "",
+        "blurb": "Complexity Theory is the study of identifying and classifying difficult problems. One can measure the difficulty of a problem through the time and computational power needed to solve it.",
         "instructors": [
             {"name": "", "link": "", "bio": ""}
         ],
@@ -55,13 +56,14 @@
     },
     "Computer Architecture": {
         "alt_name":"Architecture",
-        "blurb": "",
+        "blurb": "Computer architecture is the design and implementation of low level hardware components (such as CPU and memory), and how they work together to execute programs and act as a bridge between instructions and software.",
         "instructors": [
             {"name": "Alexa Vanhattum", "link": "https://www.wellesley.edu/people/alexa-vanhattum", "bio": "I use lightweight formal methods to improve the reliability and efficiency of low-level computer systems."},
             {"name": "Peter Mawhorter", "link": "https://www.wellesley.edu/people/peter-mawhorter", "bio": "I'm especially interested in teaching programming basics to scientists who need them for their experiments, and to humanists who want to sharpen their understanding of our increasingly code-driven world."}
         ],
         "courses": [
-            {"course_code": "", "course_name": "", "link":"", "type": ""}
+            {"course_code": "CS 240", "course_name": "Foundations of Computer Systems", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+240", "type": "core course"},
+            {"course_code": "CS 340", "course_name": "Modeling for Computer Systems", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+340", "type": "300-level elective"}
         ],
         "opportunities": [
             {"title": "", "link": "", "about": ""}
@@ -100,7 +102,7 @@
             {"name": "Eni Mustafaraj", "link": "https://www.wellesley.edu/people/eni-mustafaraj", "bio": "I am a computational data scientist who studies the online information environment shaped by the interactions of algorithms, humans, and organizations."}
         ],
         "courses": [
-            {"course_code": "CS 234", "course_name": "Data, Analytics, and Visualization", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+234", "type": " 200-level elective"},
+            {"course_code": "CS 234", "course_name": "Data, Analytics, and Visualization", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+234", "type": "200-level elective"},
             {"course_code": "CS 248", "course_name": "Software and Data", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+248", "type": "200-level elective"},
             {"course_code": "CS 315", "course_name": "Data Science for the Web", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+315", "type": "300-level elective"}
         ],
@@ -121,7 +123,7 @@
             {"course_code": "CS 365", "course_name": "Advanced Projects in Playable Media", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+365", "type": "300-level elective"}
         ],
         "opportunities": [
-            {"title": "", "link": "", "about": ""}
+            {"title": "Wellesley Game Dev Club", "link": "https://www.instagram.com/wellesley.gamedev/", "about": "'Community of students interested in computer science, animation, and game design.'"}
         ]
     },
     "Human-Computer Interaction": {
@@ -138,14 +140,15 @@
             {"course_code": "CS 325", "course_name": "Designing for Accessibility", "link":"https://catalog.wellesley.edu/course.php?pos=55&doc_type=CS+325", "type": "300-level elective"}
         ],
         "opportunities": [
-            {"title": "", "link": "", "about": ""}
+            {"title": "HCI Lab", "link": "https://cs.wellesley.edu/~hcilab/research.html", "about": "Students can get involved in HCI research projects through the HCI lab on campus."}
         ]
     },
     "Machine Learning": {
         "alt_name":"ML",
         "blurb": "",
         "instructors": [
-            {"name": "Yaniv Yacoby", "link": "https://www.wellesley.edu/people/yaniv-yacoby", "bio": "I lead the Model-Guided Uncertainty (MOGU) Lab at Wellesley, where we enable effective and responsible uses of expressive (deep) ML models in safety-critical domains, like precision healthcare."}
+            {"name": "Carolyn Anderson", "link": "https://www.wellesley.edu/people/carolyn-anderson", "bio": "In order to develop language technology that interacts with us in a natural way, we need to develop models that can adjust their language based on users' situations and knowledge states."},
+            {"name": "Yaniv Yacoby", "link": "https://www.wellesley.edu/people/yaniv-yacoby", "bio": "My research focuses on developing new machine learning methods to advance the understanding, prediction, and prevention of suicide and related behaviors."}
         ],
         "courses": [
             {"course_code": "CS 232", "course_name": "Artificial Intelligence", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+232", "type": "200-level elective"},
@@ -155,17 +158,17 @@
             {"course_code": "CS 245", "course_name": "Probablistic Foundations of Machine Learning", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+345", "type": "300-level elective"}
         ],
         "opportunities": [
-            {"title": "", "link": "", "about": ""}
+            {"title": "MOGU Lab", "link": "https://mogu-lab.github.io/", "about": "'Machine Learning (ML) laboratory at Wellesley College, focused on enabling effective and responsible uses of expressive (deep) ML models in safety-critical domains like precision healthcare.'"}
         ]
     },
     "Natural Language Processing": {
         "alt_name":"NLP",
         "blurb": "",
         "instructors": [
-            {"name": "", "link": "", "bio": ""}
+            {"name": "Carolyn Anderson", "link": "https://www.wellesley.edu/people/carolyn-anderson", "bio": "I use computational, experimental, and symbolic methods to understand meaning in natural language."}
         ],
         "courses": [
-            {"course_code": "", "course_name": "", "link":"", "type": ""}
+            {"course_code": "CS 333", "course_name": "Natural Language Processing", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+333", "type": "300-level elective"}
         ],
         "opportunities": [
             {"title": "", "link": "", "about": ""}
@@ -175,10 +178,11 @@
         "alt_name":"Networks",
         "blurb": "",
         "instructors": [
-            {"name": "", "link": "", "bio": ""}
+            {"name": "Christin Bassem", "link": "https://www.wellesley.edu/people/christin-bassem", "bio": "My broad research interests are in mechanism and algorithm design for dynamic distributed systems, including crowd networks, mobile ad-hoc networks, and transport networks."}
         ],
         "courses": [
-            {"course_code": "", "course_name": "", "link":"", "type": ""}
+            {"course_code": "CS 242", "course_name": "Computer Networks", "link":"https://catalog.wellesley.edu/course.php?pos=55&doc_type=CS+242", "type": "200-level elective"},
+            {"course_code": "CS 343", "course_name": "Distributed Computing", "link":"https://catalog.wellesley.edu/course.php?pos=55&doc_type=CS+343", "type": "300-level elective"}
         ],
         "opportunities": [
             {"title": "", "link": "", "about": ""}
@@ -201,10 +205,11 @@
         "alt_name":"PL",
         "blurb": "",
         "instructors": [
-            {"name": "", "link": "", "bio": ""}
+            {"name": "Alexa Vanhattum", "link": "https://www.wellesley.edu/people/alexa-vanhattum", "bio": "My interests span programming languages and computer systems."},
+            {"name": "Franklyn Turbak", "link": "https://www.wellesley.edu/people/franklyn-turbak", "bio": "My passion is the study of programs and programming languages, which is at the heart of both my teaching and research."}
         ],
         "courses": [
-            {"course_code": "", "course_name": "", "link":"", "type": ""}
+            {"course_code": "CS 251", "course_name": "Principles of Programming Languages", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+251", "type": "200-level elective"}
         ],
         "opportunities": [
             {"title": "", "link": "", "about": ""}
@@ -230,7 +235,21 @@
             {"name": "", "link": "", "bio": ""}
         ],
         "courses": [
-            {"course_code": "", "course_name": "", "link":"", "type": ""}
+            {"course_code": "CS 342", "course_name": "Computer Security", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+342", "type": "300-level elective"}
+        ],
+        "opportunities": [
+            {"title": "", "link": "", "about": ""}
+        ]
+    },
+    "Social Computing": {
+        "alt_name":"Social",
+        "blurb": "",
+        "instructors": [
+            {"name": "Scott Anderson", "link": "https://www.wellesley.edu/people/scott-anderson", "bio": "Professor Anderson's teaching interests include web application programming, including databases, web frameworks, and computer graphics."}
+        ],
+        "courses": [
+            {"course_code": "CS 233", "course_name": "Computational Social Choice: Theory & Applications", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+233", "type": "200-level elective"},
+            {"course_code": "CS 323", "course_name": "Social Computing", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+323", "type": "300-level elective"}
         ],
         "opportunities": [
             {"title": "", "link": "", "about": ""}
@@ -248,7 +267,7 @@
             {"course_code": "CS 317", "course_name": "Mobile App Development", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+317", "type": "300-level elective"}
         ],
         "opportunities": [
-            {"title": "", "link": "", "about": ""}
+            {"title": "UpSkill (Software Development Lifecycle)", "link": "https://careereducation.wellesley.edu/upskill", "about": "A wintersession program for Wellesley students to learn about Github and collaborate on a project."}
         ]
     }
 }
