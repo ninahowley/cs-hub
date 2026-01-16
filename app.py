@@ -101,6 +101,8 @@ def get_remaining_courses(username: str):
 @app.route("/major-plan")
 def major_plan():
     try:
+        with open('static/all_courses.json', 'r') as file:
+            all_dict = json.load(file)
         #display all courses
         all_df = pd.read_csv('courses/all_courses.csv')
         all_course_info = all_df.to_dict(orient='records')
@@ -126,7 +128,8 @@ def major_plan():
             taken_electives = taken_electives, 
             electives = elective_info, 
             remaining_info = remaining_info,
-            page_title='Major Plan'
+            page_title='Major Plan',
+            all_data = all_dict
         )
     except Exception as e:
         print(e)

@@ -1,0 +1,266 @@
+{
+  "CS 110": {
+    "course_name": "Computing in the Age of AI",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "This course aims to provide students with the knowledge and skills to become informed digital citizens in the age of AI, ready to navigate the digital landscape. Students will gain fundamental technical understanding of how computers, the Web, and AI work, and will study three programming languages: HTML5, CSS, and JavaScript. Students will also examine and discuss societal and ethical issues related to the Web and AI technologies, and consider responsible and future use of these technologies."
+  },
+  "CS 111": {
+    "course_name": "Computer Programming and Problem Solving",
+    "course_distribs": "MM",
+    "course_core": "True",
+    "description": "An introduction to problem-solving through computer programming. Students learn how to read, modify, design, debug, and test algorithms that solve problems. Programming concepts include control structures, data structures, abstraction, recursion, and modularity. Students explore these concepts in the context of interactive programs, data processing, and graphics or audio, using the Python programming language."
+  },
+  "CS 111M": {
+    "course_name": "Computer Programming and Problem Solving",
+    "course_distribs": "MM",
+    "course_core": "True",
+    "description": "This is a Maurer Public Speaking course, and this course (CS 111M) incorporates both lecture and lab into one section; there is no need to register for a separate lab. This course provides multiple opportunities to learn and practice public speaking skills."
+  },
+  "CS 111X": {
+    "course_name": "Computer Programming and Problem Solving",
+    "course_distribs": "MM",
+    "course_core": "True",
+    "description": "Students in this section will complete self-directed weekly labs. This section is intended for students who have some previous programming experience, but would benefit from more before taking CS 230. Students unsure about whether to take CS 111, CS 111X, CS 111M, CS 112, CS 230, or CS 230X as their first Wellesley CS course should complete the CS placement questionnaire."
+  },
+  "CS 112": {
+    "course_name": "Intro Computing for the Sciences",
+    "course_distribs": "MM",
+    "course_core": "True",
+    "description": "An introduction to problem-solving through computer programming with special focus on application to problems relevant to physics, chemistry, and biology. Students learn how to read, modify, design, debug, and test algorithms that solve problems. Programming concepts include control structures, problem solving strategies, abstraction, recursion, and modularity. Students explore these concepts in the context of interactive programs, data processing, and graphical and numerical analysis, using the Python programming language. Students are required to attend a 2.5-hour lab where they will apply concepts learned in lecture to study topics at the intersection of chemistry and physics. Topics might include: chemical kinetics, numerical integration, molecular dynamics, computational biology, Monte Carlo techniques, and basic statistical analysis."
+  },
+  "CS 121": {
+    "course_name": "Intro to Game Design",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "Video games are a popular form of interactive media that engage players in dynamic experiences through unprecedented combinations of storytelling, visualization, interactivity, and multi-sensory immersion. This course will introduce students to video game production and concepts. We will develop a framework for critically analyzing this medium, learn to identify effective strategies for creating games and describe what elements of design impact the final experience of a game. We’ll also identify the function of user agency in this medium to better understand how players are affected by representation in video games. Throughout the course, students will be asked to apply these concepts while building their own games and become familiar with the fundamentals of video game design."
+  },
+  "CS 200": {
+    "course_name": "OO Programming Studio in Java",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "CS 200 introduces students to Java, and the Object Oriented Model of programming with hands-on instruction and experience, using active learning pedagogical approaches. Students will gain knowledge and reinforcement in fundamental programming and programming-related skills, including problem decomposition into smaller and more manageable sub-problems, designing in the Object Oriented Model, programming in Java, practicing fundamental constructs like conditionals, looping, usage of basic Data Structures, as well as debugging and testing techniques. In addition, attention will be paid in developing skills around project management, pair and team work, and identifying and evaluating reliable resources for the task at hand. With successful completion of this course, students are expected to be independent programmers and learners, and effective team members."
+  },
+  "CS 204": {
+    "course_name": "Intro to Web Development",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "This course introduces modern web development using HTML, CSS, and JavaScript. JavaScript is explored in detail, including scoping, closures, objects, classes, object-oriented programming, and modules. The jQuery library is also introduced, and the course covers event handling and Ajax interactions. Students will build web pages that manage data structures using menus and forms, and that save/restore that data from local storage resulting in a persistent, dynamic web application. Designed web pages will be modern, responsive, and accessible. The course also covers Bootstrap and the jQuery UI (User Interface) library."
+  },
+  "CS 220": {
+    "course_name": "Human-Computer Interaction",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "Human-Computer Interaction is one of the areas that have transformed the way we use computers in the last 30 years. Topics include methodology for designing and testing user interfaces, interaction styles (command line, menus, graphical user interfaces, virtual reality, tangible user interfaces), interaction techniques (including use of voice, gesture, eye movements), design guidelines, and user interface software tools. Students will design a user interface, program a prototype, and test the results for usability."
+  },
+  "CS 221": {
+    "course_name": "Digital Worlds for Gaming",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "Digital games visualize compelling worlds that can resemble real-life environments and imagine other-worldly spaces. These virtual realms frame our experience of games and their design dramatically impacts our interpretation of their narratives and mechanics. Designers code environments to shape player agency and weave complex relationships between game characters. This course will teach students to create digital worlds and critically assess them as politically rich spaces that convey meaning. Students will build both 2D and 3D digital environments, coding elements such as interactivity and non-player entities, crafting game experiences that tell meaningful stories. CS221 continues to explore the Unity Game Engine and topics introduced by CS121, but enrollment is suitable for any student with 100-level coding experience and an interest in game design."
+  },
+  "CS 230": {
+    "course_name": "Data Structures",
+    "course_distribs": "MM",
+    "course_core": "True",
+    "description": "An introduction to techniques and building blocks for organizing large programs. Topics include: modules, abstract data types, recursion, algorithmic efficiency, and the use and implementation of standard data structures and algorithms, such as lists, trees, graphs, stacks, queues, priority queues, tables, sorting, and searching. Students become familiar with these concepts through weekly programming assignments using the Java programming language."
+  },
+  "CS 230X": {
+    "course_name": "Data Structures",
+    "course_distribs": "MM",
+    "course_core": "True",
+    "description": "CS230X is intended for students with significant prior experience in Java programming as demonstrated by a 5 in CS AP A, or equivalent demonstration of experience. Students in this section will complete self-directed weekly labs. If you did not take the CS AP A exam and would like to take this class, you may take the CS placement questionnaire to see if you qualify."
+  },
+  "CS 231": {
+    "course_name": "Fundamental Algorithms",
+    "course_distribs": "MM",
+    "course_core": "True",
+    "description": "This course introduces the design and analysis of fundamental algorithms. It focuses on the basic skills needed to design efficient, correct algorithms and mathematically prove these properties. General problem-solving techniques covered: divide-and-conquer, dynamic programming, greediness, and probabilistic algorithms. Topics include: sorting, searching, graph algorithms, optimization, network flows, asymptotic analysis, compression, and NP-completeness."
+  },
+  "CS 232": {
+    "course_name": "Artificial Intelligence",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "What is artificial intelligence (AI) and should humans fear it as one of 'our biggest existential threats'? In this course, we will grapple with these difficult questions and investigate them in different ways. We will discuss the development of the field from the symbolic, knowledge-rich approaches of the 20th century AI (e.g., rule-based systems), to statistical approaches that rely on increasingly large amounts of data, including an overview of contemporary deep learning techniques. We will explore how to apply these techniques in several AI application areas, including robotics, computer vision, and natural language processing, and consider ethical issues around AI in society. By the end of the semester, students should be able to answer the starting questions in-depth and with nuance."
+  },
+  "CS 233": {
+    "course_name": "Computational Social Choice: Theory & Applications",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "How can computation help us approach one of the most fundamental challenges facing every society or community: collective decision-making? This course will explore the varied ways that computation interacts with democratic processes. Emphasis will be on the computational and mathematical tools needed to both implement and analyze these processes. Students will develop skills to characterize the benefits and drawbacks of different voting rules, design faster algorithms for computing election winners, quantify famously unquantifiable problems like partisan gerrymandering, and more. Topics will include: introductory social choice theory, committee selection, participatory budgeting, visualizing electoral data, liquid democracy, political redistricting/gerrymandering, approval voting, ranked voting, fair allocation, preference elicitation, and algorithmic fairness."
+  },
+  "CS 234": {
+    "course_name": "Data, Analytics, and Visualization",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "This course introduces students to essential data science skills, focusing on collecting, cleaning, formatting, and managing data. Students will learn to write Python code to process data efficiently, implement algorithms for analyzing patterns, and apply machine learning techniques. Emphasis will be placed on data visualization as a tool for exploring datasets and communicating findings effectively. In addition to technical skills, students will critically examine the ethical implications of data collection and algorithmic decision-making, and consider the societal impacts of data-driven technologies."
+  },
+  "CS 235": {
+    "course_name": "Theory of Computation",
+    "course_distribs": "MM",
+    "course_core": "True",
+    "description": "This course offers an introduction to the theory of computation. Topics include languages, regular expressions, finite automata, grammars, pushdown automata, and Turing machines. The first part of the course covers the Chomsky hierarchy of languages and their associated computational models. The second part of the course focuses on decidability issues and unsolvable problems. The final part of the course investigates complexity theory."
+  },
+  "CS 236": {
+    "course_name": "Spatial-Temporal Mechanism Design",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "Spatial-Temporal Mechanism Design is an innovative course that combines computational techniques for analyzing spatial and temporal data with the principles of mechanism design to solve complex, real-world problems. Students will explore the intersection of geospatial analysis, time-series modeling, and optimization with auction theory, resource allocation, and incentive structures. Key applications include smart cities, transportation networks and environmental sustainability frameworks. Through theoretical exploration and project-based learning, students will develop the skills to design computational systems and mechanisms that operate efficiently and equitably in dynamic, spatial-temporal environments."
+  },
+  "CS 240": {
+    "course_name": "Foundations of Computer Systems",
+    "course_distribs": "MM, LAB",
+    "course_core": "True",
+    "description": "This course examines how computers run programs, introducing key software and hardware abstractions and implementations between programming languages and transistors. The course traces representation and translation of data and programs through three broad topics in computer systems: computer hardware implementation, including digital logic, computer arithmetic, and machine organization; the hardware-software interface, including instruction set architecture, assembly code, and the C programming language; and abstractions for practical systems, including the physical memory hierarchy, the operating system process model, virtual memory, and memory management. Students complete extensive hands-on projects in hardware and software systems. Students are required to attend one three-hour laboratory weekly."
+  },
+  "CS 242": {
+    "course_name": "Computer Networks",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "A systems-oriented approach to data networks, including a theoretical discussion of common networking problems and an examination of modern networks and protocols. Topics include point-to-point links, packet switching, Internet protocols, end-to-end protocols, congestion control, and security. Projects may include client-server applications and network measurement tools."
+  },
+  "CS 244": {
+    "course_name": "Machine Learning",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "Machine learning is the science of teaching computers how to learn from observations. It is ubiquitous in our interactions with society, such as in face recognition, web search, targeted advertising, speech processing, and genetic analysis. It is currently at the forefront of research in artificial intelligence, and has been making rapid strides given the vast availability of data today. This course is a broad introduction to the field, covering the theoretical ideas behind widely used algorithms like decision trees, linear regression, support vector machines, and many more. We will also study practical applications of these algorithms to problems in a variety of domains, including vision, speech, language, medicine, and the social sciences."
+  },
+  "CS 245": {
+    "course_name": "Probabilistic Foundations of Predictive ML",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "In recent years, Machine Learning (ML) has been used in novel applications—from generating new art and music to systems that accurately and reliably predict outcomes of medical interventions in real-time. Faster computing hardware, large datasets, and the probabilistic paradigm of ML, which frames advances like neural networks within statistical learning, have enabled these developments. In this course, we introduce the foundational concepts behind the probabilistic paradigm of predictive ML: statistical model specification and learning. We will focus on connecting theory with real-world applications. Students will get hands-on experience building models for specific tasks, most taken from healthcare contexts, using probabilistic programming languages. While expanding our methodological toolkit, we will simultaneously introduce critical perspectives to examine the ethics of ML within sociotechnical systems. This course lays the foundation for advanced study and research in ML. Topics include: directed graphical models, deep regression/classification, frequentist learning, and model evaluation."
+  },
+  "CS 248": {
+    "course_name": "Software and Data",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "Software and Data focuses on software engineering and data management processes, preparing students for upper-level, data-intensive courses. The course emphasizes: 1) software development skills, such as package installation, creating virtual environments, and using version control to enhance collaborative coding and project management. 2) Advanced Python programming by exploring new data structures, libraries, and object-oriented programming techniques to improve code efficiency when working with large datasets. 3) Data management techniques including file handling, databases and SQL, web scraping, and API interactions for effective data manipulation and retrieval. Throughout the course there are discussions on the ethics of building software and working with data, as the students work towards building a data-driven application, integrating all learned skills."
+  },
+  "CS 251": {
+    "course_name": "Principles of Programming Languages",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "This course introduces the principles underlying the design, semantics, and implementation of modern programming languages in major paradigms including function-oriented, imperative, and object-oriented. The course examines: language dimensions including syntax, naming, state, data, control, types, abstraction, modularity, and extensibility; issues in the runtime representation and implementation of programming languages; and the expression and management of parallelism and concurrency. Students explore course topics via programming exercises in several languages, including the development of programming language interpreters."
+  },
+  "CS 299": {
+    "course_name": "Research Methods for Ethics of Tech",
+    "course_distribs": "REP",
+    "course_core": "False",
+    "description": "How do we educate the next generation of data scientists, software engineers, and user experience designers to think of their work as not just technical but also ethical? What moral responsibilities come with the design, adoption, use, and consumption of digital technology? The way that these questions are interrogated, discussed, and the sort of answers we might propose will be informed by a thoroughgoing interdisciplinary lens. Students will learn theoretical frameworks from both Philosophy and Computational and Data Sciences and work together to see how knowledge of frameworks from both disciplines serves to enrich our understanding of the ethical issues that face the development and employment of digital technologies, as well as empower us to find creative solutions. This course includes multiple projects, both independent and in groups, hence the additional meeting time."
+  },
+  "CS 304": {
+    "course_name": "Databases with Web Interfaces",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "CS 304 is a course in full-stack web development. The stack comprises the front-end (typically a web browser), the back-end (a database for storing and retrieving user-contributed data) and the middleware that knits the two together. We will learn how to parse the incoming web request, route the request to the appropriate handler, retrieve data from the database that is relevant to the user's search, combine that data with static templates of web pages, and deliver that data to the browser. We will build endpoints to handle Ajax requests and learn about REST APIs.  We will also discuss performance, reliability,  concurrency, and security issues. In a semester project, we will create dynamic websites driven by database entries. In the fall, the CS 304 stack will comprise Flask and MySQL. In the spring, the CS 304 stack will comprise Node.js and MongoDB."
+  },
+  "CS 307": {
+    "course_name": "Computer Graphics",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "A survey of topics in computer graphics with an emphasis on fundamental techniques. Topics include: graphics hardware, fundamentals of three-dimensional graphics including modeling, projection, coordinate transformation, synthetic camera specification, color, lighting, shading, hidden surface removal, animation, and texture-mapping. We also cover the mathematical representation and programming specification of lines, planes, curves, and surfaces. Students will build graphics applications using a browser-based platform."
+  },
+  "CS 315": {
+    "course_name": "Data Science for the Web",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "The web is a dynamic ecosystem where socio-technical systems like Google, Facebook, Wikipedia, and other platforms shape and reflect human behavior on a global scale. In this course, students will explore how to investigate social phenomena on the web using data science as a research methodology. Concretely, students will learn to formulate research questions about online socio-technical systems; collect, clean, and analyze web-native data through a variety of Python libraries; investigate human behavior and its interplay with algorithmic systems using quantitative and qualitative methods; and critically evaluate findings within the broader context of societal, cultural, and ethical considerations. This course includes a semester-long research project on a provided theme, which culminates with an incrementally written research paper."
+  },
+  "CS 317": {
+    "course_name": "Mobile App Development",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "Mobile devices have become more popular than desktops or laptops for communicating with others, accessing information, and performing computation. This course covers the principles and practice of developing applications for mobile devices, with an emphasis on features that distinguish them from desktop/laptop applications and web applications. Topics include: the functionality of modern smartphones and tablets, including device sensors, actuators, and communication; an iterative design process for apps that people find both useful and usable; designing and implementing mobile app interfaces and behaviors; and tools for developing software in teams. In this hands-on and programming-intensive course, groups will build web apps and mobile apps using a process that combines aspects of Human Computer Interaction and software engineering. This course begins by using the React JS framework to build interactive web apps out of modular components. It then transitions to React Native, a cross-platform component-based mobile app development environment for creating mobile apps that run on both iOS and Android devices. The course also explores how apps can leverage cloud databases to store and share information."
+  },
+  "CS 320": {
+    "course_name": "Tangible User Interfaces",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "Tangible user interfaces emerge as a novel human-computer interaction style that interlinks the physical and digital worlds. Extending beyond the limitations of the computer mouse, keyboard, and monitor, tangible user interfaces allow users to take advantage of their natural spatial skills while supporting collaborative work. Students will be introduced to conceptual frameworks, the latest research, and a variety of techniques for designing and building these interfaces. Developing tangible interfaces requires creativity as well as an interdisciplinary perspective. Hence, students will work in teams to design, prototype, and physically build tangible user interfaces."
+  },
+  "CS 321": {
+    "course_name": "Extended Reality",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "Mixed and Augmented Reality technologies combine virtual content with the physical environment, allowing people to interact with computers and digital content in exciting new ways. These emerging human-computer interaction paradigms have been applied to a variety of fields including medicine, education, design, entertainment, and play. This course introduces fundamental methods, principles, and tools for designing, programming, and testing mixed and augmented reality applications. Topics include the history of virtual and augmented reality, application domains, hardware for 3D input and display, tracking and registration, 3D perception, and societal implications. Students will work individually and in teams to develop novel virtual and augmented reality experiences."
+  },
+  "CS 323": {
+    "course_name": "Social Computing",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "Social Computing systems connect us to our closest friends, and globally to people all over the world. In recent decades, companies like Facebook, Snapchat, and even Amazon, have reshaped our social environments. All of these systems, at their core, are designed to facilitate interactions between people. What design decisions shape these systems? Students will learn the theoretical foundations of Social Computing drawn from the Social Sciences, and will learn software prototyping and design techniques to create new systems. This class will explore topics such as identity, anonymity, reputation, moderation, crowdsourcing, and social algorithms. Students will work in teams to design, prototype, and build social computing systems."
+  },
+  "CS 325": {
+    "course_name": "Designing for Accessibility",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "As technology increasingly integrates with our lives, how can we ensure that its design is inclusive of users' different abilities? CS 325 expands on the fundamentals of design and qualitative research to explore how technology can be made accessible for diverse users, with an emphasis on people with disabilities. In this course, we will read about and analyze approaches to inclusive technology, study how design intersects with disability justice, learn about the history of accessible and assistive technologies, understand how to create multimodal user experiences, learn accessible web programming, and test state-of-the-art tools. Students will also conduct a semester-long case study project in which they work in groups to identify accessibility issues on the Wellesley campus and work with the community to build appropriate technology solutions."
+  },
+  "CS 331": {
+    "course_name": "Advanced Algorithm Design",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "Explore advanced topics in the design and analysis of algorithms and data structures. The focus is on expanding your toolkit of problem-solving techniques and considering new settings that model real-world challenges. Topics may include: randomization, approximation algorithms, online and streaming settings, parallel and distributed computing, linear programming and LP rounding, optimization under uncertainty, bias and fairness in algorithms, and the algorithmic foundations of data science, machine learning, and operations research."
+  },
+  "CS 333": {
+    "course_name": "Natural Language Processing",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "Natural Language Processing (NLP) is the subfield of CS that focuses on language technology. Because language is one of the most complex human abilities, building computational technologies that involve language is both challenging and important. This course introduces NLP methods and applications. Students will (1) learn core NLP algorithms and models; (2) explore the challenges posed by different aspects of human language; (3) learn to evaluate ethical concerns about language technology; and (4) complete a series of projects to implement and improve NLP models. We will cover a range of techniques, including n-gram models, Bayesian classifiers, neural networks, and deep learning. Applications include parsing, sentiment analysis, machine translation, and language generation, as well as information retrieval tasks like summarization, topic modeling, and question-answering."
+  },
+  "CS 334": {
+    "course_name": "Sem: Methods for Ethics of Tech",
+    "course_distribs": "REP",
+    "course_core": "False",
+    "description": "How do we educate the next generation of data scientists and software engineers to think of their work as not just technical but also ethical? How do we get them to see that the social impact of their work requires that it be driven by sound ethical principles? The way that these questions are interrogated, discussed, and the sort of answers we might propose will be informed by a thoroughgoing interdisciplinary lens. Students will learn theoretical frameworks from both Philosophy and Computational and Data Sciences and work together to see how knowledge of frameworks from both disciplines serves to enrich our understanding of the ethical issues that face digital technologies, as well as empower us to find creative solutions. Central questions include: What kinds of ethical considerations are part of the everyday jobs of graduates working in digital technology, either in non-profit or for-profit organizations? What parts of the current liberal arts curriculum, if any, are preparing our graduates for the kinds of ethical decision-making they need to engage in? How to expand the reach of ethical reasoning within the liberal arts curriculum, in order to strengthen the ethical decision-making preparation? A key component in our collective efforts to engage with these questions will involve a sustained semester-long research project with Wellesley alums working in the field of digital tech."
+  },
+  "CS 340": {
+    "course_name": "Modeling for Computer Systems",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "This course focuses on modeling and specifying computer systems. Students will learn how to reason about the properties and expected behavior of modern software. Topics include designing specifications, property-based testing, model checking, and satisfiability solvers. We will use real-world case studies to motivate the analysis of reliable computer systems. By the end of the course, students will be able to (1) design specifications for the expected behavior of a system, (2) model system behavior using state-of-the-art tools with automated formal methods, and (3) identify and prevent software bugs. While prior experience with algorithm design and analysis is expected, the course will cover any necessary background in systems programming and formal methods."
+  },
+  "CS 342": {
+    "course_name": "Computer Security",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "An introduction to computer security. Topics include the security mindset, authentication, access control, operating system security (with a focus on Linux), cryptography, security protocols, software security, network security, usable security, privacy, social engineering, and the ethics of hacking. This course will emphasize hands-on experience with technical topics and the ability to communicate security and privacy topics to lay and expert audiences. Assignments will include technical exercises exploring security exploits and tools in a Linux environment; problem sets including exercises and proofs related to theoretical aspects of computer security; and opportunities to research, write, present, and lead discussions on security-related topics."
+  },
+  "CS 343": {
+    "course_name": "Distributed Computing",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "This course is for students interested in understanding the fundamental concepts and algorithms underlying existing distributed systems. By the end of this course, students will have the knowledge needed to work with and build distributed systems, such as distributed file systems, peer-to-peer systems, and cloud computing systems. Topics discussed include MapReduce, distributed file systems, distributed coordination algorithms, consensus, fault-tolerance, and security."
+  },
+  "CS 344": {
+    "course_name": "Deep learning",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "Deep learning is the study of how computers can learn from data in a manner inspired by neural connections in the human brain. It is revolutionizing how people and machines interact. This course explores the principles and practice of modern deep learning systems. Students will design and implement their own artificial neural networks as well as analyze massive deep learning models at the forefront of the field of machine learning. Deep learning algorithms such as convolutional neural networks and recurrent neural networks will be applied in a variety of domains, including medical diagnosis, self-driving cars, and large-language models. Students will further investigate the societal impacts and ethical considerations of these deep learning systems."
+  },
+  "CS 345": {
+    "course_name": "Probabilistic Foundations of Machine Learning",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "In recent years, Machine Learning has enabled applications that were previously not thought possible—from systems that propose novel drugs or generate new art/music, to systems that accurately and reliably predict outcomes of medical interventions in real-time. But what has enabled these developments? Faster computing hardware, large amounts of data, and the Probabilistic paradigm of Machine Learning (ML), a paradigm that casts recent advances in ML, like neural networks, into a statistical learning framework. In this course, we introduce the foundational concepts behind this paradigm—statistical model specification, and statistical learning and inference—focusing on connecting theory with real-world applications and hands-on practice. While expanding our methodological toolkit, we will simultaneously introduce critical perspectives to examine the ethics of ML within sociotechnical systems. This course lays the foundation for advanced study and research in ML. Topics include: directed graphical models, deep Bayesian regression/classification, generative models (latent variable models) for clustering, dimensionality reduction, and time-series forecasting. Students will get hands-on experience building models for specific tasks, most taken from healthcare contexts, using NumPyro, a Python-based probabilistic programming language."
+  },
+  "CS 349": {
+    "course_name": "Advanced Topics in Computer Science",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": ""
+  },
+  "CS 365": {
+    "course_name": "Advanced Projects in Playable Media",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "Students with a deep personal interest in digital game design and other forms of playable media will work in collaborative units to explore all aspects of the game development process while contributing to a semester-length project of their own devising. This course will require students to explore an ethical approach to game development that will introduce new practices for ideation, pitching, designing, playtesting, and versioning through an iterative process that will result in a finished game. This course is specifically designed for students who have moderate experience with game development through either curricular activities or by working on projects of their own. Students will be expected to have moderate levels of experience with the Unity Game Engine."
+  },
+  "CS 366": {
+    "course_name": "Advanced Projects in Interactive Media",
+    "course_distribs": "MM",
+    "course_core": "False",
+    "description": "Students with deep interest in interactive media will drive cutting-edge research that shapes and examines novel user experiences with technology. Students will work in small groups to identify a direction of research, explore and iterate over designs, prototype at varying fidelities, build working systems, consider ethical implications, conduct evaluative studies, and report findings. This course is designed for students who have experience in designing and implementing interactive media through either curricular activities or by working on projects. Students will be expected to have moderate levels of experience with front-end web development."
+  }
+}

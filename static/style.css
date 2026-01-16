@@ -218,6 +218,10 @@ a {
     pointer-events: auto;
 }
 
+.dummy-popup-trigger {
+    color: black;
+}
+
 /* Stuff for map*/
 
 .map-outer{

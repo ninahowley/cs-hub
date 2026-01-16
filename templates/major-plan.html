@@ -110,7 +110,8 @@
             <!--div class="elective-list"-->
             <h2>All CS Courses offered at Wellesley</h2>
                 {% for course in all_courses %}
-                <div class="course-container {% if course.course_core %}core{% endif %}">
+                <div class="course-container dummy-popup-trigger {% if course.course_core %}core{% endif %}" 
+                     data-popup="{{ course.course_tag | replace(' ', '-') }}">
                     <div class="instructor-line">
                         <span>{{ course.course_tag }}: {{ course.course_name }}</span>
                         {% if user %}
@@ -135,5 +136,49 @@
                 {% endfor %}
         </div>
     </div>
+
+    <div class="popup-layer">
+    {% for d in all_data %}
+    <div class="course-popup hidden" id="{{ d | replace(' ', '-') }}">
+        <h2>{{ d }}: {{ all_data[d]['course_name'] }}</h2>
+        <p>{{ all_data[d]['description'] }}</p>
+        <p>Distribution(s): {{ all_data[d]['course_distribs'] }}</p>
+    </div>
+    {% endfor %}
+    </div>
 </body>
 </html>
+
+<script> //hover for all courses
+document.querySelectorAll(".course-container.dummy-popup-trigger").forEach(course => {
+    //open on hover
+    course.addEventListener("mouseenter", (e) => {
+        e.stopPropagation();
+
+        //close all popups first
+        document.querySelectorAll(".course-popup").forEach(popup => {
+            popup.classList.add("hidden");
+        });
+
+        //open selected popup
+        const popupId = course.dataset.popup; //get ID from courselist
+        const popup = document.getElementById(popupId); //open corresponding popup
+
+        if (popup) {
+            popup.classList.remove("hidden");
+        }
+    });
+});
+
+//close when mouse leaves popup
+document.querySelectorAll(".course-container.dummy-popup-trigger").forEach(course => {
+    course.addEventListener('mouseleave', (e) => {
+        e.stopPropagation();
+
+        //close all popups
+        document.querySelectorAll(".course-popup").forEach(popup => {
+            popup.classList.add("hidden");
+        });
+    });
+});
+</script>
