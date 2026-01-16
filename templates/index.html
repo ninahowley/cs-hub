@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang='en' data-theme="light">
 <head>
-    <title>Home</title>
-    <link rel='stylesheet' href="{{ url_for('static', filename='style.css') }}">
+   <meta charset='utf-8'>
+   <title>Home</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel='stylesheet' href="{{ url_for('static', filename='style.css') }}">
+   <link rel="icon" href="/static/icons/Robotics.png" type="image/x-icon">
 </head>
 <body>
    <div class="navigation">
@@ -52,7 +55,7 @@
    <div class="child-container scrollable">
       <h2>Spring '26 Course Offerings</h2>
       {% for course in spring_courses %}
-         <div class="course-container {% if course.course_core %}core{% endif %}" data-popup="{{course.course_tag | replace(' ', '-')}}">
+         <div class="course-container {% if course.course_core %}core{% endif %}" data-popup="{{ course.course_tag | replace(' ', '-') }}">
                <div class="instructor-line">
                   <span>{{ course.course_tag }}: {{ course.course_name }}</span>
                   {% if course.course_distribs %}
@@ -65,10 +68,10 @@
 </div>
 <div>
    {% for d in spring_data %}
-   <div class="course-popup hidden" id="{{ d | replace (' ', '-')}}">
+   <div class="course-popup hidden" id="{{ d | replace(' ', '-') }}">
       <h2>{{ d }}: {{ spring_data[d]['course_name'] }}</h2>
       <p>{{ spring_data[d]['description'] }}</p>
-      <p>Distribution(s): {{ spring_data[d]['course_distribs'] }}
+      <p>Distribution(s): {{ spring_data[d]['course_distribs'] }}</p>
    </div>
    {% endfor %}
 </div>
