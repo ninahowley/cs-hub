@@ -1,7 +1,7 @@
 {
     "Accessibility": {
         "alt_name":"Accessibility",
-        "blurb": "",
+        "blurb": "Accessibility is an important part of computer science, as we can create inclusive and usable technologies for everyone to enjoy. Aspects of accessible design are used in many other fields such as software engineering and assistive technology.",
         "instructors": [
             {"name": "Vinitha Gadiraju", "link": "https://www.wellesley.edu/people/vinitha-gadiraju", "bio": "My research centers on building collaborative, equitable tools for people with disabilities, particularly in the context of learning and education."}
         ],
@@ -30,12 +30,12 @@
     },
     "Compilers": {
         "alt_name":"Compilers",
-        "blurb": "",
+        "blurb": "A compiler is a specialized software that translates human-readable source code (such as Python or Java) into a lower-level language (such as binary instruction) that a computer's processor can execute.",
         "instructors": [
             {"name": "", "link": "", "bio": ""}
         ],
         "courses": [
-            {"course_code": "", "course_name": "", "link":"", "type": ""}
+            {"course_code": "CS 251", "course_name": "Principles of Programming Languages", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+251", "type": "200-level elective"}
         ],
         "opportunities": [
             {"title": "", "link": "", "about": ""}
@@ -43,7 +43,7 @@
     },
     "Computability & Complexity Theory": {
         "alt_name":"Theory",
-        "blurb": "",
+        "blurb": "Complexity Theory is the study of identifying and classifying difficult problems. One can measure the difficulty of a problem through the time and computational power needed to solve it.",
         "instructors": [
             {"name": "", "link": "", "bio": ""}
         ],
@@ -56,7 +56,7 @@
     },
     "Computer Architecture": {
         "alt_name":"Architecture",
-        "blurb": "",
+        "blurb": "Computer architecture is the design and implementation of low level hardware components (such as CPU and memory), and how they work together to execute programs and act as a bridge between instructions and software.",
         "instructors": [
             {"name": "Alexa Vanhattum", "link": "https://www.wellesley.edu/people/alexa-vanhattum", "bio": "I use lightweight formal methods to improve the reliability and efficiency of low-level computer systems."},
             {"name": "Peter Mawhorter", "link": "https://www.wellesley.edu/people/peter-mawhorter", "bio": "I'm especially interested in teaching programming basics to scientists who need them for their experiments, and to humanists who want to sharpen their understanding of our increasingly code-driven world."}
@@ -123,7 +123,7 @@
             {"course_code": "CS 365", "course_name": "Advanced Projects in Playable Media", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+365", "type": "300-level elective"}
         ],
         "opportunities": [
-            {"title": "", "link": "", "about": ""}
+            {"title": "Wellesley Game Dev Club", "link": "https://www.instagram.com/wellesley.gamedev/", "about": "'Community of students interested in computer science, animation, and game design.'"}
         ]
     },
     "Human-Computer Interaction": {
@@ -140,14 +140,15 @@
             {"course_code": "CS 325", "course_name": "Designing for Accessibility", "link":"https://catalog.wellesley.edu/course.php?pos=55&doc_type=CS+325", "type": "300-level elective"}
         ],
         "opportunities": [
-            {"title": "", "link": "", "about": ""}
+            {"title": "HCI Lab", "link": "https://cs.wellesley.edu/~hcilab/research.html", "about": "Students can get involved in HCI research projects through the HCI lab on campus."}
         ]
     },
     "Machine Learning": {
         "alt_name":"ML",
         "blurb": "",
         "instructors": [
-            {"name": "Yaniv Yacoby", "link": "https://www.wellesley.edu/people/yaniv-yacoby", "bio": "I lead the Model-Guided Uncertainty (MOGU) Lab at Wellesley, where we enable effective and responsible uses of expressive (deep) ML models in safety-critical domains, like precision healthcare."}
+            {"name": "Carolyn Anderson", "link": "https://www.wellesley.edu/people/carolyn-anderson", "bio": "In order to develop language technology that interacts with us in a natural way, we need to develop models that can adjust their language based on users' situations and knowledge states."},
+            {"name": "Yaniv Yacoby", "link": "https://www.wellesley.edu/people/yaniv-yacoby", "bio": "My research focuses on developing new machine learning methods to advance the understanding, prediction, and prevention of suicide and related behaviors."}
         ],
         "courses": [
             {"course_code": "CS 232", "course_name": "Artificial Intelligence", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+232", "type": "200-level elective"},
@@ -157,7 +158,7 @@
             {"course_code": "CS 245", "course_name": "Probablistic Foundations of Machine Learning", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+345", "type": "300-level elective"}
         ],
         "opportunities": [
-            {"title": "", "link": "", "about": ""}
+            {"title": "MOGU Lab", "link": "https://mogu-lab.github.io/", "about": "'Machine Learning (ML) laboratory at Wellesley College, focused on enabling effective and responsible uses of expressive (deep) ML models in safety-critical domains like precision healthcare.'"}
         ]
     },
     "Natural Language Processing": {
@@ -266,7 +267,7 @@
             {"course_code": "CS 317", "course_name": "Mobile App Development", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+317", "type": "300-level elective"}
         ],
         "opportunities": [
-            {"title": "", "link": "", "about": ""}
+            {"title": "UpSkill (Software Development Lifecycle)", "link": "https://careereducation.wellesley.edu/upskill", "about": "A wintersession program for Wellesley students to learn about Github and collaborate on a project."}
         ]
     }
 }
