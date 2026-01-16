@@ -53,7 +53,7 @@
       </div>
    </div>
    <div class="child-container scrollable">
-      <h2>Spring '26 Course Offerings</h2>
+      <h2>Wellesley CS Spring '26 Course Offerings</h2>
       {% for course in spring_courses %}
          <div class="course-container {% if course.course_core %}core{% endif %}" data-popup="{{ course.course_tag | replace(' ', '-') }}">
                <div class="instructor-line">
