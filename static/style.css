@@ -203,13 +203,13 @@ checkable{
 */
 
 .taken-mark{
-    color: #ccd6fd;
+    color: black;
     position: absolute;
     right: 16px;
 }
 
 .taken-mark.core{
-    color: #fcd5ec;
+    color: black;
     position: absolute;
     right: 16px;
 }
