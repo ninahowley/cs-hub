@@ -47,10 +47,10 @@ The scrollable **topic list** on the left displays some popular topics in CS (an
 
 + ```templates/``` contains html files for all webpages.
     + ```templates/index.html``` contains the main webpage with login and spring '26 courses.
-    + ```templates/major-plan.html``` contains a personalized major planning page, including requirements and all Wellesley CS courses.
-    + ```templates/explore.html``` contains explore page with topic list and information popups.
+    + ```templates/major-plan.html``` contains a major planning page, including completed requirements and all offered Wellesley CS courses.
+    + ```templates/explore.html``` contains explore page with topic list and informative popups.
 + ```app.py``` is the main app, handling routing with Flask.
-+ ```static/``` contains the styling template and formatted .json files for CS course data.
++ ```static/``` contains icons, UI screenshots, styling template, and formatted .json files with course and topic data.
 + ```courses/``` contains scraped CS course data from the Wellesley College courselist.
 + ```db_functions.py``` contains database functions (using SQLite).
 
