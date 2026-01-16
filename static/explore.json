@@ -71,7 +71,7 @@
     },
     "Computer Graphics": {
         "alt_name":"Graphics",
-        "blurb": "",
+        "blurb": "Computer graphics is the art and science of creating images and art with the aid of computers. Popuplar applications include digital photography, film, displays like the one you would see on a cell phone, and video games!",
         "instructors": [
             {"name": "Scott Anderson", "link": "https://www.wellesley.edu/people/scott-anderson", "bio": "Professor Anderson's teaching interests include web application programming, including databases, web frameworks, and computer graphics"}
         ],
@@ -79,7 +79,7 @@
             {"course_code": "CS 307", "course_name": "Computer Graphics", "link":"https://catalog.wellesley.edu/course.php?pos=25&doc_type=CS+307", "type": "300-level elective"}
         ],
         "opportunities": [
-            {"title": "", "link": "", "about": ""}
+            {"title": "SIGGRAPH", "link": "https://s2025.siggraph.org/about-the-conference/", "about": "A research conference all about computer graphics, organized by ACM."}
         ]
     },
     "Cryptography & Information Theory": {
