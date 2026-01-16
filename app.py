@@ -52,6 +52,31 @@ def index():
         flash('An error occurred. Please try agåain.')
         return
 
+def get_remaining_courses(username: str):
+    courses_taken = db.get_user_courses(username)
+    core_courses = ["CS 111", "CS 112", "CS 230", "CS 231", "CS 235", "CS 240"]
+    cores_taken = [course for course in courses_taken if course in core_courses]
+    cores_not_taken = [course for course in core_courses if course not in courses_taken]
+    if "CS 111" in cores_taken:
+        cores_not_taken.remove("CS 112")
+    if "CS 112" in cores_taken:
+        cores_not_taken.remove("CS 111")
+    electives_taken = [course for course in courses_taken if course not in core_courses and course[3] in ["2", "3"]]
+    electives_remaining = 0
+    if len(electives_taken) < 4:
+        electives_remaining = 4 - len(electives_taken)
+    level_300s = len([course for course in electives_taken if course[3] == "3"])
+    remaining_300s = 0
+    if level_300s < 2:
+        remaining_300s = 2 - level_300s
+    remaining_dict = {
+        "num_cores_remaining": len(cores_not_taken),
+        "cores_remaining": ', '.join(cores_not_taken),
+        "electives_remaining": electives_remaining,
+        "level_300s": remaining_300s
+    }
+    return remaining_dict
+
 @app.route("/major-plan")
 def major_plan():
     try:
@@ -64,6 +89,7 @@ def major_plan():
         if 'username' in session:
             username = session['username']
             #display user courses
+            remaining_info = get_remaining_courses(username)
             taken_courses = db.get_user_courses(username)
             taken_courses = [course.strip() for course in taken_courses]
             taken_electives_df = elective_df[elective_df["course_tag"].isin(taken_courses)] #only keep taken
@@ -87,6 +113,7 @@ def major_plan():
             taken_courses = taken_courses,
             taken_electives = taken_electives, 
             electives = elective_info, 
+            remaining_info = remaining_info,
             page_title='Major Plan'
         )
     except Exception as e:

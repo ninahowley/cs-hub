@@ -49,7 +49,7 @@
                     <h2>{{ d }}!</h2>
                     <p>{{ data[d]['blurb'] }}</p>
                     {% if data[d]['instructors'][0]['name'] %}
-                        <h2>Relevant instructors at Wellesley: </h2>
+                        <h2>Relevant instructors at Wellesley</h2>
                         {% for instructor in data[d]['instructors'] %}
                             <p><a href="{{ instructor['link'] }}" target="_blank">{{ instructor['name'] }}</a>: "{{ instructor['bio'] }}"</p>
                         {% endfor %}

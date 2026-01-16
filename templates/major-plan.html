@@ -27,6 +27,11 @@
             {% endif %}
             <!--REQUIRED SEQUENCE-->
             <h3>Required Sequence</h3>
+            {% if remaining_info.cores_remaining %}
+                <p>You have {{ remaining_info.num_cores_remaining }} core course(s) remaining: {{ remaining_info.cores_remaining }}</p>
+            {% else %}
+                <p>Congratulations, you have completed your required core courses!</p>
+            {% endif %}
             {% if user %}
                 {% for course in all_courses %}
                 {% if course.course_tag in ['CS 111', 'CS 230'] %}
@@ -76,7 +81,11 @@
             {% endif %}
             <!--ELECTIVES-->
             <h3>Electives</h3>
-            <p>You have to take 4 electives if you started with CS 111. Two must be at the 300-level.</p>
+            {% if remaining_info.electives_remaining > 0 %}
+                <p>You have {{ remaining_info.electives_remaining }} elective(s) remaining, {{ remaining_info.level_300s }} of which must be at the 300 level.</p>
+            {% else %}
+                <p>Congratulations, you have completed your electives!</p>
+            {% endif %}
             {% if user %}
                 {% for course in taken_electives %}
                 <div class="course-container">
@@ -103,15 +112,11 @@
                         <span>{{ course.course_tag }}: {{ course.course_name }}</span>
                         {% if user %}
                         {% if course.course_tag in taken_courses %}
-                            {% if course.course_core %}
                                 <form action="{{ url_for('drop_course') }}" method="POST" style="display: inline-block;">
                                     <input type="hidden" name="course_code" value="{{ course.course_tag }}">
                                     <input type="hidden" name="is_core" value="{{ course.course_core }}">
                                     <button type="submit" class="add-button {% if course.course_core %}core{% endif %}">Drop</button>
                                 </form>
-                            {% else %}
-                                <span class="taken-mark {% if course.course_core %}core{% endif %}">Taken</span>
-                            {% endif %}
                         {% else %}
                         <div style="display: inline-block;">
                             <form action="{{ url_for('add_course') }}" method="POST" style="display: inline-block;">
