@@ -1,6 +1,8 @@
 # Wellesley CS Hub
 
-Wellesley CS Hub is a website where Wellesley CS majors and other students interested in CS can view course offerings, plan their major, and explore the many fields of CS. Nina and Aileen made this for the UpSkill: Software Development Lifecycle program.
+Wellesley CS Hub is a website where Wellesley CS majors and other students interested in CS can view course offerings, plan their major, and explore the many fields of CS. 
+
+Nina and Aileen made this for the UpSkill: Software Development Lifecycle program.
 
 ## How to Use
 
@@ -79,3 +81,7 @@ Nina Howley '27, Aileen Liang '28
 + Allow classes to be added or dropped from the home page spring offerings
 + Allow users to indicate if they skipped courses or took cross-register equivalents
 + Implement more robust login with passwords
+
+## License
+
+Wellesley College
