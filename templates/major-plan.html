@@ -27,37 +27,68 @@
             {% endif %}
             <!--REQUIRED SEQUENCE-->
             <h3>Required Sequence</h3>
-            <div class="course-container core">
-                <span>CS 111: Computer Programming and Problem Solving</span>
-                <span class="taken-mark core">Not Taken</span>
-            </div>
-            <div class="course-container core">
-                <span>CS 230: Data Structures</span>
-                <span class="taken-mark core">Not Taken</span>
-            </div>
+            {% if user %}
+                {% for course in all_courses %}
+                {% if course.course_tag in ['CS 111', 'CS 230'] %}
+                <div class="course-container core">
+                    <span> {{ course.course_tag }}: {{ course.course_name }} </span>
+                    {% if course.course_tag in taken_courses %}
+                        <span class="taken-mark core">Taken</span>
+                    {% else %}
+                        <span class="taken-mark core">Not Taken</span>
+                    {% endif %}
+                </div>
+                {% endif %}
+                {% endfor %}
+            {% else %}
+                <div class="course-container core">
+                    <span>CS 111: Computer Programming and Problem Solving</span>
+                </div>
+                <div class="course-container core">
+                    <span>CS 230: Data Structures</span>
+                </div>
+            {% endif %}
             <!--CORE (ANIMATED LIST)-->
             <h3>Core</h3>
-            <div class="course-container core">
-                <span>CS 231: Design and Analysis of Algorithms</span>
-                <span class="taken-mark core">Not Taken</span>
-            </div>
-            <div class="course-container core">
-                <span>CS 235: Theory of Computation</span>
-                <span class="taken-mark core">Not Taken</span>
-            </div>
-            <div class="course-container core">
-                <span>CS 240: Foundations of Computer Systems</span>
-                <span class="taken-mark core">Not Taken</span>
-            </div>
+            {% if user %}
+                {% for course in all_courses %}
+                {% if course.course_tag in ['CS 235', 'CS 231', 'CS 240'] %}
+                <div class="course-container core">
+                    <span> {{ course.course_tag }}: {{ course.course_name }} </span>
+                    {% if course.course_tag in taken_courses %}
+                        <span class="taken-mark core">Taken</span>
+                    {% else %}
+                        <span class="taken-mark core">Not Taken</span>
+                    {% endif %}
+                </div>
+                {% endif %}
+                {% endfor %}
+            {% else %}
+                <div class="course-container core">
+                    <span>CS 231: Design and Analysis of Algorithms</span>
+                </div>
+                <div class="course-container core">
+                    <span>CS 235: Theory of Computation</span>
+                </div>
+                <div class="course-container core">
+                    <span>CS 240: Foundations of Computer Systems</span>
+                </div>
+            {% endif %}
             <!--ELECTIVES-->
             <h3>Electives</h3>
-            <p>You have to take x more elective(s). Exactly x of these must be at the 300-level.</p>
+            <p>You have to take 4 electives if you started with CS 111. Two must be at the 300-level.</p>
             {% if user %}
                 {% for course in taken_electives %}
                 <div class="course-container">
                     <div class="instructor-line">
                         <span>{{ course.course_tag }}: {{ course.course_name }}</span!>
-                        <span class="taken-mark">Taken</span>
+                        <div style="display: inline-block;">
+                            <form action="{{ url_for('drop_course') }}" method="POST" style="display: inline-block;">
+                                <input type="hidden" name="course_code" value="{{ course.course_tag }}">
+                                <input type="hidden" name="is_core" value="{{ course.course_core }}">
+                                <button type="submit" class="add-button {% if course.course_core %}core{% endif %}">Drop</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
                 {% endfor %}
@@ -67,81 +98,34 @@
             <!--div class="elective-list"-->
             <h2>All CS Courses offered at Wellesley</h2>
                 {% for course in all_courses %}
-                {% if course.course_core %}
-                <div class="course-container core">
+                <div class="course-container {% if course.course_core %}core{% endif %}">
                     <div class="instructor-line">
                         <span>{{ course.course_tag }}: {{ course.course_name }}</span>
                         {% if user %}
-                            <button class="add-button core" data-course-code="{{course.course_tag}}">Add</button>
+                        {% if course.course_tag in taken_courses %}
+                            {% if course.course_core %}
+                                <form action="{{ url_for('drop_course') }}" method="POST" style="display: inline-block;">
+                                    <input type="hidden" name="course_code" value="{{ course.course_tag }}">
+                                    <input type="hidden" name="is_core" value="{{ course.course_core }}">
+                                    <button type="submit" class="add-button {% if course.course_core %}core{% endif %}">Drop</button>
+                                </form>
+                            {% else %}
+                                <span class="taken-mark {% if course.course_core %}core{% endif %}">Taken</span>
+                            {% endif %}
+                        {% else %}
+                        <div style="display: inline-block;">
+                            <form action="{{ url_for('add_course') }}" method="POST" style="display: inline-block;">
+                                <input type="hidden" name="course_code" value="{{ course.course_tag }}">
+                                <input type="hidden" name="is_core" value="{{ course.course_core }}">
+                                <button type="submit" class="add-button {% if course.course_core %}core{% endif %}">Add</button>
+                            </form>
+                        </div>
+                        {% endif %}
                         {% endif %}
                     </div>
                 </div>
-                {% else %}
-                <div class="course-container">
-                    <div class="instructor-line">
-                        <span>{{ course.course_tag }}: {{ course.course_name }}</span>
-                        {% if user %}
-                            <button class="add-button" data-course-code="{{course.course_tag}}">Add</button>
-                        {% endif %}
-                    </div>
-                </div>
-                {% endif %}
                 {% endfor %}
-            <!--/div-->
-    </div>
+        </div>
     </div>
 </body>
-<script> // for adding + displaying courses
-
-const addButtons = document.querySelectorAll('.add-button');
-addButtons.forEach( button => {
-    button.addEventListener('click', function() {
-        console.log("button clicked");
-        const courseCode = this.getAttribute('data-course-code');
-        fetch('/add-course', { //fetch route to send to db
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    course_code: courseCode
-                })
-            })
-        .then(response => response.json()) //convert db response to json
-        .then(data =>{
-            if (data.success) {
-                    this.textContent = 'Taken';
-                } else {
-                    alert('Error: ' + data.message);
-                }
-        }).catch(error => {
-                console.error('Error:', error);
-                alert('An error occurred');
-        });
-    });
-});
-
-
-//for button checking
-    
-    /*const list = document.querySelector(".course-list");
-    document.addEventListener("click", (e) =>{ //close popup on outside click
-        const row = e.target.closest(".checkable") || e.target.closest(".checkable-moving");
-        if (!row) return;
-        row.classList.toggle("checked");
-
-        // move element
-        if (row.classList.contains("checkable-moving") && row.classList.contains("checked")) {
-            list.appendChild(row); // move to bottom
-        } else {
-            // move back above checked ones
-            const firstChecked = list.querySelector(".checkable-moving.checked");
-            if (firstChecked) {
-                list.insertBefore(row, firstChecked);
-            } else {
-                list.prepend(row);
-            }
-        }
-    });*/
-</script>
 </html>

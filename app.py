@@ -65,6 +65,7 @@ def major_plan():
             username = session['username']
             #display user courses
             taken_courses = db.get_user_courses(username)
+            taken_courses = [course.strip() for course in taken_courses]
             taken_electives_df = elective_df[elective_df["course_tag"].isin(taken_courses)] #only keep taken
             taken_electives = taken_electives_df.to_dict(orient='records')
         else:
@@ -83,6 +84,7 @@ def major_plan():
             'major-plan.html', 
             user = username, 
             all_courses = all_course_info, 
+            taken_courses = taken_courses,
             taken_electives = taken_electives, 
             electives = elective_info, 
             page_title='Major Plan'
@@ -95,22 +97,44 @@ def major_plan():
 @app.route("/add-course", methods=['POST'])
 def add_course():
     if 'username' not in session:
-        return jsonify({'success': False})
+        flash('not logged in.')
+        return redirect(url_for('major_plan'))
     
     username = session['username']
-    data = request.get_json()
-    course_code = data.get('course_code')
+    course_code = request.form.get('course_code')
+    is_core = request.form.get('is_core')
     
     if not course_code:
-        print("course code problem")
-        return jsonify({'success': False})
+        flash('not a valid course code')
+        return redirect(url_for('major_plan'))
     try:
         print("got to try")
         db.upload_registration(username, course_code)
-        return jsonify({'success': True}) #so page can check if it works
     except Exception as e:
         print(e)
-        return jsonify({"success": False})
+        flash('error uploading to db.')
+    return redirect(url_for('major_plan'))
+
+@app.route("/drop-course", methods=['POST'])
+def drop_course():
+    if 'username' not in session:
+        flash('not logged in.')
+        return redirect(url_for('major_plan'))
+    
+    username = session['username']
+    course_code = request.form.get('course_code')
+    is_core = request.form.get('is_core')
+    
+    if not course_code:
+        flash('not a valid course code')
+        return redirect(url_for('major_plan'))
+    try:
+        print("got to try")
+        db.delete_registration(username, course_code)
+    except Exception as e:
+        print(e)
+        flash('error uploading to db.')
+    return redirect(url_for('major_plan'))
 
 @app.route("/explore")
 def explore():
