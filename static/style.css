@@ -374,7 +374,7 @@ hr {
     transform: translateY(1px);
 }
 
-.add-button.core_button:hover {
+.add-button.core:hover {
     background-color: #7996ff !important;
 }
 
