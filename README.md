@@ -62,7 +62,7 @@ The scrollable **topic list** on the left displays some popular topics in CS (an
 
 Nina Howley '27, Aileen Liang '28
 
-## Our Design Process and Next Steps
+## Design Process and Next Steps
 
 **Milestone 1:**
 + Scrape courses (separate core vs elective courses)
@@ -84,4 +84,4 @@ Nina Howley '27, Aileen Liang '28
 
 ## License
 
-Wellesley College
+Wellesley
