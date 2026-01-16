@@ -79,8 +79,10 @@
 </html>
 <script>
    document.querySelectorAll(".course-container").forEach(course => {
+      console.log(course.dataset.popup);
       //open on hover
       course.addEventListener("mouseenter", (e) => {
+         console.log('hover triggered')
          e.stopPropagation();
 
          //close all popups first
@@ -90,9 +92,12 @@
 
          //open selected popup
          const popupId = course.dataset.popup; //get ID from courselist
+         console.log(popupId);
          const popup = document.getElementById(popupId); //open corresponding popup
+         console.log(popup);
 
          if (popup) {
+            console.log('popup exists!')
             popup.classList.remove("hidden");
          }
       });
