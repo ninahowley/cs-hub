@@ -6,52 +6,47 @@ CS Hub is a website where Wellesley CS majors and other students interested in C
 * Nina Howley '27
 * Aileen Liang '28
 
-## Contents
-```
-* templates/
-* app.py
-* README.md
-```
-
 ## Quick Start
-```
-pip install flask
-flask --app app run
-```
 
-## Milestones
+1. **Clone the repository**
+    ```git clone https://github.com/ninahowley/cs-hub.git```
+2. **Optional: create a [https://gist.github.com/ryumada/c22133988fd1c22a66e4ed1b23eca233](virtual environment).**
+3. **Install flask**
+    ```pip install flask```
+4. **Run the app!**
+    ```flask --app app run```
 
-Milestone 1:
+## Contents
 
-1. Scrape courses (separate core vs elective courses)
-2. Create the three pages with navigation bar and basic routing between
++ ```templates/``` contains html files for all webpages.
+    ```templates/index.html``` main webpage with login and spring '26 courses.
+    ```templates/major-plan.html``` personalized major planning page, including requirements and all Wellesley CS courses.
+    ```templates/explore.html``` explore page with topic list and information popups.
++ ```app.py``` main app, handling routing with Flask.
++ ```static/``` styling template and formatted .json files for CS course data.
++ ```courses/``` scraped CS course data from the Wellesley College courselist.
++ ```db_functions.py``` database functions (using SQLite).
 
+## Technology Stack
++ **Frontend:** Flask, HTMl, CSS, JavaScript
++ **Backend:** Python and SQLite
 
-Milestone 2:
+## Our Design Process-- Milestones and Next Steps
 
-1. Implement major tracking page with checklist
-2. Implement explore page with clickable topics
+**Milestone 1:**
++ Scrape courses (separate core vs elective courses)
++ Create the three pages with navigation bar and basic routing
 
+**Milestone 2:**
++ Implement major tracking page with checklist
++ Implement explore page with clickable topics
 
-Milestone 3:
+**Milestone 3:**
++ Add popups to explore page and course offerings
++ Add information to explore page
 
-1. Add popups to explore page and course offerings
-2. Add information to explore page
-
-## Technology used
-
-Frontend: Flask, HTMl, CSS, JavaScript
-
-Backend: Python and SQLite
-
-## Next steps
-
-Add more topics and opportunities to the explore page
-
-Allow classes to be added or dropped from the home page spring offerings
-
-Allow users to indicate if they skipped courses or took cross-register equivalents
-
-Implement more robust login with passwords
-
-
+**Next Steps:**
++ Add more topics and opportunities to the explore page
++ Allow classes to be added or dropped from the home page spring offerings
++ Allow users to indicate if they skipped courses or took cross-register equivalents
++ Implement more robust login with passwords
