@@ -54,7 +54,7 @@ The scrollable **topic list** on the left displays some popular topics in CS (an
 + ```courses/``` contains scraped CS course data from the Wellesley College courselist.
 + ```db_functions.py``` contains database functions (using SQLite).
 
-## Technology Stack
+## Tech Stack
 + **Frontend:** Flask, HTMl, CSS, JavaScript
 + **Backend:** Python and SQLite
 
@@ -84,4 +84,4 @@ Nina Howley '27, Aileen Liang '28
 
 ## License
 
-Wellesley
+Wellesley :)
