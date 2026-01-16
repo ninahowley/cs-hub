@@ -87,42 +87,18 @@ def major_plan():
         all_course_info = all_df.to_dict(orient='records')
         elective_df = all_df[all_df["course_core"] == False] #remove core
         elective_info = elective_df.to_dict(orient='records')
-
+        # by default, if not logged in use dummy account with no courses
+        username = "notloggedin"
+        # otherwise, get username from session
         if 'username' in session:
             username = session['username']
-            #display user courses
-            remaining_info = get_remaining_courses(username)
-            taken_courses = db.get_user_courses(username)
-            taken_courses = [course.strip() for course in taken_courses]
-            taken_electives_df = elective_df[elective_df["course_tag"].isin(taken_courses)] #only keep taken
-            taken_electives = taken_electives_df.to_dict(orient='records')
-        else:
-            username = "notloggedin"
-            #display user courses
-            remaining_info = get_remaining_courses(username)
-            taken_courses = db.get_user_courses(username)
-            taken_courses = [course.strip() for course in taken_courses]
-            taken_electives_df = elective_df[elective_df["course_tag"].isin(taken_courses)] #only keep taken
-            taken_electives = taken_electives_df.to_dict(orient='records')
-            return render_template(
-                'major-plan.html', 
-                user = username, 
-                all_courses = all_course_info, 
-                taken_courses = taken_courses,
-                taken_electives = taken_electives, 
-                electives = elective_info, 
-                remaining_info = remaining_info,
-                page_title='Major Plan'
-            )
-        
-        #display spring courses
-        spring_df = pd.read_csv('courses/spring_courses.csv')
-        spring_with_info = spring_df.merge(
-            all_df,
-            on='course_tag',
-            how='left'
-        )
-        spring_course_info = spring_with_info.to_dict(orient='records')
+        print(f"{username = }")
+        # get user courses to display
+        remaining_info = get_remaining_courses(username)
+        taken_courses = db.get_user_courses(username)
+        taken_courses = [course.strip() for course in taken_courses]
+        taken_electives_df = elective_df[elective_df["course_tag"].isin(taken_courses)] #only keep taken
+        taken_electives = taken_electives_df.to_dict(orient='records')
         return render_template(
             'major-plan.html', 
             user = username, 
