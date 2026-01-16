@@ -82,6 +82,19 @@
             {"title": "", "link": "", "about": ""}
         ]
     },
+    "Computer Vision": {
+        "alt_name":"Vision",
+        "blurb": "",
+        "instructors": [
+            {"name": "", "link": "", "bio": ""}
+        ],
+        "courses": [
+            {"course_code": "", "course_name": "", "link":"", "type": ""}
+        ],
+        "opportunities": [
+            {"title": "", "link": "", "about": ""}
+        ]
+    },
     "Cryptography & Information Theory": {
         "alt_name":"Cryptography",
         "blurb": "",
