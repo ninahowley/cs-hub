@@ -54,4 +54,19 @@ Allow users to indicate if they skipped courses or took cross-register equivalen
 
 Implement more robust login with passwords
 
+## Screenshots
 
+<h2>Home
+<img alt="image" src="static/screenshots/home.png" />
+
+<h2>Major Plan
+<img alt="image" src="static/screenshots/major_plan.png" />
+
+<h2>Major Plan - Course Popup
+<img alt="image" src="static/screenshots/major_plan_popup.png" />
+
+<h2>Explore
+<img alt="image" src="static/screenshots/explore.png" />
+
+<h2>Explore - Topic Popup
+<img alt="image" src="static/screenshots/explore_popup.png" />
