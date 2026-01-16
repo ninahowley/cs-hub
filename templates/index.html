@@ -52,7 +52,7 @@
    <div class="child-container scrollable">
       <h2>Spring '26 Course Offerings</h2>
       {% for course in spring_courses %}
-         <div class="course-container {% if course.course_core %}core{% endif %}" data-popup="{{course.course_code}}">
+         <div class="course-container {% if course.course_core %}core{% endif %}" data-popup="{{course.course_tag | replace(' ', '-')}}">
                <div class="instructor-line">
                   <span>{{ course.course_tag }}: {{ course.course_name }}</span>
                   {% if course.course_distribs %}
@@ -65,7 +65,7 @@
 </div>
 <div>
    {% for d in spring_data %}
-   <div class="course-popup hidden" id="{{ d }}">
+   <div class="course-popup hidden" id="{{ d | replace (' ', '-')}}">
       <h2>{{ d }}: {{ spring_data[d]['course_name'] }}</h2>
       <p>{{ spring_data[d]['description'] }}</p>
       <p>Distribution(s): {{ spring_data[d]['course_distribs'] }}
@@ -76,8 +76,10 @@
 </html>
 <script>
    document.querySelectorAll(".course-container").forEach(course => {
+      console.log(course.dataset.popup);
       //open on hover
       course.addEventListener("mouseenter", (e) => {
+         console.log('hover triggered')
          e.stopPropagation();
 
          //close all popups first
@@ -87,9 +89,12 @@
 
          //open selected popup
          const popupId = course.dataset.popup; //get ID from courselist
+         console.log(popupId);
          const popup = document.getElementById(popupId); //open corresponding popup
+         console.log(popup);
 
          if (popup) {
+            console.log('popup exists!')
             popup.classList.remove("hidden");
          }
       });
