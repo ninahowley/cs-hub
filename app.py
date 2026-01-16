@@ -22,6 +22,8 @@ def index():
             how='left'
         )
         spring_course_info = spring_with_info.to_dict(orient='records')
+        with open('static/spring_courses.json', 'r') as file:
+            spring_dict = json.load(file)
         if 'username' in session:
             username = session['username']
         else:
@@ -41,12 +43,22 @@ def index():
                     return redirect(url_for('index', user = username, spring_courses = spring_course_info, page_title="Home"))
                 else:
                     flash(f"Please enter a valid username.")
-                    return render_template('index.html', user = username, spring_courses = spring_course_info, page_title="Home")
+                    return render_template(
+                        'index.html', 
+                        user = username, 
+                        spring_courses = spring_course_info,
+                        spring_data = spring_dict, 
+                        page_title="Home")
             else:
                 if username:
                     flash(f'Goodbye, {username}.')
                 session['username'] = None
-                return render_template('index.html', user = None, spring_courses = spring_course_info, page_title="Home")
+                return render_template(
+                    'index.html', 
+                    user = None, 
+                    spring_courses = spring_course_info, 
+                    spring_data = spring_dict,
+                    page_title="Home")
     except Exception as e:
         print(e)
         flash('An error occurred. Please try agåain.')
