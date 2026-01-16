@@ -71,7 +71,7 @@
     },
     "Computer Graphics": {
         "alt_name":"Graphics",
-        "blurb": "Computer graphics is the art and science of creating images and art with the aid of computers. Popuplar applications include digital photography, film, displays like the one you would see on a cell phone, and video games!",
+        "blurb": "Computer graphics deals with creating images and art using the aid of computers. Popuplar applications include digital photography, film, computer and cell phone displays, and video games.",
         "instructors": [
             {"name": "Scott Anderson", "link": "https://www.wellesley.edu/people/scott-anderson", "bio": "Professor Anderson's teaching interests include web application programming, including databases, web frameworks, and computer graphics"}
         ],
@@ -84,7 +84,7 @@
     },
     "Computer Vision": {
         "alt_name":"Vision",
-        "blurb": "",
+        "blurb": "Computer vision is the art and science of understanding visual images. If graphics turns a scene into an image, computer vision uses an image to learn information about the scene. Popular applications include object tracking, 3D modeling, VR, and the processing pathways used in self-driving cars.",
         "instructors": [
             {"name": "", "link": "", "bio": ""}
         ],
