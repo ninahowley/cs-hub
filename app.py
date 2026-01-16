@@ -32,7 +32,12 @@ def index():
             # If method is get, send a blank form
             if not username:
                 username = None
-            return render_template('index.html', user = username, spring_courses = spring_course_info, page_title='Home')
+            return render_template('index.html', 
+                                   user = username, 
+                                   spring_courses = spring_course_info, 
+                                   spring_data = spring_dict,
+                                   page_title='Home'
+                                   )
         else:
             if 'login' in request.form:
                 input_username = request.form.get('username')
@@ -48,7 +53,8 @@ def index():
                         user = username, 
                         spring_courses = spring_course_info,
                         spring_data = spring_dict, 
-                        page_title="Home")
+                        page_title="Home"
+                        )
             else:
                 if username:
                     flash(f'Goodbye, {username}.')
@@ -58,7 +64,8 @@ def index():
                     user = None, 
                     spring_courses = spring_course_info, 
                     spring_data = spring_dict,
-                    page_title="Home")
+                    page_title="Home"
+                    )
     except Exception as e:
         print(e)
         flash('An error occurred. Please try agåain.')
