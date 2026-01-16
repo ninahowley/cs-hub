@@ -109,7 +109,7 @@ def major_plan():
         elective_df = all_df[all_df["course_core"] == False] #remove core
         elective_info = elective_df.to_dict(orient='records')
         # by default, if not logged in use dummy account with no courses
-        username = "notloggedin"
+        username = None
         # otherwise, get username from session
         if 'username' in session:
             username = session['username']
