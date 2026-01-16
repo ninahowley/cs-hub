@@ -26,23 +26,29 @@ CS Hub is a website where Wellesley CS majors and other students interested in C
 ## Quick Start
 
 1. **Clone the repository**
-    ```git clone https://github.com/ninahowley/cs-hub.git```
+    ```
+    git clone https://github.com/ninahowley/cs-hub.git
+    ```
 2. **Optional: create a [virtual environment](https://gist.github.com/ryumada/c22133988fd1c22a66e4ed1b23eca233).**
 3. **Install flask**
-    ```pip install flask```
+    ```
+    pip install flask
+    ```
 4. **Run the app!**
-    ```flask --app app run```
+    ```
+    flask --app app run
+    ```
 
 ## Contents
 
 + ```templates/``` contains html files for all webpages.
-    ```templates/index.html``` main webpage with login and spring '26 courses.
-    ```templates/major-plan.html``` personalized major planning page, including requirements and all Wellesley CS courses.
-    ```templates/explore.html``` explore page with topic list and information popups.
-+ ```app.py``` main app, handling routing with Flask.
-+ ```static/``` styling template and formatted .json files for CS course data.
-+ ```courses/``` scraped CS course data from the Wellesley College courselist.
-+ ```db_functions.py``` database functions (using SQLite).
+    + ```templates/index.html``` contains the main webpage with login and spring '26 courses.
+    + ```templates/major-plan.html``` contains a personalized major planning page, including requirements and all Wellesley CS courses.
+    + ```templates/explore.html``` contains explore page with topic list and information popups.
++ ```app.py``` is the main app, handling routing with Flask.
++ ```static/``` contains the styling template and formatted .json files for CS course data.
++ ```courses/``` contains scraped CS course data from the Wellesley College courselist.
++ ```db_functions.py``` contains database functions (using SQLite).
 
 ## Technology Stack
 + **Frontend:** Flask, HTMl, CSS, JavaScript
