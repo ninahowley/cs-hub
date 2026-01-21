@@ -33,9 +33,9 @@ The scrollable **topic list** on the left displays some popular topics in CS (an
     git clone https://github.com/ninahowley/cs-hub.git
     ```
 2. **Optional: create a [virtual environment](https://gist.github.com/ryumada/c22133988fd1c22a66e4ed1b23eca233).**
-3. **Install flask**
+3. **Install requirements**
     ```
-    pip install flask
+    pip install -r requirements.txt
     ```
 4. **Run the app!**
 
